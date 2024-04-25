@@ -1,0 +1,307 @@
+@charset "utf-8";
+@import "./header.css";
+@import "./footer.css";
+
+/* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
+
+.de-brand img {
+  text-align: center;
+}
+
+.de-brand p > img {
+  text-align: center;
+  padding: 160px 0 200px;
+}
+
+.ec-base-product .prdList .promotion img {
+  width: auto;
+}
+
+/*검색 스위치  /* 부분 앞뒤 부분 주석 삭제 하면 화면 검색 부분 삭제 됨 */
+.xans-product-menupackage .title h2 {
+  font-family: "Times New Roman", serif;
+}
+/*
+.btn-search-open {
+    display:none !important;
+}
+*/
+.d-none {
+  display: none;
+}
+
+#cate64 > a {
+  pointer-events: none;
+}
+
+#cate154 > a {
+  pointer-events: none;
+}
+
+.secretSaleText {
+  display: none;
+  margin: 15px 0;
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  src: local("Times New Roman"), url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf") format("truetype");
+  font-weight: normal;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "Times New Roman";
+  src: local("Times New Roman Bold"), url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf") format("truetype");
+  font-weight: bold;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+:root {
+  --font-main: "Times New Roman", "Noto Sans KR", sans-serif;
+  --layout-padding: 5.2%;
+  --color-main: #111;
+  --color-black: #111;
+  --color-gray: #aaa;
+  --color-darkgray: #999;
+  --color-gray-line: #dfdfdf;
+  --color-gray-bg: #f4f4f6;
+}
+
+/* tag reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+img {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body,
+code {
+  font-size: 13px;
+  font-family: var(--font-main);
+  color: var(--color-black);
+  background: #fff;
+}
+body {
+  min-width: 1280px;
+}
+body#popup {
+  min-width: 0;
+}
+li {
+  list-style: none;
+}
+img,
+fieldset {
+  border: none;
+  vertical-align: top;
+}
+table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+/* table th, table td { background-color: transparent; } */
+caption {
+  display: none;
+}
+th,
+td {
+  border: 0;
+  vertical-align: top;
+}
+button {
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+hr.layout {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:active {
+  text-decoration: none;
+}
+.objHidden {
+  visibility: hidden;
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  height: 0;
+  width: 0;
+}
+#content_CONTAINER table,
+#bi_inquire_content_CONTAINER table {
+  border: 0;
+  margin: 0 0 -1px;
+}
+#content_CONTAINER table:before,
+#bi_inquire_content_CONTAINER table:before {
+  display: none;
+}
+#content_CONTAINER td,
+#bi_inquire_content_CONTAINER td {
+  width: auto !important;
+  padding: 0;
+}
+table.nneditor-table {
+  width: auto !important;
+}
+
+/* html5 */
+object,
+del,
+sub,
+var {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 결제진행바 */
+#progressPaybarBackground {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#progressPaybarView {
+  position: absolute;
+  z-index: 100;
+  top: 160px;
+  left: 20px;
+  width: 471px;
+  font-size: 12px;
+}
+#progressPaybarView .box {
+  height: 180px;
+  background: url(https://lenina.kr/img.cafe24.com/images/ec_hosting/popup/layer_guide/bg_layer_box1.gif) 0 0 no-repeat;
+}
+#progressPaybarView .box .graph {
+  padding: 15px 0 0 0;
+  text-align: center;
+}
+#progressPaybarView .box .graph span {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+}
+#progressPaybarView .box .txt {
+  text-align: center;
+  padding: 15px 0 0;
+  color: #555555;
+}
+div.layerProgress {
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  -moz-opacity: 0.4;
+  background-color: #999;
+}
+
+/* contents */
+#skipNavigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 0;
+}
+#skipNavigation p,
+#skipNavigation ul,
+#skipNavigation ul li {
+  height: 0;
+}
+#skipNavigation p a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  text-align: center;
+  color: #000;
+  white-space: nowrap;
+}
+#skipNavigation p a:focus,
+#skipNavigation p a:hover,
+#skipNavigation p a:active {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  background: #c4122f;
+  color: #fff;
+  z-index: 100;
+}
+
+.displaynone {
+  display: none;
+}
+
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */
