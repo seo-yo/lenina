@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Scroll Effect</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+    <!-- lenis 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+-->
+
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script> -->
+
+    <link
+      href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      body {
+        color: #fff;
+        font-family: "NexonLv1Gothic";
+        font-weight: 300;
+        background-color: #333;
+      }
+      #parallax__title {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        z-index: 1000;
+      }
+      #parallax__title h1 {
+        font-size: 30px;
+        border-bottom: 1px dashed #fff;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        font-weight: 400;
+        display: inline-block;
+      }
+      #parallax__title p {
+        font-size: 16px;
+      }
+      #parallax__title ul {
+        margin-top: 10px;
+      }
+      #parallax__title li {
+        display: inline;
+      }
+      #parallax__title li a {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px dashed #fff;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+      #parallax__title li.active a {
+        background: #fff;
+        color: #000;
+      }
+
+      /* parallax__cont */
+      .parallax__item {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .parallax__item__num {
+        font-size: 5vw;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-family: "Lato";
+        font-weight: 100;
+        z-index: 100;
+      }
+      .parallax__item__imgWrap {
+        width: 30%;
+        padding-bottom: 18%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .parallax__item__imgWrap:has(li) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .parallax__item__img {
+        position: absolute;
+        left: -5%;
+        top: -5%;
+        width: 110%;
+        height: 110%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        /* filter: saturate(0%); */
+        transition: all 1s;
+      }
+      .parallax__item__img:hover {
+        /* filter: saturate(100%); */
+        transform: scale(1.025);
+      }
+
+      #section1,
+      #section3,
+      #section5,
+      #section7,
+      #section9 {
+        background-color: #111;
+      }
+
+      /* option */
+      #parallax__cont {
+        overflow: hidden;
+      }
+      #horizontal {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 500%;
+      }
+      #horizontal > section {
+        width: 100%;
+      }
+      /* .split-line {
+        overflow: hidden;
+      } */
+
+      /* 밀리는 이미지 */
+      .parallax__item__img {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .parallax__item__img-list:nth-child(6n + 1) {
+        width: 25%;
+        margin-right: 6.25%;
+      }
+      .parallax__item__img-list:nth-child(6n + 2) {
+        width: 18.75%;
+        margin-right: 6.25%;
+        margin-top: 20%;
+      }
+      .parallax__item__img-list:nth-child(6n + 3) {
+        width: 12.5%;
+        margin-top: 4%;
+      }
+      .parallax__item__img-list:nth-child(6n + 4) {
+        width: 31.25%;
+        margin-top: 24%;
+      }
+      .parallax__item__img-list:nth-child(6n + 5) {
+        width: 31.25%;
+        margin-right: 6.25%;
+        margin-top: -12%;
+      }
+      .parallax__item__img-list:nth-child(6n + 6) {
+        width: 25%;
+        margin-right: 25%;
+        margin-top: -8%;
+      }
+
+      /* 웨이브 이미지 */
+      .wave_img {
+        display: flex;
+        gap: 2rem;
+        padding: 0 10rem;
+      }
+      .wave_img li {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="parallax__title">
+      <h1>GSAP Parallax Effect14</h1>
+      <p>GSAP scrollTrigger - 가로/세로 나타나기 효과</p>
+    </header>
+    <!-- //parallax__title  -->
+
+    <main id="parallax__cont">
+      <section id="section1" class="parallax__item">
+        <span class="parallax__item__num">01</span>
+        <figure class="parallax__item__imgWrap">
+          <img
+            class="parallax__item__img"
+            src="https://picsum.photos/200/300"
+            alt=""
+          />
+        </figure>
+      </section>
+      <!-- //section1 -->
+
+      <section id="section2" class="parallax__item">
+        <span class="parallax__item__num">02</span>
+        <div class="parallax__item__imgWrap">
+          <ul class="parallax__item__img">
+            <li class="parallax__item__img-list">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </li>
+            <li class="parallax__item__img-list">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </li>
+            <li class="parallax__item__img-list">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </li>
+            <li class="parallax__item__img-list">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </li>
+            <li class="parallax__item__img-list">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </li>
+            <li class="parallax__item__img-list">
+              <img src="https://picsum.photos/200/300" alt="" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- //section2 -->
+
+      <div id="horizontal">
+        <section id="section3" class="parallax__item">
+          <span class="parallax__item__num">03</span>
+          <figure class="parallax__item__imgWrap">
+            <img
+              class="parallax__item__img"
+              src="https://picsum.photos/200/300"
+              alt=""
+            />
+          </figure>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4" class="parallax__item">
+          <span class="parallax__item__num">04</span>
+          <div class="parallax__item__imgWrap">
+            <ul class="wave_img">
+              <li class="wave_img-list">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </li>
+              <li class="wave_img-list">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </li>
+              <li class="wave_img-list">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </li>
+              <li class="wave_img-list">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </li>
+              <li class="wave_img-list">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </li>
+              <li class="wave_img-list">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- //section4 -->
+
+        <section id="section5" class="parallax__item">
+          <span class="parallax__item__num">05</span>
+          <figure class="parallax__item__imgWrap">
+            <img
+              class="parallax__item__img"
+              src="https://picsum.photos/200/300"
+              alt=""
+            />
+          </figure>
+        </section>
+        <!-- //section5 -->
+
+        <section id="section6" class="parallax__item">
+          <span class="parallax__item__num">06</span>
+          <figure class="parallax__item__imgWrap">
+            <img
+              class="parallax__item__img"
+              src="https://picsum.photos/200/300"
+              alt=""
+            />
+          </figure>
+        </section>
+        <!-- //section6 -->
+
+        <section id="section7" class="parallax__item">
+          <span class="parallax__item__num">07</span>
+          <figure class="parallax__item__imgWrap">
+            <img
+              class="parallax__item__img"
+              src="https://picsum.photos/200/300"
+              alt=""
+            />
+          </figure>
+        </section>
+        <!-- //section7 -->
+      </div>
+
+      <section id="section8" class="parallax__item">
+        <span class="parallax__item__num">08</span>
+        <figure class="parallax__item__imgWrap">
+          <img
+            class="parallax__item__img"
+            src="https://picsum.photos/200/300"
+            alt=""
+          />
+        </figure>
+      </section>
+      <!-- //section8 -->
+
+      <section id="section9" class="parallax__item">
+        <span class="parallax__item__num">09</span>
+        <figure class="parallax__item__imgWrap">
+          <img
+            class="parallax__item__img"
+            src="https://picsum.photos/200/300"
+            alt=""
+          />
+        </figure>
+      </section>
+      <!-- //section9 -->
+    </main>
+
+    <script>
+      // GSAP의 TweenMax 플러그인을 등록합니다.
+      // gsap.registerPlugin(TweenMax);
+
+      const horizontal = document.querySelector("#horizontal");
+      const sections = gsap.utils.toArray("#horizontal > section");
+
+      let scrollTween = gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: horizontal,
+          start: "top top",
+          end: () => "+=" + (horizontal.offsetWidth - innerWidth),
+          pin: true,
+          anticipatePin: 1,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      const waveImgOdd = document.querySelectorAll(
+        ".wave_img-list:nth-child(2n+1)"
+      );
+      const waveImgEven = document.querySelectorAll(
+        ".wave_img-list:nth-child(2n)"
+      );
+
+      waveImgEven.forEach((item) => {
+        let triggerElement = item;
+        let targetElement = item.nextSibling;
+
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "left top",
+            end: "right bottom",
+            markers: true,
+            scrub: 3,
+            // pin: ".project-section", // 가로스크롤시 페이지를 고정할 수 있는 기능
+          },
+        });
+        tl.to(targetElement, {
+          repeat: 1,
+          repeatDelay: 1,
+          yoyo: true,
+          y: "+=300",
+          // y: "-70%",
+          duration: 1,
+        });
+      });
+
+      // 커스텀 전
+      // gsap.to(".img4", {
+      //   y: -200,
+      //   duration: 2,
+      //   ease: "elastic",
+      //   scrollTrigger: {
+      //     trigger: ".img4",
+      //     containerAnimation: scrollTween,
+      //     start: "left center",
+      //     toggleActions: "play none reverse none", [진입했을때, 떠났을떄, 다시돌아왔을때, 다시떠났을때] play, pause, reverse, reset, restart, complete
+      //     markers: false,
+      //     id: "img4",
+      // onEnter : () => {console.log("onEnter")}
+      // onLeave : () => {console.log("onLeave")}
+      // onEnterBack : () => {console.log("onEnterBack")}
+      // onLeaveBack : () => {console.log("onLeaveBack")}
+      // onUpdate : (self) => {console.log("onUpdate"), self.progress.toFixed(3)}
+      // onToggle : (self) => {console.log("onToggle", self.isActive)}
+      //   },
+      // });
+
+      // gsap.to(".img5", {
+      //   rotation: 720,
+      //   duration: 2,
+      //   ease: "elastic",
+      //   scrollTrigger: {
+      //     trigger: ".img5",
+      //     containerAnimation: scrollTween,
+      //     start: "left center",
+      //     toggleActions: "play none reverse none",
+      //     markers: false,
+      //     id: "img5",
+      //   },
+      // });
+
+      // gsap.to(".img6", {
+      //   scale: 0.3,
+      //   duration: 2,
+      //   ease: "elastic",
+      //   scrollTrigger: {
+      //     trigger: ".img6",
+      //     containerAnimation: scrollTween,
+      //     start: "left center",
+      //     toggleActions: "play none reverse none",
+      //     markers: false,
+      //     id: "img6",
+      //   },
+      // });
+
+      // 밀리는 이미지
+      // N번째
+      const firstGroupImages = document.querySelectorAll(
+        ".parallax__item__img-list:nth-child(3n+1)"
+      );
+      const secondGroupImages = document.querySelectorAll(
+        ".parallax__item__img-list:nth-child(3n+2)"
+      );
+      const thirdGroupImages = document.querySelectorAll(
+        ".parallax__item__img-list:nth-child(3n+3)"
+      );
+
+      firstGroupImages.forEach((item) => {
+        let triggerElement = item;
+        let targetElement = item;
+
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
+          },
+        });
+        tl.to(targetElement, {
+          y: "-30%",
+          duration: 1,
+        });
+      });
+      secondGroupImages.forEach((item) => {
+        let triggerElement = item;
+        let targetElement = item;
+
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2,
+          },
+        });
+        tl.to(targetElement, {
+          y: "-50%",
+          duration: 1,
+        });
+      });
+      thirdGroupImages.forEach((item) => {
+        let triggerElement = item;
+        let targetElement = item;
+
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            // trigger element - viewport
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.5,
+          },
+        });
+        tl.to(targetElement, {
+          y: "-70%",
+          duration: 1,
+        });
+      });
+
+      // text
+      // gsap.to(".parallax__item__num", {
+      //   duration: 1,
+      //   text: {
+      //     value: "happy coding",
+      //     newClass: "class2",
+      //     delimiter: " ",
+      //   },
+      // });
+
+      // gsap.from(".parallax__item__num", {
+      //   yPercent: 100,
+      //   autoAlpha: 0,
+      //   duration: 2,
+      //   ease: "circ.out",
+      //   stagger: 0.1,
+
+      //   scrollTrigger: {
+      //     trigger: ".parallax__item",
+      //     start: "top center",
+      //     end: "+=400",
+      //     markers: true,
+      //     scrub: 1,
+      //   },
+      // });
+
+      // 유료 text
+      // const quotes = document.querySelectorAll(".parallax__item__num");
+
+      // function setupSplits() {
+      //   quotes.forEach((quote) => {
+      //     // Reset if needed
+      //     if (quote.anim) {
+      //       quote.anim.progress(1).kill();
+      //       quote.split.revert();
+      //     }
+
+      //     quote.split = new SplitText(quote, {
+      //       type: "lines,words,chars",
+      //       linesClass: "split-line",
+      //     });
+
+      //     // Set up the anim
+      //     quote.anim = gsap.from(quote.split.chars, {
+      //       scrollTrigger: {
+      //         trigger: quote,
+      //         toggleActions: "restart pause resume reverse",
+      //         start: "top 50%",
+      //       },
+      //       duration: 0.6,
+      //       ease: "circ.out",
+      //       y: 80,
+      //       stagger: 0.02,
+      //     });
+      //   });
+      // }
+
+      // ScrollTrigger.addEventListener("refresh", setupSplits);
+      // setupSplits();
+
+      // 스크롤 스무스 https://github.com/darkroomengineering/lenis
+      // const lenis = new Lenis();
+
+      // lenis.on("scroll", (e) => {
+      //   // console.log(e);
+      // });
+
+      // function raf(time) {
+      //   lenis.raf(time);
+      //   requestAnimationFrame(raf);
+      // }
+
+      // requestAnimationFrame(raf);
+
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        // console.log(e);
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+      // https://velog.io/@chiaki/smooth-scroll-Lenis
+    </script>
+  </body>
+</html>

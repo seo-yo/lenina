@@ -1,5 +1,22 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "Times";
+  src: local("Times New Roman"),
+    url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf")
+      format("truetype");
+  font-weight: normal;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "Times";
+  src: local("Times New Roman Bold"),
+    url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf")
+      format("truetype");
+  font-weight: bold;
+  unicode-range: U+0030-0039;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -9,6 +26,196 @@
   overflow: hidden;
 }
 
+/* --font-main: 'Times New Roman', 'Noto Sans KR', sans-serif;
+--layout-padding: 16px;
+--color-main: #111;
+--color-black: #111;
+--color-gray: #AAA;
+--color-darkgray: #999;
+--color-gray-line: #DFDFDF;
+--color-gray-bg: #F4F4F6;
+} */
+/* #5E4D4D */
+:root {
+  --color-white: #fff;
+}
 figure {
   margin: 0;
+}
+.times-font {
+  font: 400 60px/1.4 Times, serif;
+}
+/* MAIN */
+#main {
+}
+#main > section {
+  position: relative;
+  width: 100%;
+}
+
+.lenina-visual {
+}
+.lenina-visual img {
+  width: 100%;
+}
+
+.lenina-text-banner {
+  padding: 180px 0 230px;
+}
+.lenina-text-banner figure {
+  /* display: block; */
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 32px;
+}
+.lenina-text-banner h2 {
+  font-size: 60px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.lenina-item-category {
+}
+
+.lenina-item-category .sticky-element {
+  /* position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; */
+}
+.lenina-item-category__swiper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.lenina-item-category ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.lenina-item-category .swiper-slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  float: left;
+}
+
+.lenina-item-category .slide-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  z-index: 1; /* 활성 슬라이드가 가장 앞에 오도록 z-index 설정 */
+}
+.lenina-item-category__swiper .swiper-slide-active .slide-inner {
+  z-index: 2; /* 활성 슬라이드에 더 높은 z-index 설정 */
+}
+.lenina-item-category__swiper .swiper-slide:nth-child(1n) .slide-inner {
+  background-color: red;
+}
+.lenina-item-category__swiper .swiper-slide:nth-child(2n) .slide-inner {
+  background-color: blue;
+}
+.lenina-item-category__swiper .swiper-slide:nth-child(3n) .slide-inner {
+  background-color: rgb(58, 77, 58);
+}
+
+.lenina-item-category figure {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+.lenina-item-category img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5);
+}
+.lenina-item-category__desc {
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lenina-item-category__title {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 60px;
+  line-height: 1;
+  color: var(--color-white);
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+.lenina-item-category__title:after,
+.lenina-item-category__title:before {
+  position: absolute;
+  top: calc(50% + 7px);
+  width: 32px;
+  height: 28px;
+  content: "";
+  background: url("../img/emblem_02.png") no-repeat center / contain;
+}
+.lenina-item-category__title:before {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+.lenina-item-category__title:after {
+  right: 0;
+  transform: translate(100%, -50%);
+}
+
+.lenina-item-category__link {
+  display: block;
+  width: 217px;
+  height: 54px;
+  background: url("../img/button_frame__basic.png") no-repeat center / contain;
+  padding: 7px;
+}
+
+.lenina-item-category__link span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+.lenina-item-category__link:hover span {
+  color: #5e4d4d;
+  background-color: var(--color-white);
+}
+#horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 200%;
+}
+#horizontal > section {
+  width: 100%;
+}
+.lenina-img-banner {
+  height: 100vh;
+  background-color: rebeccapurple;
+}
+.lenina-item {
+}
+.lenina-item ul {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.lenina-item {
 }
