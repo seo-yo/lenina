@@ -1,0 +1,100 @@
+#footer {
+  margin-top: 60px;
+  padding: 0 var(--layout-padding) 24px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#footer .info {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+#footer .info li {
+  padding: 2px 0px;
+}
+
+#footer .info li.inline {
+  display: inline-block;
+  padding: 0px 3px;
+}
+
+#footer .info li span {
+  margin-right: 5px;
+  color: rgb(153, 153, 153);
+}
+
+#footer .cs {
+  margin-bottom: 28px;
+}
+
+#footer .cs > p {
+  padding: 2px 0px;
+}
+
+#footer .utilMenu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+#footer .utilMenu li {
+  padding: 0px 7px;
+}
+
+#footer .social {
+  position: relative;
+}
+
+#footer .social ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer .social ul li {
+  margin: 0px 4px;
+  font-size: 0px;
+  width: 14px;
+  height: 14px;
+}
+
+#footer .social ul li > a {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+#footer .social ul li > a::after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 14px;
+  font-family: xeicon;
+}
+
+#footer .social ul .insta > a::after {
+  content: "";
+}
+
+#footer .social ul .facebook > a::after {
+  content: "";
+}
+
+#footer .social ul .youtube > a::after {
+  content: "";
+}
+
+#footer .social ul .blog > a::after {
+  content: "";
+}
+
+#footer .social ul .twitter > a::after {
+  content: "";
+}
+
+#footer .social ul .kakao > a::after {
+  content: "";
+}

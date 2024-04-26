@@ -1,0 +1,143 @@
+#footer {
+  margin: 120px auto 0;
+  padding: 0 var(--layout-padding) 60px;
+}
+#main #footer {
+  margin: 0 auto;
+}
+
+#footer .footer_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer .left {
+  display: block;
+  width: 45%;
+}
+#footer .logo {
+  margin-bottom: 24px;
+}
+#footer .logo img:last-child {
+  display: none;
+}
+
+#footer .info ul {
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+#footer .info ul li {
+  display: inline;
+  margin-right: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  line-height: 2;
+}
+#footer .info ul li span {
+  display: inline;
+  margin-right: 6px;
+  color: #999;
+}
+#footer .info p.safe {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+#footer .footer_wrap > div p.title {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+#footer .cs p.phone {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+#footer .cs p.runtime {
+  font-size: 13px;
+  line-height: 2;
+}
+#footer .bank p.account {
+  font-size: 13px;
+  line-height: 2;
+}
+#footer .util ul li {
+  font-size: 13px;
+  line-height: 2;
+}
+#footer .util ul li a:hover {
+  color: #999;
+}
+
+#footer .bottom {
+  position: relative;
+  margin-top: 80px;
+}
+#footer .copyright {
+  font-size: 14px;
+  color: #666;
+}
+#footer .social {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#footer .social ul {
+  display: flex;
+}
+#footer .social ul li {
+  margin-left: 16px;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+}
+#footer .social ul li > a {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+#footer .social ul li > a::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+  font-family: "xeicon";
+}
+#footer .social ul .insta > a::after {
+  content: "\ebe9";
+}
+#footer .social ul .facebook > a::after {
+  content: "\ebd3";
+}
+#footer .social ul .youtube > a::after {
+  content: "\ec32";
+}
+#footer .social ul .blog > a::after {
+  content: "\ebf9";
+}
+#footer .social ul .twitter > a::after {
+  content: "\ec1f";
+}
+#footer .social ul .kakao > a::after {
+  content: "\ebef";
+}
+
+.de-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 101;
+}
+.de-fixed > a {
+  position: relative;
+  display: block;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+}
+.de-fixed > a > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

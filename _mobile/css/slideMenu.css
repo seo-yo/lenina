@@ -1,0 +1,100 @@
+#aside {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 86px var(--layout-padding) 20px;
+  z-index: 101;
+  background-color: #f5f2e9;
+  transition: transform 0.5s cubic-bezier(0, 0, 0.5, 0.9);
+}
+#aside.on {
+  transform: translateX(0);
+}
+
+#aside .aside-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#aside .de-search {
+  position: relative;
+  margin: 20px 0;
+}
+#aside .de-search .searchForm #keyword {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  border: 0;
+  border-bottom: 1px solid #111;
+  font-size: 15px;
+  padding: 10px 30px 10px 0;
+}
+#aside .de-search .searchForm button {
+  all: unset;
+  position: absolute;
+  top: 2px;
+  right: -7px;
+  font-size: 18px;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+}
+
+#aside .de-cate .cate-list {
+  font-size: 16px;
+  font-family: "Times New Roman", serif;
+}
+#aside .de-cate .cate-list li {
+  position: relative;
+  padding: 4px 0;
+}
+#aside .de-cate .cate-list li > a {
+  display: inline-block;
+  padding: 5px 10px 5px 0;
+  word-break: break-all;
+}
+#aside .de-cate .cate-list li > .view {
+  position: absolute;
+  top: 1px;
+  right: -7px;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+#aside .de-cate .cate-list li > .view::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "xeicon";
+  content: "\e943";
+  font-size: 16px;
+  font-weight: bold;
+}
+#aside .de-cate .cate-list li.open > .view::before {
+  content: "\e946";
+}
+#aside .de-cate .cate-list li.noChild .view {
+  display: none;
+}
+#aside .de-cate .cate-list li ul {
+  display: none;
+  padding: 4px 0 0 20px;
+  font-size: 13px;
+}
+
+#aside .de-list {
+  margin-top: 50px;
+}
+#aside .de-list li {
+  margin-bottom: 14px;
+}
+#aside .de-list li a {
+  padding: 5px 10px 5px 0;
+  font-size: 14px;
+}
