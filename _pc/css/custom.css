@@ -2,13 +2,17 @@
 
 @font-face {
   font-family: "Times";
-  src: local("Times New Roman"), url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf") format("truetype");
+  src: local("Times New Roman"),
+    url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf")
+      format("truetype");
   font-weight: normal;
   unicode-range: U+0030-0039;
 }
 @font-face {
   font-family: "Times";
-  src: local("Times New Roman Bold"), url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf") format("truetype");
+  src: local("Times New Roman Bold"),
+    url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf")
+      format("truetype");
   font-weight: bold;
   unicode-range: U+0030-0039;
 }
@@ -65,16 +69,16 @@ img {
 .lenina-button__ribbon {
   position: relative;
   display: block;
-  width: 313px;
-  height: 80px;
-  padding: 7px;
+  width: calc(100vh * (313 / 1080));
+  height: calc(100vh * (80 / 1080));
+  padding: calc(100vh * (7 / 1080));
 }
 .lenina-button__ribbon span {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 20px;
+  font-size: calc(100vh * (20 / 1080));
   line-height: 1;
   font-weight: 400;
   color: #52371e;
@@ -87,15 +91,11 @@ img {
   bottom: 0;
   content: "";
   width: 100%;
-  height: 116px;
+  height: calc(100vh * (116 / 1080));
   background: url("../img/button_frame__ribbon.svg") no-repeat center / contain;
-  opacity: 0.8;
-  background-blend-mode: multiply;
-  filter: grayscale(50%);
+  filter: invert(49%) sepia(5%) saturate(1727%) hue-rotate(329deg)
+    brightness(96%) contrast(88%);
   pointer-events: none;
-  /* opacity: 0.8;
-  background-blend-mode: multiply;
-  filter: grayscale(50%); */
 }
 
 /* --font-main: 'Times New Roman', 'Noto Sans KR', sans-serif;
@@ -152,6 +152,7 @@ section {
     text-align: center;
   }
 }
+
 .lenina-item-category {
   overflow: hidden;
   /* height: 100vh; */
@@ -162,26 +163,24 @@ section {
   & .lenina-item-category__item {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 70px);
   }
 
   & .category__top {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat center / cover;
+    background: #edd8d2 url("../img/category_01.jpg") no-repeat top center /
+      cover;
   }
   & .category__dress {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat center / cover;
+    background: #edd8d2 url("../img/category_02.jpg") no-repeat top center /
+      cover;
   }
   & .category__shirt {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat center / cover;
+    background: #edd8d2 url("../img/category_03.jpg") no-repeat top center /
+      cover;
   }
   & .category__denim {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
-  }
-
-  & .lenina-item-category__swiper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    background: #edd8d2 url("../img/category_04.jpg") no-repeat top center /
+      cover;
   }
 
   & .lenina-item-category__desc {
@@ -222,7 +221,14 @@ section {
     transform: translate(100%, -50%);
   }
 
-  /* & .swpier-wrapper {
+  /* 
+    & .lenina-item-category__swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  & .swpier-wrapper {
     transition-timing-function: linear;
   }
   & .swiper-slide {
@@ -257,9 +263,15 @@ section {
   width: 100%;
 } */
 .lenina-img-banner {
-  aspect-ratio: 1920/1080;
-  /* overflow-x: hidden; */
+  display: grid;
+  place-content: center;
+  width: auto;
+  min-width: 100%;
+  height: calc(100vh - 70px);
   background-color: #eabeb0;
+
+  /* aspect-ratio: 1920/1080; */
+  /* overflow-x: hidden; */
 
   &::after {
     position: absolute;
@@ -268,7 +280,130 @@ section {
     content: "";
     width: 100%;
     height: 90px;
-    background: url("../img/line_top.png") repeat-x top left / 100%;
+    background: url("../img/line_top.png") repeat-x bottom left / cover;
+  }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 60px;
+    background: url("../img/line_bottom.png") repeat-x top left / cover;
+  }
+
+  & .lenina-img-banner__text-wrap {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+  }
+  & .lenina-img-banner__text-wrap::before {
+    width: calc(100vh * (101 / 1080));
+    height: calc(100vh * (66 / 1080));
+    flex-shrink: 0;
+    content: "";
+    background: url("../img/emblem_03.svg") no-repeat center / contain;
+    margin-bottom: calc(100vh * (54 / 1080));
+  }
+  & .lenina-img-banner__text-wrap figure {
+    flex-shrink: 0;
+    width: calc(100vh * (431 / 1080));
+    height: calc(100vh * (100 / 1080));
+    margin-bottom: calc(100vh * (40 / 1080));
+  }
+  & .lenina-img-banner__title {
+    font-size: calc(100vh * (32 / 1080));
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    color: rgba(128, 65, 52, 0.7);
+    margin-bottom: calc(100vh * (64 / 1080));
+  }
+  & .lenina-img-banner__title:after {
+    display: block;
+    width: calc(100vh * (1 / 1080));
+    height: calc(100vh * (60 / 1080));
+    content: "";
+    background-color: #a27d71;
+    margin: calc(100vh * (31 / 1080)) auto 0;
+  }
+  & .lenina-img-banner__title span {
+    font-size: calc(100vh * (32 / 1080));
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(128, 65, 52, 0.7);
+  }
+
+  & .lenina-img-banner__text-wrap a {
+    flex-shrink: 0;
+  }
+  & .lenina-img-banner__img-list {
+    position: absolute;
+    width: calc(100vh * (1920 / 1080));
+    max-width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  & .lenina-img-banner__img {
+    position: absolute;
+    transform-origin: top center;
+  }
+
+  & .lenina-img-banner__img img {
+    /* height: 100%; */
+  }
+
+  & .lenina-img-banner__img[data-img="01"] {
+    top: calc(100vh * (92 / 1080));
+    left: calc(100vh * (104 / 1080));
+    width: calc(100vh * (392 / 1080));
+    height: calc(100vh * (506 / 1080));
+  }
+  & .lenina-img-banner__img[data-img="02"] {
+    top: calc(100vh * (87 / 1080));
+    right: calc(100vh * (-27 / 1080));
+    width: calc(100vh * (621 / 1080));
+    height: calc(100vh * (347 / 1080));
+  }
+  & .lenina-img-banner__img[data-img="03"] {
+    top: calc(100vh * (665 / 1080));
+    left: calc(100vh * (-40 / 1080));
+    width: calc(100vh * (619 / 1080));
+    height: calc(100vh * (344 / 1080));
+  }
+  & .lenina-img-banner__img[data-img="04"] {
+    top: calc(100vh * (481 / 1080));
+    right: calc(100vh * (113 / 1080));
+    width: calc(100vh * (341 / 1080));
+    height: calc(100vh * (487 / 1080));
+  }
+  & .lenina-img-banner__img[data-img="05"] {
+    top: calc(100vh * (787 / 1080));
+    right: calc(100vh * (377 / 1080));
+    width: calc(100vh * (250 / 1080));
+    height: calc(100vh * (238 / 1080));
+  }
+
+  /* 
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 90px;
+    background: url("../img/line_top.png") repeat-x bottom left / 100%;
   }
   &::before {
     position: absolute;
@@ -346,7 +481,6 @@ section {
   }
 
   & .lenina-img-banner__img img {
-    /* height: 100%; */
   }
 
   & .lenina-img-banner__img[data-img="01"] {
@@ -378,7 +512,7 @@ section {
     right: 377px;
     width: 250px;
     height: 238px;
-  }
+  } */
 
   /*   
   & .lenina-img-banner__img {
@@ -448,7 +582,7 @@ section {
 .lenina-new-arrivals {
   height: 100vh;
   background: #edd8d2;
-  padding: 209px 0 275px;
+  padding: calc(100vh * (209 / 1080)) 0 calc(100vh * (257 / 1080));
   overflow: hidden;
 
   /* & .lenina-new-arrivals__inner {
@@ -466,7 +600,7 @@ section {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    padding: 0 240px;
+    padding: 0 calc(100vh * (240 / 665));
   }
   & .lenina-new-arrivals__title {
     color: #000;
@@ -493,7 +627,7 @@ section {
     position: absolute;
     top: calc(100vh * (277 / 1080));
     display: flex;
-    padding: 0 240px;
+    padding: 0 calc(100vh * (240 / 665));
     gap: 16px;
   }
   & .new-arrivals-item {
@@ -542,22 +676,23 @@ section {
   & .lenina-new-arrivals__scrollbar-wrap {
     position: absolute;
     top: calc(100vh * (870 / 1080));
+    width: 100vw;
+    height: calc(100vh * (20 / 665));
     left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
-    height: 20px;
-    padding: 0 240px;
+    padding: 0 calc(100vh * (240 / 665));
   }
 
   & .lenina-new-arrivals__scrollbar {
-    /* position: relative;
-    width: 1000px;
+    position: relative;
+    width: calc(100vh * (1000 / 665));
+    /* max-width: 1000px; */
     height: 100%;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.1); */
-    z-index: 2;
+    border: 1px solid gold;
+    /* z-index: 2;
     position: fixed;
     height: 50px;
     background: coral;
@@ -565,19 +700,40 @@ section {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 1000px;
+    width: 1000px; */
+  }
+
+  & .lenina-new-arrivals__scrollbar:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    content: "";
+    height: calc(100vh * (2 / 665));
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-50%);
   }
 
   & .lenina-new-arrivals__scrollbar-thumb {
-    /* position: absolute;
-    width: 100px;
+    position: absolute;
+    width: calc(100vh * (300 / 665));
     height: 100%;
-    border-radius: 40px;
-    background-color: #000; */
-    width: 50px;
+    /* width: 50px;
     height: 50px;
     border-radius: 50px;
-    background: red;
+    background: red; */
+  }
+  & .lenina-new-arrivals__scrollbar-thumb:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: calc(100vh * (300 / 665));
+    content: "";
+    height: calc(100vh * (2 / 665));
+    background-color: #000;
+    transform: translateY(-50%);
+  }
+  & .lenina-new-arrivals__scrollbar-thumb:hover:after {
   }
 }
 
