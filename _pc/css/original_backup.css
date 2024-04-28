@@ -122,7 +122,7 @@ section {
   top: 0;
   left: 0; */
   aspect-ratio: 16/9;
-  background: url("../img/main_banner.jpg") no-repeat center / cover;
+  background: url("../img/main_banner.jpg");
 
   & #vimeo-player {
     position: absolute;
@@ -153,48 +153,79 @@ section {
   }
 }
 .lenina-item-category {
-  overflow: hidden;
-  /* height: 100vh; */
-
-  & .lenina-item-category__list {
-  }
-
-  & .lenina-item-category__item {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-
-  & .category__top {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat center / cover;
-  }
-  & .category__dress {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat center / cover;
-  }
-  & .category__shirt {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat center / cover;
-  }
-  & .category__denim {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
-  }
+  height: 100vh;
 
   & .lenina-item-category__swiper {
+    position: relative;
+    /* width: 100%;
+  height: 100%;
+  overflow: hidden; */
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    border: 1px solid red;
+  }
+
+  & .swiper-wrapper {
+    /* display: flex;
+  flex-direction: column; */
+    /* width: 100%;
+  height: 100%; */
+  }
+  & .swiper-slide {
+    /* position: relative; */
+    /* flex: 1; */
+    /* width: 100%;
+  border: 1px solid blue; */
+    /* float: left;
+  overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .slide-inner {
+    /* position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat; */
+
+    z-index: 1; /* 활성 슬라이드가 가장 앞에 오도록 z-index 설정 */
+  }
+
+  & .lenina-item-category__swiper .swiper-slide-active .slide-inner {
+    z-index: 2; /* 활성 슬라이드에 더 높은 z-index 설정 */
+  }
+  & .lenina-item-category__swiper .swiper-slide:nth-child(1) .slide-inner {
+    background-image: url("../img/category_01.jpg");
+  }
+  & .lenina-item-category__swiper .swiper-slide:nth-child(2) .slide-inner {
+    background-image: url("../img/category_02.jpg");
+  }
+  & .lenina-item-category__swiper .swiper-slide:nth-child(3) .slide-inner {
+    background-image: url("../img/category_03.jpg");
+  }
+  & .lenina-item-category__swiper .swiper-slide:nth-child(4) .slide-inner {
+    background-image: url("../img/category_04.jpg");
   }
 
   & .lenina-item-category__desc {
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 80px;
     z-index: 1;
+    background-color: red;
   }
-
+  & .lenina-item-category__swiper .swiper-slide-active .lenina-item-category__desc {
+    z-index: 2; /* 활성 슬라이드에 더 높은 z-index 설정 */
+  }
   & .lenina-item-category__title {
     position: relative;
     text-align: center;
@@ -221,30 +252,6 @@ section {
     right: 0;
     transform: translate(100%, -50%);
   }
-
-  /* & .swpier-wrapper {
-    transition-timing-function: linear;
-  }
-  & .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-  & .lenina-item-category__swiper .swiper-slide:nth-child(1) {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat center / cover;
-  }
-  & .lenina-item-category__swiper .swiper-slide:nth-child(2) {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat center / cover;
-  }
-  & .lenina-item-category__swiper .swiper-slide:nth-child(3) {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat center / cover;
-  }
-  & .lenina-item-category__swiper .swiper-slide:nth-child(4) {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
-  } */
 }
 
 /* 
@@ -258,7 +265,7 @@ section {
 } */
 .lenina-img-banner {
   aspect-ratio: 1920/1080;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background-color: #eabeb0;
 
   &::after {
@@ -342,14 +349,12 @@ section {
 
   & .lenina-img-banner__img {
     position: absolute;
-    transform-origin: top center;
   }
-
   & .lenina-img-banner__img img {
-    /* height: 100%; */
+    height: 100%;
   }
 
-  & .lenina-img-banner__img[data-img="01"] {
+  /* & .lenina-img-banner__img[data-img="01"] {
     top: 92px;
     left: 104px;
     width: 392px;
@@ -378,71 +383,38 @@ section {
     right: 377px;
     width: 250px;
     height: 238px;
-  }
-
-  /*   
-  & .lenina-img-banner__img {
-    position: absolute;
-    height: 2px;
-    overflow: hidden;
-    transition: all 1s ease-out;
-    transform-origin: top center;
-  }
-
-  & .lenina-img-banner__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: scale(1.2);
-    transition: all 1s;
-  }
-
-  & .lenina-img-banner__img.scroll_active img {
-    height: auto;
-    transform: scale(1);
-    outline: 10px solid red;
-  }
+  } */
   & .lenina-img-banner__img[data-img="01"] {
     top: calc(100vw * (92 / 1920));
     left: calc(100vw * (104 / 1920));
     width: calc(100vw * (392 / 1920));
+    height: calc(100vw * (506 / 1920));
   }
   & .lenina-img-banner__img[data-img="02"] {
     top: calc(100vw * (87 / 1920));
     right: calc(100vw * (-27 / 1920));
     width: calc(100vw * (621 / 1920));
+    height: calc(100vw * (347 / 1920));
+    border: 1px solid red;
   }
   & .lenina-img-banner__img[data-img="03"] {
-    top: calc(100vw * (665 / 1920));
+    bottom: calc(100vw * (81 / 1920));
     left: calc(100vw * (-40 / 1920));
     width: calc(100vw * (619 / 1920));
-  }
-  & .lenina-img-banner__img[data-img="04"] {
-    top: calc(100vw * (481 / 1920));
-    right: calc(100vw * (113 / 1920));
-    width: calc(100vw * (341 / 1920));
-  }
-  & .lenina-img-banner__img[data-img="05"] {
-    top: calc(100vw * (787 / 1920));
-    right: calc(100vw * (377 / 1920));
-    width: calc(100vw * (250 / 1920));
-  }
-  & .lenina-img-banner__img.scroll_active[data-img="01"] {
-    height: calc(100vw * (506 / 1920));
-  }
-  & .lenina-img-banner__img.scroll_active[data-img="02"] {
-    height: calc(100vw * (347 / 1920));
-  }
-  & .lenina-img-banner__img.scroll_active[data-img="03"] {
     height: calc(100vw * (344 / 1920));
   }
-  & .lenina-img-banner__img.scroll_active[data-img="04"] {
+  & .lenina-img-banner__img[data-img="04"] {
+    bottom: calc(100vw * (113 / 1920));
+    right: calc(100vw * (113 / 1920));
+    width: calc(100vw * (341 / 1920));
     height: calc(100vw * (487 / 1920));
   }
-  & .lenina-img-banner__img.scroll_active[data-img="05"] {
+  & .lenina-img-banner__img[data-img="05"] {
+    bottom: calc(100vw * (55 / 1920));
+    right: calc(100vw * (377 / 1920));
+    width: calc(100vw * (250 / 1920));
     height: calc(100vw * (238 / 1920));
-  } */
+  }
 }
 
 .lenina-new-arrivals {
@@ -547,37 +519,24 @@ section {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 20px;
+    height: 2px;
     padding: 0 240px;
   }
 
   & .lenina-new-arrivals__scrollbar {
-    /* position: relative;
+    position: relative;
     width: 1000px;
     height: 100%;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.1); */
-    z-index: 2;
-    position: fixed;
-    height: 50px;
-    background: coral;
-    top: calc(50% - 25px);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   & .lenina-new-arrivals__scrollbar-thumb {
-    /* position: absolute;
+    position: absolute;
     width: 100px;
     height: 100%;
     border-radius: 40px;
-    background-color: #000; */
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background: red;
+    background-color: #000;
   }
 }
 
