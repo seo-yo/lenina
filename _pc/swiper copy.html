@@ -1,0 +1,1110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+  <!-- #region SKIP AREA -->
+  <head>
+    <meta name="path_role" content="MAIN" />
+    <meta name="description" content="르니나의 공식 온라인 스토어에 오신 것을 환영합니다." />
+    <meta name="keywords" content="르니나" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-loading-overlay/2.1.7/loadingoverlay.min.css" rel="stylesheet" /> -->
+    <meta name="facebook-domain-verification" content="7o30qmjv2636gnaza8rveu25e7au69" />
+
+    <style type="text/css"></style>
+
+    <title>르니나 리뉴얼</title>
+    <!-- 임의로 가져온 코드 -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <!-- <script src="./js/common.js" defer></script> -->
+
+    <!-- 추가한 소스 코드 -->
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" />
+    <!-- lenis 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <style>
+      /* RESET */
+      :root {
+        --color-white: #fff;
+      }
+      figure {
+        margin: 0;
+      }
+      img {
+        width: 100%;
+      }
+
+      /* COMMON */
+      .times-font {
+        font: 400 60px/1.4 Times, serif;
+      }
+      .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+      }
+
+      .lenina-button__basic {
+        display: block;
+        width: 217px;
+        height: 54px;
+        background: url("../img/button_frame__basic.svg") no-repeat center / contain;
+        padding: 7px;
+      }
+
+      .lenina-button__basic span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--color-white);
+        border-radius: 2px;
+        transition: all 0.5s;
+      }
+      .lenina-button__basic:hover span {
+        color: #5e4d4d;
+        background-color: var(--color-white);
+      }
+
+      .lenina-button__ribbon {
+        position: relative;
+        display: block;
+        width: calc(100vh * (313 / 1080));
+        height: calc(100vh * (80 / 1080));
+        padding: calc(100vh * (7 / 1080));
+      }
+      .lenina-button__ribbon span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: calc(100vh * (20 / 1080));
+        line-height: 1;
+        font-weight: 400;
+        color: #52371e;
+        transition: all 0.5s;
+        border-radius: 2px;
+      }
+      .lenina-button__ribbon::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: calc(100vh * (116 / 1080));
+        background: url("../img/button_frame__ribbon.svg") no-repeat center / contain;
+        filter: invert(49%) sepia(5%) saturate(1727%) hue-rotate(329deg) brightness(96%) contrast(88%);
+        pointer-events: none;
+      }
+      /* MAIN */
+      #main {
+        background-color: #fff;
+      }
+      section {
+        position: relative;
+        width: 100%;
+      }
+
+      .lenina-visual {
+        aspect-ratio: 16/9;
+        background: url("../img/main_banner.jpg") no-repeat center / cover;
+
+        & #vimeo-player {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          transform: translate(-50%, -50%);
+          /* background-size: cover; */
+          object-fit: cover;
+        }
+      }
+      .lenina-text-banner {
+        padding: 180px 0 230px;
+        background: #fff;
+
+        & figure {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto 32px;
+        }
+
+        & h2 {
+          font-size: 60px;
+          line-height: 1.4;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+
+      .lenina-item-category {
+        overflow: hidden;
+        height: 100vh;
+        border: 1px solid red;
+        background-color: #5e4d4d;
+
+        & .lenina-item-category-inner {
+          height: 100vh;
+          border: 2px solid blue;
+        }
+
+        & .lenina-item-category__list {
+        }
+
+        & .lenina-item-category__item {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        & .category__top {
+          background: #edd8d2 url("../img/category_01.jpg") no-repeat top center / cover;
+        }
+        & .category__dress {
+          background: #edd8d2 url("../img/category_02.jpg") no-repeat top center / cover;
+        }
+        & .category__shirt {
+          background: #edd8d2 url("../img/category_03.jpg") no-repeat top center / cover;
+        }
+        & .category__denim {
+          background: #edd8d2 url("../img/category_04.jpg") no-repeat top center / cover;
+        }
+
+        & .lenina-item-category__desc {
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          padding-bottom: 80px;
+          z-index: 1;
+        }
+
+        & .lenina-item-category__title {
+          position: relative;
+          text-align: center;
+          font-size: 60px;
+          line-height: 1;
+          font-weight: 400;
+          color: var(--color-white);
+          padding: 0 20px;
+          margin-bottom: 40px;
+        }
+        & .lenina-item-category__title:after,
+        & .lenina-item-category__title:before {
+          position: absolute;
+          top: calc(50% + 7px);
+          width: 32px;
+          height: 28px;
+          content: "";
+          background: url("../img/emblem_02.svg") no-repeat center / contain;
+        }
+        & .lenina-item-category__title:before {
+          left: 0;
+          transform: translate(-100%, -50%);
+        }
+        & .lenina-item-category__title:after {
+          right: 0;
+          transform: translate(100%, -50%);
+        }
+
+        & .lenina-item-category__swiper {
+          width: 100%;
+          height: calc(100vh - 70px);
+          /* display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff; */
+        }
+        & .swpier-wrapper {
+          transition-timing-function: linear;
+        }
+
+        & .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        & .lenina-item-category__swiper .swiper-slide:nth-child(1) {
+          background: #edd8d2 url("../img/category_01.jpg") no-repeat center / cover;
+        }
+        & .lenina-item-category__swiper .swiper-slide:nth-child(2) {
+          background: #edd8d2 url("../img/category_02.jpg") no-repeat center / cover;
+        }
+        & .lenina-item-category__swiper .swiper-slide:nth-child(3) {
+          background: #edd8d2 url("../img/category_03.jpg") no-repeat center / cover;
+        }
+        & .lenina-item-category__swiper .swiper-slide:nth-child(4) {
+          background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
+        }
+      }
+
+      .lenina-img-banner {
+        display: grid;
+        place-content: center;
+        width: auto;
+        min-width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #eabeb0;
+
+        /* aspect-ratio: 1920/1080; */
+        /* overflow-x: hidden; */
+
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 90px;
+          background: url("../img/line_top.png") repeat-x bottom left / cover;
+        }
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 60px;
+          background: url("../img/line_bottom.png") repeat-x top left / cover;
+        }
+
+        & .lenina-img-banner__text-wrap {
+          /* position: absolute;
+    top: 50%;
+    left: 50%; */
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          /* transform: translate(-50%, -50%); */
+          z-index: 2;
+        }
+        & .lenina-img-banner__text-wrap::before {
+          width: calc(100vh * (101 / 1080));
+          height: calc(100vh * (66 / 1080));
+          flex-shrink: 0;
+          content: "";
+          background: url("../img/emblem_03.svg") no-repeat center / contain;
+          margin-bottom: calc(100vh * (54 / 1080));
+        }
+        & .lenina-img-banner__text-wrap figure {
+          flex-shrink: 0;
+          width: calc(100vh * (431 / 1080));
+          height: calc(100vh * (100 / 1080));
+          margin-bottom: calc(100vh * (40 / 1080));
+        }
+        & .lenina-img-banner__title {
+          font-size: calc(100vh * (32 / 1080));
+          font-weight: 400;
+          line-height: 1;
+          text-align: center;
+          color: rgba(128, 65, 52, 0.7);
+          margin-bottom: calc(100vh * (64 / 1080));
+        }
+        & .lenina-img-banner__title:after {
+          display: block;
+          width: calc(100vh * (1 / 1080));
+          height: calc(100vh * (60 / 1080));
+          content: "";
+          background-color: #a27d71;
+          margin: calc(100vh * (31 / 1080)) auto 0;
+        }
+        & .lenina-img-banner__title span {
+          font-size: calc(100vh * (32 / 1080));
+          font-weight: 400;
+          line-height: 1;
+          color: rgba(128, 65, 52, 0.7);
+        }
+
+        & .lenina-img-banner__text-wrap a {
+          flex-shrink: 0;
+        }
+        & .lenina-img-banner__img-list {
+          position: absolute;
+          width: calc(100vh * (1920 / 1080));
+          max-width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        & .lenina-img-banner__img {
+          position: absolute;
+          transform-origin: top center;
+        }
+
+        & .lenina-img-banner__img[data-img="01"] {
+          top: calc(100vh * (92 / 1080));
+          left: calc(100vh * (104 / 1080));
+          width: calc(100vh * (392 / 1080));
+          height: calc(100vh * (506 / 1080));
+        }
+        & .lenina-img-banner__img[data-img="02"] {
+          top: calc(100vh * (87 / 1080));
+          right: calc(100vh * (-27 / 1080));
+          width: calc(100vh * (621 / 1080));
+          height: calc(100vh * (347 / 1080));
+        }
+        & .lenina-img-banner__img[data-img="03"] {
+          /* top: calc(100vh * (665 / 1080)); */
+          bottom: calc(100vh * (81 / 1080));
+          left: calc(100vh * (-40 / 1080));
+          width: calc(100vh * (619 / 1080));
+          height: calc(100vh * (344 / 1080));
+        }
+        & .lenina-img-banner__img[data-img="04"] {
+          /* top: calc(100vh * (481 / 1080)); */
+          bottom: calc(100vh * (113 / 1080));
+          right: calc(100vh * (113 / 1080));
+          width: calc(100vh * (341 / 1080));
+          height: calc(100vh * (487 / 1080));
+        }
+        & .lenina-img-banner__img[data-img="05"] {
+          /* bottom: calc(100vh * (787 / 1080)); */
+          bottom: calc(100vh * (55 / 1080));
+          right: calc(100vh * (377 / 1080));
+          width: calc(100vh * (250 / 1080));
+          height: calc(100vh * (238 / 1080));
+        }
+      }
+
+      .lenina-new-arrivals {
+        height: 100vh;
+        background: #edd8d2;
+        padding: calc(100vh * (209 / 1080)) 0 calc(100vh * (257 / 1080));
+        overflow: hidden;
+
+        & .lenina-new-arrivals__top {
+          position: absolute;
+          top: calc(100vh * (209 / 1080));
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 0 calc(100vh * (240 / 665));
+        }
+        & .lenina-new-arrivals__title {
+          color: #000;
+          font-size: calc(100vh * (24 / 1080));
+          font-weight: 700;
+          line-height: normal;
+        }
+        & .lenina-new-arrivals__link {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        & .lenina-new-arrivals__link b {
+          color: #000;
+          font-size: calc(100vh * (14 / 1080));
+          font-weight: 700;
+        }
+        & .lenina-new-arrivals__link span {
+          width: calc(100vh * (14 / 1080));
+          height: calc(100vh * (5.4 / 1080));
+        }
+
+        & .lenina-new-arrivals__item-list-wrap {
+          position: absolute;
+          top: calc(100vh * (277 / 1080));
+          /* padding: 0 calc(100vh * (240 / 665)); */
+          width: 100%;
+          overflow: hidden;
+        }
+
+        & .lenina-new-arrivals__item-list {
+          display: flex;
+          gap: 16px;
+        }
+        & .new-arrivals-item {
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          width: calc(100vh * (348 / 1080));
+        }
+        & .new-arrivals-item__img {
+          width: 100%;
+          aspect-ratio: 348/464;
+          flex-shrink: 0;
+          margin-bottom: calc(100vh * (20 / 1080));
+        }
+        & .new-arrivals-item__name {
+          color: #000;
+          font-size: calc(100vh * (16 / 1080));
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: calc(100vh * (8 / 1080));
+
+          /* 한줄처리 */
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        & .new-arrivals-item__price {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          letter-spacing: -1px;
+        }
+        & .new-arrivals-item__price b {
+          color: #000;
+          font-size: calc(100vh * (16 / 1080));
+          font-weight: 700;
+        }
+        & .new-arrivals-item__price s {
+          color: rgba(83, 19, 19, 0.4);
+          font-size: calc(100vh * (16 / 1080));
+          font-weight: 400;
+          text-decoration-color: inherit;
+        }
+
+        & .lenina-new-arrivals__scrollbar-wrap {
+          position: absolute;
+          top: calc(100vh * (870 / 1080));
+          width: 100%;
+          height: calc(100vh * (20 / 665));
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 calc(100vh * (240 / 665));
+        }
+
+        & .lenina-new-arrivals__scrollbar {
+          position: relative;
+          width: calc(100vh * (1000 / 665));
+          height: 100%;
+          margin: 0 auto;
+          border: 1px solid gold;
+        }
+
+        & .lenina-new-arrivals__scrollbar:after {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          content: "";
+          height: calc(100vh * (2 / 665));
+          background-color: rgba(0, 0, 0, 0.1);
+          transform: translateY(-50%);
+        }
+
+        & .lenina-new-arrivals__scrollbar-thumb {
+          position: absolute;
+          width: calc(100vh * (300 / 665));
+          height: 100%;
+        }
+        & .lenina-new-arrivals__scrollbar-thumb:after {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: calc(100vh * (300 / 665));
+          content: "";
+          height: calc(100vh * (2 / 665));
+          background-color: #000;
+          transform: translateY(-50%);
+        }
+      }
+
+      .lenina-bottom-text {
+        padding: 183px 10px 2px;
+        background-color: #fff;
+
+        & h2 {
+          width: 1066px;
+          color: #000;
+          text-align: center;
+          font-size: 32px;
+          font-weight: 400;
+          line-height: normal;
+          margin: 0 auto;
+        }
+      }
+      /* 1440px */
+    </style>
+  </head>
+  <body id="main">
+    <!-- #endregion -->
+    <!-- E : HEADER -->
+    <div id="contents">
+      <main id="main">
+        <!-- S : 메인 비쥬얼 -->
+        <section class="lenina-visual">
+          <h2 class="blind">메인 비쥬얼</h2>
+          <!-- <iframe
+            id="vimeo-player"
+            src="https://player.vimeo.com/video/921917600?h=0afbfa0f69&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;byline=0&amp;controls=0&amp;loop=1&amp;pip=0&amp;playsinlin=0&amp;portrait=0&amp;title=0&amp;background=1&amp;muted=1"
+            frameborder="0"
+            title="LENINA SPRING TEASER WEB"
+          ></iframe> -->
+        </section>
+        <!-- E : 메인 비쥬얼 -->
+
+        <!-- S : 텍스트 배너 -->
+        <section class="lenina-text-banner">
+          <figure>
+            <img src="./img/emblem_01.svg" alt="장식" />
+          </figure>
+          <h2>
+            <span class="times-font">24</span> SUMMER COLLECTION<br />
+            Mon cher, My summer
+          </h2>
+        </section>
+        <!-- E : 텍스트 배너 -->
+
+        <!-- S : 상품 카테고리 -->
+        <section class="lenina-item-category">
+          <h2 class="blind">상품 카테고리 리스트</h2>
+          <div class="lenina-item-category-inner">
+            <div class="lenina-item-category__swiper swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide lenina-item-category__item"></li>
+                <li class="swiper-slide lenina-item-category__item"></li>
+                <li class="swiper-slide lenina-item-category__item"></li>
+                <li class="swiper-slide lenina-item-category__item"></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- E : 상품 카테고리 -->
+
+        <!-- S : 이미지 배너 -->
+        <section class="lenina-img-banner">
+          <div class="lenina-img-banner__text-wrap">
+            <figure>
+              <img src="https://lenina.kr/web/upload/drawcode/logo.svg" alt="Lenina" />
+            </figure>
+            <h2 class="lenina-img-banner__title"><span class="times-font">24</span>&nbsp;SUMMER COLLECTION</h2>
+            <a href="" class="lenina-button__ribbon"><span>Discover Now</span></a>
+          </div>
+
+          <div class="lenina-img-banner__img-list">
+            <figure class="lenina-img-banner__img" data-img="01">
+              <img src="./img/img_banner_img_01.jpg" alt="&nbsp;" />
+            </figure>
+            <figure class="lenina-img-banner__img" data-img="02">
+              <img src="./img/img_banner_img_02.jpg" alt="&nbsp;" />
+            </figure>
+            <figure class="lenina-img-banner__img" data-img="03">
+              <img src="./img/img_banner_img_03.jpg" alt="&nbsp;" />
+            </figure>
+            <figure class="lenina-img-banner__img" data-img="05">
+              <img src="./img/img_banner_img_05.jpg" alt="&nbsp;" />
+            </figure>
+            <figure class="lenina-img-banner__img" data-img="04">
+              <img src="./img/img_banner_img_04.jpg" alt="&nbsp;" />
+            </figure>
+          </div>
+        </section>
+        <!-- E : 이미지 배너 -->
+
+        <!-- S : 상품 진열 리스트 -->
+        <!-- <div id="horizontal"> -->
+        <section class="lenina-new-arrivals">
+          <div class="lenina-new-arrivals__top">
+            <h2 class="lenina-new-arrivals__title">New Arrival</h2>
+            <a href="" class="lenina-new-arrivals__link">
+              <b>Discover Now</b>
+              <span>
+                <img src="./img/icon_arrow.svg" alt="아이콘" />
+              </span>
+            </a>
+          </div>
+          <div class="lenina-new-arrivals__item-list-wrap">
+            <ul class="lenina-new-arrivals__item-list">
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_01.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">196,200</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_02.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <b class="times-font">218,000</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_03.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">218,000</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_04.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">218,000</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_01.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">218,000</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_02.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">218,000</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_03.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">218,000</b>
+                </p>
+              </li>
+
+              <li class="new-arrivals-item">
+                <figure class="new-arrivals-item__img">
+                  <img src="./img/slide_item_04.jpg" alt="제품명" />
+                </figure>
+                <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
+                <p class="new-arrivals-item__price">
+                  <s class="times-font">218,000</s><b class="times-font">218,000</b>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="lenina-new-arrivals__scrollbar-wrap">
+            <div class="lenina-new-arrivals__scrollbar">
+              <div class="lenina-new-arrivals__scrollbar-thumb"></div>
+            </div>
+          </div>
+        </section>
+        <!-- E : 상품 진열 리스트 -->
+
+        <!-- S : 하단 텍스트 -->
+        <section class="lenina-bottom-text">
+          <h2>
+            Experience authentic French mood in Korea. We suggest styles that allow modern women to mix and match in
+            their daily lives, transforming the ordinary with exquisite details, colors, and patterns. Discover your
+            unique charm beyond the mundane.
+          </h2>
+        </section>
+        <!-- E : 하단 텍스트 -->
+        <!-- </div> -->
+      </main>
+    </div>
+
+    <span itemscope="" itemtype="https://schema.org/Organization">
+      <link itemprop="url" href="https://www.lenina.kr" />
+    </span>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+    <script>
+      const headerHeight = "70px";
+      const categorySwiper = new Swiper(".lenina-item-category__swiper", {
+        slidesPerView: 1,
+        speed: 1000,
+        watchSlidesProgress: true,
+        grabCursor: true,
+
+        on: {
+          init: function () {
+            gsap.to(this.slides[this.activeIndex], { scale: 1, opacity: 1 });
+            console.log(this.slides);
+          },
+          slideChange: function () {
+            gsap.to(this.slides[this.activeIndex], { scale: 1, opacity: 1 });
+            gsap.to(this.slides[this.previousIndex], { opacity: 0.3, scale: 0.8 });
+            this.slides[this.previousIndex].animation.pause(0);
+            this.slides[this.activeIndex].animation.restart();
+            currentIndex = this.activeIndex;
+          },
+          slideChangeTransitionEnd: function () {
+            animating = false;
+          },
+        },
+      });
+
+      // Gsap Code
+      let currentIndex = 0;
+      let animating;
+
+      categorySwiper.slides.forEach((slide, index) => {
+        let letter = slide.querySelector("h1");
+        let description = slide.querySelector("h2");
+        let tl = gsap.timeline({ paused: true, onComplete: function () {} });
+
+        slide.animation = tl;
+      });
+
+      categorySwiper.slides[0].animation.play();
+
+      // create an observer and disable it to start
+      let intentObserver = ScrollTrigger.observe({
+        type: "wheel,touch",
+        onUp: () => !animating && gotoPanel(currentIndex + 1, true),
+        onDown: () => !animating && gotoPanel(currentIndex - 1, false),
+        wheelSpeed: -1, // to match mobile behavior, invert the wheel speed
+        tolerance: 30,
+        preventDefault: true,
+        onPress: (self) => {
+          ScrollTrigger.isTouch && self.event.preventDefault();
+        },
+      });
+      intentObserver.disable();
+
+      let preventScroll = ScrollTrigger.observe({
+        preventDefault: true,
+        type: "wheel,scroll",
+        allowClicks: true,
+        onEnable: (self) => {
+          console.log("enable");
+          return (self.savedScroll = self.scrollY());
+        }, // save the scroll position
+        onChangeY: (self) => {
+          console.log("disable");
+          self.scrollY(self.savedScroll); // refuse to scroll
+        },
+      });
+      preventScroll.disable();
+
+      const numPanels = categorySwiper.slides.length;
+      console.log(numPanels);
+
+      // handle the panel swipe animations
+      function gotoPanel(index, isScrollingDown) {
+        animating = true;
+        console.log("gotoPanel");
+        // return to normal scroll if we're at the end or back up to the start
+        if ((index === numPanels && isScrollingDown) || (index === -1 && !isScrollingDown)) {
+          console.log("return to normal scroll");
+          intentObserver.disable();
+          preventScroll.disable();
+
+          animating = false;
+          // now make it go 1px beyond in the correct direction so that it doesn't trigger onEnter/onEnterBack.
+          preventScroll.scrollY(preventScroll.scrollY() + (index === numPanels ? 1 : -1));
+          return;
+        }
+        console.log("call swiper slideTo()");
+        categorySwiper.slideTo(index);
+
+        currentIndex = index;
+      }
+
+      // pin swipe section and initiate observer
+      const itemCategory = document.querySelector(".lenina-item-category");
+      const itemCategoryHeight = itemCategory.offsetHeight;
+
+      ScrollTrigger.create({
+        trigger: ".lenina-item-category-inner",
+        pin: true,
+        start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+        endTrigger: ".lenina-item-category-inner",
+        end: `+=${itemCategoryHeight}`,
+        anticipatePin: 1,
+        pinSpacing: false,
+        onEnter: (self) => {
+          if (preventScroll.isEnabled === false) {
+            self.scroll(self.start);
+            preventScroll.enable();
+            intentObserver.enable();
+
+            gotoPanel(currentIndex + 1, true);
+          }
+        },
+        onEnterBack: (self) => {
+          if (preventScroll.isEnabled === false) {
+            self.scroll(self.start);
+            preventScroll.enable();
+            intentObserver.enable();
+
+            gotoPanel(currentIndex - 1, false);
+          }
+        },
+      });
+
+      // ScrollTrigger.create({
+      //   trigger: ".lenina-item-category-inner",
+      //   pin: true,
+      //   anticipatePin: true,
+      //   start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+      //   end: "+=50%",
+      //   onEnter: (self) => {
+      //     if (preventScroll.isEnabled === false) {
+      //       self.scroll(self.start);
+      //       preventScroll.enable();
+      //       intentObserver.enable();
+
+      //       gotoPanel(currentIndex + 1, true);
+      //     }
+      //   },
+      //   onEnterBack: (self) => {
+      //     if (preventScroll.isEnabled === false) {
+      //       self.scroll(self.start);
+      //       preventScroll.enable();
+      //       intentObserver.enable();
+
+      //       gotoPanel(currentIndex - 1, false);
+      //     }
+      //   },
+      // });
+
+      ScrollTrigger.config({
+        ignoreMobileResize: true,
+      });
+
+      function categoryInteraction() {
+        let panels = gsap.utils.toArray(".lenina-item-category__item");
+        // let dddd = gsap.utils.toArray(".lenina-item-category__list");
+        let tops = panels.map((panel) => ScrollTrigger.create({ trigger: panel, start: "top top" }));
+
+        panels.forEach((panel, i) => {
+          ScrollTrigger.create({
+            trigger: panel,
+            // start: () =>
+            //   panel.offsetHeight < window.innerHeight
+            //     ? "top top"
+            //     : "bottom bottom",
+            start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+            pin: true,
+            pinSpacing: false,
+          });
+        });
+
+        // ScrollTrigger.create({
+        //   snap: {
+        //     snapTo: (progress, self) => {
+        //       let panelStarts = tops.map((st) => st.start),
+        //         snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+        //       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
+        //     },
+        //     duration: 0.1,
+        //   },
+        // });
+      }
+      // categoryInteraction();
+
+      function ScaleAnimation(el) {
+        console.log(el);
+
+        el.classList.add("active");
+      }
+      // 이미지 배너 이미지
+
+      function imgBannerInteraction() {
+        const ani2 = gsap.timeline();
+        ani2
+          .from(".lenina-img-banner__img[data-img='01']", {
+            x: -100,
+            autoAlpha: 0,
+          })
+          .from(".lenina-img-banner__img[data-img='02']", {
+            x: 100,
+            autoAlpha: 0,
+          })
+          .from(".lenina-img-banner__img[data-img='03']", {
+            x: -100,
+            autoAlpha: 0,
+          })
+          .from(".lenina-img-banner__img[data-img='04']", {
+            x: 200,
+            autoAlpha: 0,
+          })
+          .from(".lenina-img-banner__img[data-img='05']", {
+            y: 100,
+            autoAlpha: 0,
+          });
+
+        ScrollTrigger.create({
+          animation: ani2,
+          trigger: ".lenina-img-banner",
+          // start: "top top",
+          start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+          end: "+=2000",
+          pinnedContainer: ".lenina-img-banner__img-list",
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          markers: false,
+        });
+      }
+
+      imgBannerInteraction();
+
+      // GSAP 가로스크롤 + 스크롤바
+
+      function setupHorizontalScroll() {
+        const container = document.querySelector(".lenina-new-arrivals");
+        const wrapper = container.querySelector(".lenina-new-arrivals__item-list");
+        const scrollbar = document.querySelector(".lenina-new-arrivals__scrollbar");
+        const scrollbarThumb = document.querySelector(".lenina-new-arrivals__scrollbar-thumb");
+
+        // 스크롤을 관리할 Tween을 생성합니다.
+        const scrollTween = gsap.to(wrapper, {
+          x: () => -(wrapper.clientWidth - container.clientWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: () => `+=${wrapper.clientWidth}`,
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            // markers: true,
+            duration: 3,
+            onUpdate: (self) => {
+              const progress = self.progress;
+              const scrollWidth = wrapper.scrollWidth - wrapper.clientWidth;
+              const thumbWidth = scrollbarThumb.offsetWidth;
+              const maxThumbPosition = scrollbar.clientWidth - thumbWidth;
+              const thumbPosition = progress * maxThumbPosition;
+              gsap.set(scrollbarThumb, { x: thumbPosition });
+
+              // 스크롤바의 길이를 조정합니다.
+              let scrollbarWidth = container.clientWidth * (container.clientWidth / wrapper.clientWidth);
+              scrollbarWidth = Math.min(container.clientWidth, scrollbarWidth); // 최대 컨테이너 너비로 제한합니다.
+              gsap.set(scrollbar, { width: scrollbarWidth });
+            },
+          },
+        });
+
+        // 컨테이너에 대한 스크롤 트리거를 설정합니다.
+        ScrollTrigger.create({
+          trigger: container,
+          start: "top top",
+          end: "bottom 20%",
+          onEnter: () => toDark(),
+          onLeave: () => toLight(),
+          onEnterBack: () => toDark(),
+          onLeaveBack: () => toLight(),
+        });
+
+        // 스크롤 바를 드래그할 때 내용물을 스크롤하도록 설정합니다.
+        Draggable.create(scrollbarThumb, {
+          type: "x",
+          bounds: ".lenina-new-arrivals__scrollbar",
+          inertia: true,
+          onDrag: function () {
+            const progress = this.x / (this.maxX - this.minX);
+            const scrollX = gsap.utils.mapRange(
+              0,
+              1,
+              0,
+              wrapper.clientWidth,
+              progress * (wrapper.clientWidth - container.clientWidth)
+            );
+            TweenMax.to(scrollTween, {
+              progress: progress,
+              scrollTo: { x: scrollX },
+            });
+          },
+        });
+
+        Draggable.create(".lenina-new-arrivals__item-list-wrap", {
+          type: "scrollLeft",
+          throwProps: true,
+        });
+      }
+
+      // 스크롤 위치에 따라 배경색을 변경하는 함수들입니다.
+      function toDark() {
+        gsap.to(".lenina-new-arrivals", {
+          backgroundColor: "#edd8d2",
+          duration: 1,
+          ease: "expo",
+        });
+      }
+
+      function toLight() {
+        gsap.to(".lenina-new-arrivals", {
+          backgroundColor: "#ebe2e0",
+          duration: 1,
+          ease: "expo",
+        });
+      }
+
+      // 함수를 호출하여 가로 스크롤을 설정합니다.
+      setupHorizontalScroll();
+
+      // 스크롤 스무스
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        // console.log(e);
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+    </script>
+  </body>
+</html>

@@ -6,7 +6,14 @@
    아이디 : lenina
    비밀번호 : Inditex11!!
 
+   테스트 페이지
+   PC https://lenina.kr/index_renewal.html
+   MO https://m.lenina.kr/index_renewal.html
+
 3. gsap
+   https://gsap.com
+   dev@yoil.co.kr / yoil3213!
+
    https://webstoryboy.github.io/gsap2023/gsap01.html
    https://webstoryboy.co.kr/1911
 

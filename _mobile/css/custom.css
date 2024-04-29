@@ -2,17 +2,13 @@
 
 @font-face {
   font-family: "Times";
-  src: local("Times New Roman"),
-    url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf")
-      format("truetype");
+  src: local("Times New Roman"), url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf") format("truetype");
   font-weight: normal;
   unicode-range: U+0030-0039;
 }
 @font-face {
   font-family: "Times";
-  src: local("Times New Roman Bold"),
-    url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf")
-      format("truetype");
+  src: local("Times New Roman Bold"), url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf") format("truetype");
   font-weight: bold;
   unicode-range: U+0030-0039;
 }
@@ -90,8 +86,7 @@ img {
   width: 100%;
   height: 50px;
   background: url("../img/button_frame__ribbon.svg") no-repeat center / contain;
-  filter: invert(49%) sepia(5%) saturate(1727%) hue-rotate(329deg)
-    brightness(96%) contrast(88%);
+  filter: invert(49%) sepia(5%) saturate(1727%) hue-rotate(329deg) brightness(96%) contrast(88%);
   pointer-events: none;
 }
 
@@ -151,20 +146,16 @@ section {
   }
 
   & .category__top {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat top center /
-      cover;
+    background: #edd8d2 url("../img/category_01.jpg") no-repeat top center / cover;
   }
   & .category__dress {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat top center /
-      cover;
+    background: #edd8d2 url("../img/category_02.jpg") no-repeat top center / cover;
   }
   & .category__shirt {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat top center /
-      cover;
+    background: #edd8d2 url("../img/category_03.jpg") no-repeat top center / cover;
   }
   & .category__denim {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat top center /
-      cover;
+    background: #edd8d2 url("../img/category_04.jpg") no-repeat top center / cover;
   }
 
   & .lenina-item-category__desc {
@@ -182,6 +173,7 @@ section {
     position: relative;
     text-align: center;
     font-size: 32px;
+    font-weight: 400;
     line-height: 1;
     color: var(--color-white);
     padding: 0 20px;
