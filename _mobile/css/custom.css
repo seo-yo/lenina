@@ -12,7 +12,10 @@
   font-weight: bold;
   unicode-range: U+0030-0039;
 }
-
+:root {
+  --color-white: #fff;
+  --font-play: "Playfair Display", serif;
+}
 /* RESET */
 :root {
   --color-white: #fff;
@@ -26,7 +29,7 @@ img {
 
 /* COMMON */
 .times-font {
-  font: 400 60px/1.4 Times, serif;
+  font: 400 calc(100vh * (14 / 665)) / 1.4 Times, serif;
 }
 .blind {
   position: absolute;
@@ -34,6 +37,9 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
+  overflow: hidden;
+}
+.split-line {
   overflow: hidden;
 }
 
@@ -86,7 +92,6 @@ img {
   width: 100%;
   height: 50px;
   background: url("../img/button_frame__ribbon.svg") no-repeat center / contain;
-  filter: invert(49%) sepia(5%) saturate(1727%) hue-rotate(329deg) brightness(96%) contrast(88%);
   pointer-events: none;
 }
 
@@ -117,18 +122,25 @@ section {
 }
 
 .lenina-text-banner {
-  padding: 82px 0 80px;
+  padding: 86px 0;
+  background: #fff;
   & figure {
     width: 40px;
     height: 40px;
     margin: 0 auto 16px;
   }
-  & h2,
-  & span {
-    font-size: 24px;
+  & h2 {
+    font: 400 20px/ 1.4 var(--font-play);
     line-height: 1.4;
     font-weight: 400;
     text-align: center;
+    color: #111;
+  }
+  & h2 div {
+    font-variant-numeric: lining-nums; /* high-level property          */
+    -moz-font-feature-settings: "lnum"; /* low-level (old Firefox)      */
+    -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit)       */
+    font-feature-settings: "lnum" on; /* low-level (all new browsers) */
   }
 }
 
@@ -229,13 +241,13 @@ section {
 }
 
 .lenina-img-banner {
-  width: auto;
-  min-width: 100%;
-  height: calc(100vh - 52px);
-  background-color: #eabeb0;
   display: grid;
   place-content: center;
+  width: 100%;
+  height: calc(100vh - 52px);
+  background: url("../img/img_banner_bg.jpg") no-repeat center / cover;
 
+  overflow: hidden;
   /* aspect-ratio: 375/665;
   background-color: #eabeb0; */
 
@@ -245,8 +257,8 @@ section {
     left: 0;
     content: "";
     width: 100%;
-    height: 90px;
-    background: url("../img/line_top.png") repeat-x bottom left / cover;
+    height: calc(100vh * (30 / 665));
+    background: url("../img/line_top.svg") repeat-x bottom left / cover;
   }
   &::before {
     position: absolute;
@@ -254,8 +266,8 @@ section {
     left: 0;
     content: "";
     width: 100%;
-    height: 60px;
-    background: url("../img/line_bottom.png") repeat-x top left / cover;
+    height: calc(100vh * (30 / 665));
+    background: url("../img/line_bottom.svg") repeat-x top left / cover;
   }
 
   & .lenina-img-banner__text-wrap {
@@ -284,7 +296,7 @@ section {
     font-weight: 400;
     line-height: 1;
     text-align: center;
-    color: rgba(128, 65, 52, 0.7);
+    color: rgba(89, 106, 131, 0.7);
     margin-bottom: calc(100vh * (31 / 665));
   }
   & .lenina-img-banner__title:after {
@@ -292,14 +304,14 @@ section {
     width: calc(100vh * (0.5 / 665));
     height: calc(100vh * (20 / 665));
     content: "";
-    background-color: #a27d71;
+    background-color: #596a83;
     margin: calc(100vh * (15 / 665)) auto 0;
   }
   & .lenina-img-banner__title span {
-    font-size: calc(100vh * (12 / 665));
+    /* font-size: calc(100vh * (12 / 665));
     font-weight: 400;
-    line-height: 1;
-    color: rgba(128, 65, 52, 0.7);
+    line-height: 1; */
+    color: rgba(89, 106, 131, 0.7);
   }
 
   & .lenina-img-banner__text-wrap a {
@@ -308,8 +320,7 @@ section {
 
   & .lenina-img-banner__img-list {
     position: absolute;
-    width: calc(100vh * (375 / 665));
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     top: 50%;
     left: 50%;
@@ -337,51 +348,48 @@ section {
 
   & .lenina-img-banner__img[data-img="02"] {
     top: calc(100vh * (89 / 665));
-    right: calc(100vh * (-11 / 665));
-    width: calc(100vh * (123 / 665));
+    right: 0;
+    width: calc(100vh * (112 / 665));
     height: calc(100vh * (153 / 665));
   }
   & .lenina-img-banner__img[data-img="03"] {
-    top: calc(100vh * (420 / 665));
+    bottom: calc(100vh * (65 / 665));
     left: 0;
     width: calc(100vh * (100 / 665));
     height: calc(100vh * (180 / 665));
   }
   & .lenina-img-banner__img[data-img="04"] {
-    bottom: calc(100vh * (47 / 665));
-    right: calc(100vh * (16 / 665));
+    bottom: calc(100vh * (48 / 665));
+    right: calc(100vh * (46 / 665));
     width: calc(100vh * (200 / 665));
     height: calc(100vh * (111 / 665));
   }
   & .lenina-img-banner__img[data-img="05"] {
     bottom: calc(100vh * (109 / 665));
-    right: calc(100vh * (-23 / 665));
-    width: calc(100vh * (92 / 665));
+    right: 0;
+    width: calc(100vh * (69 / 665));
     height: calc(100vh * (88 / 665));
   }
 }
 
 .lenina-new-arrivals {
-  height: 100svh;
+  height: 100vh;
   background: #edd8d2;
   padding: calc(100vh * (139 / 665)) 0;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 
-  /* & .lenina-new-arrivals__inner {
-    position: absolute;
-    top: 50%;
-    left: 0;
+  & .lenina-new-arrivals__inner {
     width: 100%;
-    transform: translateY(-50%);
-  } */
+  }
+
   & .lenina-new-arrivals__top {
-    position: absolute;
-    top: calc(100vh * (139 / 665));
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     padding: 0 calc(100vh * (16 / 665));
+    margin-bottom: calc(100vh * (20 / 665));
   }
   & .lenina-new-arrivals__title {
     color: #000;
@@ -402,21 +410,16 @@ section {
   & .lenina-new-arrivals__link span {
     width: calc(100vh * (14 / 665));
     height: calc(100vh * (5.4 / 665));
+    margin-top: calc(100vh * (2 / 665));
   }
 
-  & .lenina-new-arrivals__item-list {
-    /* 얘 때문에 가로스크롤 어쩌지 ㅋ */
-    position: absolute;
-    top: calc(100vh * (184 / 665));
-    display: flex;
-    padding: 0 calc(100vh * (16 / 665));
-    gap: calc(100vh * (8 / 665));
+  & .new-arrivals__swiper {
+    padding: 0 calc(100vh * (16 / 665)) calc(100vh * (34 / 665)) calc(100vh * (16 / 665));
   }
+
   & .new-arrivals-item {
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    width: calc(100vh * (176 / 665));
   }
   & .new-arrivals-item__img {
     width: 100%;
@@ -442,8 +445,8 @@ section {
   & .new-arrivals-item__price {
     display: flex;
     align-items: center;
-    gap: calc(100vh * (3 / 665));
-    letter-spacing: -1px;
+    gap: calc(100vh * (4 / 665));
+    /* letter-spacing: calc(100vh * (-0.5 / 665)); */
   }
   & .new-arrivals-item__price b {
     color: #000;
@@ -456,27 +459,18 @@ section {
     font-weight: 400;
   }
 
-  & .lenina-new-arrivals__scrollbar-wrap {
+  & .new-arrivals__swiper-scrollbar {
     position: absolute;
-    top: calc(100vh * (520 / 665));
-    width: 100vw;
+    top: unset;
+    left: 50%;
+    bottom: 0;
+    width: calc(100vw - calc(100vh * (32 / 665)));
     height: calc(100vh * (20 / 665));
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 calc(100vh * (16 / 665));
+    transform: translateX(-50%);
+    background-color: transparent;
   }
 
-  & .lenina-new-arrivals__scrollbar {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* margin: 0 auto; */
-    border: 1px solid gold;
-  }
-
-  & .lenina-new-arrivals__scrollbar:after {
+  & .new-arrivals__swiper-scrollbar:before {
     position: absolute;
     top: 50%;
     left: 0;
@@ -487,22 +481,26 @@ section {
     transform: translateY(-50%);
   }
 
-  & .lenina-new-arrivals__scrollbar-thumb {
-    position: absolute;
-    width: 100px;
-    height: 100%;
+  & .swiper-scrollbar-drag {
+    background-color: transparent;
   }
-  & .lenina-new-arrivals__scrollbar-thumb:after {
+  & .swiper-scrollbar-drag:after {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 100px;
     content: "";
-    height: calc(100vh * (2 / 665));
-    background-color: #000;
+    width: 100%;
+    height: calc(3 / 750 * 100vw);
+    background-color: #111;
+    border-radius: 0;
     transform: translateY(-50%);
+    /* pointer-events: none; */
+    transition: background-color 0.3s ease; /* 전환 효과 */
   }
-  & .lenina-new-arrivals__scrollbar-thumb:hover:after {
+
+  & .swiper-scrollbar-drag:active:after {
+    background-color: #363636; /* 색상 변경 */
+    box-shadow: 0 0 0 2px #363636; /* 그림자 효과 */
   }
 }
 
@@ -510,12 +508,14 @@ section {
   padding-top: 60px;
 
   & h2 {
-    width: 334px;
+    width: auto;
     color: #000;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
-    margin: 0 auto;
+    padding: 0 20px;
+    letter-spacing: 0;
+    /* text-wrap: pretty; */
   }
 }

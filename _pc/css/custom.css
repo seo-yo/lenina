@@ -154,11 +154,12 @@ section {
     font-weight: 400;
     text-align: center;
     color: #111;
-
-    /* font-feature-settings: "liga" 1; */
-    /* font-feature-settings: "liga1" on; */
-    font-optical-sizing: auto;
-    font-variant-numeric: tabular-nums;
+  }
+  & h2 div {
+    font-variant-numeric: lining-nums; /* high-level property          */
+    -moz-font-feature-settings: "lnum"; /* low-level (old Firefox)      */
+    -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit)       */
+    font-feature-settings: "lnum" on; /* low-level (all new browsers) */
   }
 }
 
@@ -270,8 +271,7 @@ section {
 .lenina-img-banner {
   display: grid;
   place-content: center;
-  width: auto;
-  min-width: 100%;
+  width: 100%;
   height: calc(100vh - 70px);
   background: url("../img/img_banner_bg.jpg") no-repeat center / cover;
   overflow: hidden;
@@ -298,14 +298,10 @@ section {
   }
 
   & .lenina-img-banner__text-wrap {
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* transform: translate(-50%, -50%); */
     z-index: 2;
   }
   & .lenina-img-banner__text-wrap::before {
@@ -521,19 +517,9 @@ section {
   & .lenina-new-arrivals__scrollbar {
     position: relative;
     width: calc(100vh * (1000 / 665));
-    /* max-width: 1000px; */
     height: 100%;
     margin: 0 auto;
     border: 1px solid gold;
-    /* z-index: 2;
-    position: fixed;
-    height: 50px;
-    background: coral;
-    top: calc(50% - 25px);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 1000px; */
   }
 
   & .lenina-new-arrivals__scrollbar:after {
@@ -551,10 +537,6 @@ section {
     position: absolute;
     width: calc(100vh * (300 / 665));
     height: 100%;
-    /* width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background: red; */
   }
   & .lenina-new-arrivals__scrollbar-thumb:after {
     position: absolute;
