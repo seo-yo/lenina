@@ -125,7 +125,7 @@ section {
   top: 0;
   left: 0; */
   aspect-ratio: 16/9;
-  background: url("../img/main_banner.jpg") no-repeat center / cover;
+  /* background: url("../img/main_banner.jpg") no-repeat center / cover; */
 
   & #vimeo-player {
     position: absolute;
@@ -164,7 +164,6 @@ section {
 
 .lenina-item-category {
   overflow: hidden;
-  /* height: 100vh; */
 
   & .lenina-item-category__list {
   }
@@ -172,10 +171,7 @@ section {
   & .lenina-item-category__item {
     display: flex;
     flex-direction: column;
-    /* height: calc(100vh - 70px); */
-    height: 100vh;
-    padding-top: 70px;
-    background-color: red;
+    height: calc(100vh - 70px);
   }
 
   & .category__top {
