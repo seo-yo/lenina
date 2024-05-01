@@ -62,9 +62,11 @@ https://velog.io/@kmmkyung/GSAP
 
 \*\* TODO ::
 
-- 24 숫자 폰트 처리하기
+- 24 숫자 폰트 처리하기 (0)
 - header back 보이는거 처리
 - Swiper 접근성 추가
+- 반응형 확인 [이미지배너 컨테이너 때문에 이슈있을 수있음]
+- 클래스명 변경하기
 
 ```js
 function cateTest() {

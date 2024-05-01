@@ -32,7 +32,6 @@ section {
 .times-font {
   font: 400 60px/1.4 Times, serif;
 }
-
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -102,12 +101,19 @@ section {
   pointer-events: none;
 }
 
+/* --font-main: 'Times New Roman', 'Noto Sans KR', sans-serif;
+--layout-padding: 16px;
+--color-main: #111;
+--color-black: #111;
+--color-gray: #AAA;
+--color-darkgray: #999;
+--color-gray-line: #DFDFDF;
+--color-gray-bg: #F4F4F6;
+} */
+/* #5E4D4D */
 /* MAIN */
 #main {
-  /* 폰트 굵기 이슈 반영 */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth: never;
+  background-color: #fff;
 }
 section {
   position: relative;
@@ -115,7 +121,11 @@ section {
 }
 
 .lenina-visual {
+  /* position: sticky;
+  top: 0;
+  left: 0; */
   aspect-ratio: 16/9;
+  /* background: url("../img/main_banner.jpg") no-repeat center / cover; */
 
   & #vimeo-player {
     position: absolute;
@@ -124,6 +134,7 @@ section {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
+    /* background-size: cover; */
     object-fit: cover;
   }
 }
@@ -138,22 +149,88 @@ section {
   }
 
   & h2 {
-    font: 200 40px/ 1.4 var(--font-play);
+    font: 400 40px/ 1.4 var(--font-play);
+    line-height: 1.4;
+    font-weight: 400;
     text-align: center;
     color: #111;
-
-    /* 숫자폰트 case-sensitive forms 적용 */
-    font-variant-numeric: lining-nums; /* high-level property */
-    -moz-font-feature-settings: "lnum"; /* low-level (old Firefox) */
-    -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit) */
+  }
+  & h2 div {
+    font-variant-numeric: lining-nums; /* high-level property          */
+    -moz-font-feature-settings: "lnum"; /* low-level (old Firefox)      */
+    -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit)       */
     font-feature-settings: "lnum" on; /* low-level (all new browsers) */
   }
 }
 
 .lenina-item-category {
+  position: relative;
+  height: 100vh;
   overflow: hidden;
+  background-color: #867f7f;
+
+  & .lenina-item-category__wrap {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
 
   & .lenina-item-category__list {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+
+    & .outer,
+    & .inner {
+      width: 100%;
+      height: 100%;
+      overflow-y: hidden;
+    }
+
+    & .bg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      background-size: cover;
+      background-position: center;
+
+      & h2 {
+        z-index: 2;
+      }
+
+      & .clip-text {
+        overflow: hidden;
+      }
+    }
+
+    & h2 * {
+      will-change: transform;
+    }
   }
 
   & .lenina-item-category__item {
@@ -162,17 +239,21 @@ section {
     height: calc(100vh - 70px);
   }
 
-  & .category__top {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat top center / cover;
+  & .category__top .bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url("../img/category_01.jpg") no-repeat top center / cover;
   }
-  & .category__dress {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat top center / cover;
+  & .category__dress .bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url("../img/category_02.jpg") no-repeat top center / cover;
   }
-  & .category__shirt {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat top center / cover;
+  & .category__shirt .bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url("../img/category_03.jpg") no-repeat top center / cover;
   }
-  & .category__denim {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat top center / cover;
+  & .category__denim .bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
+      url("../img/category_04.jpg") no-repeat top center / cover;
   }
 
   & .lenina-item-category__desc {
@@ -245,6 +326,16 @@ section {
     background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
   } */
 }
+
+/* 
+#horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 200%;
+}
+#horizontal > section {
+  width: 100%;
+} */
 .lenina-img-banner {
   display: grid;
   place-content: center;
@@ -252,6 +343,8 @@ section {
   height: calc(100vh - 70px);
   background: url("../img/img_banner_bg.jpg") no-repeat center / cover;
   overflow: hidden;
+  /* aspect-ratio: 1920/1080; */
+  /* overflow-x: hidden; */
 
   &::after {
     position: absolute;
@@ -304,7 +397,7 @@ section {
   & .lenina-img-banner__title:after {
     display: block;
     width: calc(100vh * (1 / 1080));
-    height: calc(100vh * (50 / 1080));
+    height: calc(100vh * (60 / 1080));
     content: "";
     background-color: #596a83;
     margin: calc(100vh * (31 / 1080)) auto 0;
@@ -463,29 +556,18 @@ section {
     display: flex;
     align-items: center;
     gap: 8px;
+    letter-spacing: -1px;
   }
   & .new-arrivals-item__price b {
-    max-width: 50%;
     color: #000;
     font-size: calc(100vh * (16 / 1080));
     font-weight: 700;
-
-    /* 한줄처리 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   & .new-arrivals-item__price s {
-    max-width: 50%;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(83, 19, 19, 0.4);
     font-size: calc(100vh * (16 / 1080));
     font-weight: 400;
     text-decoration-color: inherit;
-
-    /* 한줄처리 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   & .lenina-new-arrivals__scrollbar-wrap {
@@ -497,14 +579,15 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0 calc(100vh * (240 / 665)); */
+    padding: 0 calc(100vh * (240 / 665));
   }
 
   & .lenina-new-arrivals__scrollbar {
     position: relative;
-    width: clamp(0, calc(100vh * (1000 / 665)), 80%);
+    width: calc(100vh * (1000 / 665));
     height: 100%;
     margin: 0 auto;
+    border: 1px solid gold;
   }
 
   & .lenina-new-arrivals__scrollbar:after {
