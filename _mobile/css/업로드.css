@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @font-face {
   font-family: "Times";
   src: local("Times New Roman"), url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf") format("truetype");
@@ -17,9 +16,6 @@
   --font-play: "Playfair Display", serif;
 }
 /* RESET */
-:root {
-  --color-white: #fff;
-}
 figure {
   margin: 0;
 }
@@ -29,7 +25,7 @@ img {
 
 /* COMMON */
 .times-font {
-  font: 400 60px/1.4 Times, serif;
+  font: 400 calc(100vh * (14 / 665)) / 1.4 "Times", serif;
 }
 .blind {
   position: absolute;
@@ -43,14 +39,14 @@ img {
   overflow: hidden;
 }
 
+/* BUTTON */
 .lenina-button__basic {
   display: block;
   width: 217px;
   height: 54px;
-  background: url("../img/button_frame__basic.svg") no-repeat center / contain;
+  background: url("https://picsum.photos/200/300") no-repeat center / contain;
   padding: 7px;
 }
-
 .lenina-button__basic span {
   display: flex;
   align-items: center;
@@ -65,7 +61,6 @@ img {
   border-radius: 2px;
   transition: all 0.5s;
 }
-
 .lenina-button__ribbon {
   position: relative;
   display: block;
@@ -91,24 +86,24 @@ img {
   content: "";
   width: 100%;
   height: 50px;
-  background: url("../img/button_frame__ribbon.svg") no-repeat center / contain;
+  background: url("https://picsum.photos/200/300") no-repeat center / contain;
   pointer-events: none;
 }
 
-/* #5E4D4D */
 /* MAIN */
 #main {
-  /* overflow-x: hidden; */
+  /* 폰트 굵기 이슈 반영 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
 }
 section {
   position: relative;
   width: 100%;
 }
-
 .main-visual {
   aspect-ratio: 4/7.1;
-  background: url("../img/main_banner.jpg") no-repeat center / cover;
-
+  background: url("https://picsum.photos/200/300") no-repeat center / cover;
   & #vimeo-player {
     position: absolute;
     top: 50%;
@@ -116,7 +111,6 @@ section {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
-    /* background-size: cover; */
     object-fit: cover;
   }
 }
@@ -131,45 +125,34 @@ section {
   }
   & h2 {
     font: 400 20px/ 1.4 var(--font-play);
-    line-height: 1.4;
-    font-weight: 400;
     text-align: center;
-    color: #111;
-  }
-  & h2 div {
-    font-variant-numeric: lining-nums; /* high-level property          */
-    -moz-font-feature-settings: "lnum"; /* low-level (old Firefox)      */
-    -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit)       */
+    color: #111; /* 숫자폰트 case-sensitive forms 적용 */
+    font-variant-numeric: lining-nums; /* high-level property */
+    -moz-font-feature-settings: "lnum"; /* low-level (old Firefox) */
+    -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit) */
     font-feature-settings: "lnum" on; /* low-level (all new browsers) */
   }
 }
 
 .main-category {
   overflow: hidden;
-  /* height: 100vh; */
-
-  & .main-category__list {
-  }
-
   & .main-category__item {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 52px);
   }
-
   & .category__top {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://picsum.photos/200/300") no-repeat top center / cover;
   }
   & .category__dress {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://picsum.photos/200/300") no-repeat top center / cover;
   }
   & .category__shirt {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://picsum.photos/200/300") no-repeat top center / cover;
   }
   & .category__denim {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://picsum.photos/200/300") no-repeat top center / cover;
   }
-
   & .main-category__desc {
     position: relative;
     height: 100%;
@@ -180,7 +163,6 @@ section {
     padding-bottom: 36px;
     z-index: 1;
   }
-
   & .main-category__title {
     position: relative;
     text-align: center;
@@ -198,7 +180,7 @@ section {
     width: 21px;
     height: 18px;
     content: "";
-    background: url("../img/emblem_02.svg") no-repeat center / contain;
+    background: url("https://picsum.photos/200/300") no-repeat center / contain;
   }
   & .main-category__title:before {
     left: 0;
@@ -208,36 +190,6 @@ section {
     right: 0;
     transform: translate(100%, -50%);
   }
-
-  /*
-    position: relative;
-  width: 100%;
-  aspect-ratio: 375/664;
-  overflow: hidden;
-  
-  & .swpier-wrapper {
-    transition-timing-function: linear;
-  }
-  & .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(1) {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat center / cover;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(2) {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat center / cover;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(3) {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat center / cover;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(4) {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
-  } */
 }
 
 .main-gallery {
@@ -245,12 +197,8 @@ section {
   place-content: center;
   width: 100%;
   height: calc(100vh - 52px);
-  background: url("../img/img_banner_bg.jpg") no-repeat center / cover;
-
+  background: url("https://picsum.photos/200/300") no-repeat center / cover;
   overflow: hidden;
-  /* aspect-ratio: 375/665;
-  background-color: #eabeb0; */
-
   &::after {
     position: absolute;
     top: 0;
@@ -258,7 +206,7 @@ section {
     content: "";
     width: 100%;
     height: calc(100vh * (30 / 665));
-    background: url("../img/line_top.svg") repeat-x bottom left / cover;
+    background: url("https://picsum.photos/200/300") repeat-x bottom left / cover;
   }
   &::before {
     position: absolute;
@@ -267,9 +215,8 @@ section {
     content: "";
     width: 100%;
     height: calc(100vh * (30 / 665));
-    background: url("../img/line_bottom.svg") repeat-x top left / cover;
+    background: url("https://picsum.photos/200/300") repeat-x top left / cover;
   }
-
   & .main-gallery__text-wrap {
     position: relative;
     display: flex;
@@ -282,7 +229,7 @@ section {
     height: calc(100vh * (33 / 665));
     flex-shrink: 0;
     content: "";
-    background: url("../img/emblem_03.svg") no-repeat center / contain;
+    background: url("https://picsum.photos/200/300") no-repeat center / contain;
     margin-bottom: calc(100vh * (15 / 665));
   }
   & .main-gallery__text-wrap figure {
@@ -308,16 +255,11 @@ section {
     margin: calc(100vh * (15 / 665)) auto 0;
   }
   & .main-gallery__title span {
-    font-size: calc(100vh * (12 / 665));
-    font-weight: 400;
-    line-height: 1;
     color: rgba(89, 106, 131, 0.7);
   }
-
   & .main-gallery__text-wrap a {
     flex-shrink: 0;
   }
-
   & .main-gallery__img-list {
     position: absolute;
     width: 100%;
@@ -328,68 +270,39 @@ section {
     pointer-events: none;
     z-index: 1;
   }
-
   & .main-gallery__img {
     position: absolute;
-    height: 2px;
-    overflow: hidden;
-    transition: all 1s ease-out;
     transform-origin: top center;
-  }
-
-  & .main-gallery__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: scale(1.2);
-    transition: all 1s;
-  }
-
-  & .main-gallery__img.scroll_active img {
-    height: auto;
-    transform: scale(1);
-    outline: 10px solid red;
   }
   & .main-gallery__img[data-img="01"] {
     top: calc(100vh * (50 / 665));
     left: 50%;
     width: calc(100vh * (237 / 665));
+    height: calc(100vh * (132 / 665));
     transform: translateX(-50%);
   }
   & .main-gallery__img[data-img="02"] {
     top: calc(100vh * (89 / 665));
     right: 0;
     width: calc(100vh * (112 / 665));
-  }
-  & .main-gallery__img[data-img="03"] {
-    top: calc(100vh * (417 / 665));
-    left: 0;
-    width: calc(100vh * (100 / 665));
-  }
-  & .main-gallery__img[data-img="04"] {
-    top: calc(100vh * (503 / 665));
-    right: calc(100vh * (46 / 665));
-    width: calc(100vh * (200 / 665));
-  }
-  & .main-gallery__img[data-img="05"] {
-    top: calc(100vh * (465 / 665));
-    right: 0;
-    width: calc(100vh * (69 / 665));
-  }
-  & .main-gallery__img.scroll_active[data-img="01"] {
-    height: calc(100vh * (132 / 665));
-  }
-  & .main-gallery__img.scroll_active[data-img="02"] {
     height: calc(100vh * (153 / 665));
   }
-  & .main-gallery__img.scroll_active[data-img="03"] {
+  & .main-gallery__img[data-img="03"] {
+    bottom: calc(100vh * (65 / 665));
+    left: 0;
+    width: calc(100vh * (100 / 665));
     height: calc(100vh * (180 / 665));
   }
-  & .main-gallery__img.scroll_active[data-img="04"] {
+  & .main-gallery__img[data-img="04"] {
+    bottom: calc(100vh * (48 / 665));
+    right: calc(100vh * (46 / 665));
+    width: calc(100vh * (200 / 665));
     height: calc(100vh * (111 / 665));
   }
-  & .main-gallery__img.scroll_active[data-img="05"] {
+  & .main-gallery__img[data-img="05"] {
+    bottom: calc(100vh * (109 / 665));
+    right: 0;
+    width: calc(100vh * (69 / 665));
     height: calc(100vh * (88 / 665));
   }
 }
@@ -397,14 +310,12 @@ section {
 .main-products {
   height: 100vh;
   background: #edd8d2;
-  /* padding: calc(100vh * (139 / 665)) 0; */
+  padding: calc(100vh * (139 / 665)) 0;
   display: flex;
   align-items: center;
-
   & .main-products__inner {
     width: 100%;
   }
-
   & .main-products__top {
     display: flex;
     align-items: baseline;
@@ -434,7 +345,6 @@ section {
     height: calc(100vh * (5.4 / 665));
     margin-top: calc(100vh * (2 / 665));
   }
-
   & .card-product__swiper {
     padding: 0 calc(100vh * (16 / 665)) calc(100vh * (34 / 665)) calc(100vh * (16 / 665));
   }
@@ -454,9 +364,7 @@ section {
     font-size: calc(100vh * (14 / 665));
     font-weight: 400;
     line-height: normal;
-    margin-bottom: calc(100vh * (8 / 665));
-
-    /* 두줄처리 */
+    margin-bottom: calc(100vh * (8 / 665)); /* 두줄처리 */
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -468,30 +376,35 @@ section {
     display: flex;
     align-items: center;
     gap: calc(100vh * (4 / 665));
-    /* letter-spacing: calc(100vh * (-0.5 / 665)); */
   }
   & .card-product__price b {
+    max-width: 50%;
     color: #000;
     font-size: calc(100vh * (14 / 665));
-    font-weight: 700;
+    font-weight: 700; /* 한줄처리 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   & .card-product__price s {
+    max-width: 50%;
     color: rgba(0, 0, 0, 0.4);
     font-size: calc(100vh * (14 / 665));
-    font-weight: 400;
+    font-weight: 400; /* 한줄처리 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-
   & .card-product__swiper-scrollbar {
     position: absolute;
     top: unset;
     left: 50%;
-    bottom: calc(100vh * (140 / 665));
+    bottom: 0;
     width: calc(100vw - calc(100vh * (32 / 665)));
     height: calc(100vh * (20 / 665));
     transform: translateX(-50%);
     background-color: transparent;
   }
-
   & .card-product__swiper-scrollbar:before {
     position: absolute;
     top: 50%;
@@ -502,7 +415,6 @@ section {
     background-color: rgba(0, 0, 0, 0.1);
     transform: translateY(-50%);
   }
-
   & .swiper-scrollbar-drag {
     background-color: transparent;
   }
@@ -516,12 +428,9 @@ section {
     background-color: #111;
     border-radius: 0;
     transform: translateY(-50%);
-    /* pointer-events: none; */
     transition: background-color 0.3s ease; /* 전환 효과 */
   }
-
-  & .swiper-scrollbar-drag:active:after,
-  & .swiper-scrollbar-drag:hover:after {
+  & .swiper-scrollbar-drag:active:after {
     background-color: #363636; /* 색상 변경 */
     box-shadow: 0 0 0 2px #363636; /* 그림자 효과 */
   }
@@ -529,7 +438,6 @@ section {
 
 .main-bottom-text-banner {
   padding-top: 60px;
-
   & h2 {
     width: auto;
     color: #000;
@@ -538,7 +446,6 @@ section {
     font-weight: 400;
     line-height: normal;
     padding: 0 20px;
-    letter-spacing: 0;
-    /* text-wrap: pretty; */
+    letter-spacing: -0.1px;
   }
 }

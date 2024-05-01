@@ -14,10 +14,14 @@
     <!-- // PG크로스브라우징필수내용 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -33,15 +37,19 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/custom.css" />
     <script src="./js/common.js" defer></script>
+
     <!-- 추가한 소스 코드 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" />
     <!-- lenis 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
   </head>
   <body id="main">
     <!-- <div class="player-box-wrap">
@@ -81,12 +89,16 @@
           <div class="gnb de-cate">
             <ul class="xans-element- xans-layout xans-layout-category cate-list">
               <!-- (수정금지) 상품 카테고리는 관리자와 연동되어 있습니다. -->
-              <li id="cate53" class="xans-record-"><a href="/category/shop/53/" class="cate" cate="?cate_no=53">SHOP</a><span class="view"></span></li>
+              <li id="cate53" class="xans-record-">
+                <a href="/category/shop/53/" class="cate" cate="?cate_no=53">SHOP</a><span class="view"></span>
+              </li>
               <li id="cate64" class="xans-record-">
-                <a href="/category/collection/64/" class="cate" cate="?cate_no=64">COLLECTION</a><span class="view"></span>
+                <a href="/category/collection/64/" class="cate" cate="?cate_no=64">COLLECTION</a
+                ><span class="view"></span>
               </li>
               <li id="cate201" class="xans-record-">
-                <a href="/category/denim-collection/201/" class="cate" cate="?cate_no=201">DENIM COLLECTION</a><span class="view"></span>
+                <a href="/category/denim-collection/201/" class="cate" cate="?cate_no=201">DENIM COLLECTION</a
+                ><span class="view"></span>
               </li>
               <li class="featured">
                 <a href="/event/sana" class="board">LENINA X SANA</a>
@@ -141,12 +153,16 @@
         <div class="fnav">
           <ul class="xans-element- xans-layout xans-layout-category cate-list">
             <!-- (수정금지) 상품 카테고리는 관리자와 연동되어 있습니다. -->
-            <li id="cate53" class="xans-record-"><a href="/category/shop/53/" class="cate" cate="?cate_no=53">SHOP</a><span class="view"></span></li>
+            <li id="cate53" class="xans-record-">
+              <a href="/category/shop/53/" class="cate" cate="?cate_no=53">SHOP</a><span class="view"></span>
+            </li>
             <li id="cate64" class="xans-record-">
-              <a href="/category/collection/64/" class="cate" cate="?cate_no=64">COLLECTION</a><span class="view"></span>
+              <a href="/category/collection/64/" class="cate" cate="?cate_no=64">COLLECTION</a
+              ><span class="view"></span>
             </li>
             <li id="cate201" class="xans-record-">
-              <a href="/category/denim-collection/201/" class="cate" cate="?cate_no=201">DENIM COLLECTION</a><span class="view"></span>
+              <a href="/category/denim-collection/201/" class="cate" cate="?cate_no=201">DENIM COLLECTION</a
+              ><span class="view"></span>
             </li>
             <li class="featured">
               <a href="/event/sana" class="board">LENINA X SANA</a>
@@ -196,7 +212,14 @@
 
     <div class="de-search">
       <div class="inner">
-        <form id="searchBarForm" name="" action="/product/search.html" method="get" target="_self" enctype="multipart/form-data">
+        <form
+          id="searchBarForm"
+          name=""
+          action="/product/search.html"
+          method="get"
+          target="_self"
+          enctype="multipart/form-data"
+        >
           <input id="banner_action" name="banner_action" value="" type="hidden" />
           <div class="xans-element- xans-layout xans-layout-searchheader search-area">
             <!--
@@ -244,12 +267,12 @@
         <!-- S : 메인 비쥬얼 -->
         <section class="main-visual">
           <h2 class="blind">메인 비쥬얼</h2>
-          <!-- <iframe
+          <iframe
             id="vimeo-player"
             src="https://player.vimeo.com/video/921917600?h=0afbfa0f69&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;byline=0&amp;controls=0&amp;loop=1&amp;pip=0&amp;playsinlin=0&amp;portrait=0&amp;title=0&amp;background=1&amp;muted=1"
             frameborder="0"
-            title="LENINA SPRING TEASER WEB"
-          ></iframe> -->
+            title="LENINA SUMMER TEASER WEB"
+          ></iframe>
         </section>
         <!-- E : 메인 비쥬얼 -->
 
@@ -258,9 +281,9 @@
           <figure>
             <img src="./img/emblem_01.svg" alt="장식" />
           </figure>
-          <h2 class="animate-text">
-            Collection Printemps <span class="times-font">24</span><br />
-            de Lenina avec la nouvelle muse Sana
+          <h2 class="text-animation">
+            24 SUMMER COLLECTION<br />
+            Mon cher, My summer
           </h2>
         </section>
         <!-- E : 텍스트 배너 -->
@@ -268,33 +291,32 @@
         <!-- S : 상품 카테고리 -->
         <section class="main-category">
           <h2 class="blind">상품 카테고리 리스트</h2>
-          <div class="main-category__inner">
-              <ul class="">
-                <li class="main-category__item">
-                  <div class="main-category__desc">
-                    <p class="main-category__title">TOP</p>
-                    <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                  </div>
-                </li>
-                <li class="main-category__item">
-                  <div class="main-category__desc">
-                    <p class="main-category__title">DRESS</p>
-                    <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                  </div>
-                </li>
-                <li class="main-category__item">
-                  <div class="main-category__desc">
-                    <p class="main-category__title">SHIRT</p>
-                    <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                  </div>
-                </li>
-                <li class="main-category__item">
-                  <div class="main-category__desc">
-                    <p class="main-category__title">DENIM</p>
-                    <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                  </div>
-                </li>
-              </ul>
+          <div class="main-category__wrap">
+            <div class="main-category__list">
+              <div class="main-category__item category__top">
+                <div class="main-category__desc">
+                  <p class="main-category__title text-animation">TOP</p>
+                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+                </div>
+              </div>
+              <div class="main-category__item category__dress">
+                <div class="main-category__desc">
+                  <p class="main-category__title text-animation">DRESS</p>
+                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+                </div>
+              </div>
+              <div class="main-category__item category__shirt">
+                <div class="main-category__desc">
+                  <p class="main-category__title text-animation">SHIRT</p>
+                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+                </div>
+              </div>
+              <div class="main-category__item category__denim">
+                <div class="main-category__desc">
+                  <p class="main-category__title text-animation">DENIM</p>
+                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -306,7 +328,9 @@
             <figure>
               <img src="https://lenina.kr/web/upload/drawcode/logo.svg" alt="Lenina" />
             </figure>
-            <h2 class="main-gallery__title"><span class="times-font">24</span>&nbsp;SUMMER COLLECTION</h2>
+            <h2 class="main-gallery__title text-animation">
+              <span class="times-font">24</span>&nbsp;SUMMER COLLECTION
+            </h2>
             <a href="" class="lenina-button__ribbon"><span>Discover Now</span></a>
           </div>
 
@@ -335,7 +359,7 @@
         <section class="main-products">
           <!-- <div class="main-products__inner"> -->
           <div class="main-products__top">
-            <h2 class="main-products__title">New Arrival</h2>
+            <h2 class="main-products__title">New Arrivals</h2>
             <a href="" class="main-products__link">
               <b>Discover Now</b>
               <span>
@@ -343,6 +367,7 @@
               </span>
             </a>
           </div>
+          <!-- <div class="main-products__item-list-wrap"> -->
           <ul class="main-products__item-list">
             <li class="card-product">
               <figure class="card-product__img">
@@ -357,7 +382,9 @@
                 <img src="./img/slide_item_02.jpg" alt="제품명" />
               </figure>
               <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="card-product__price"><b class="times-font">218,000</b></p>
+              <p class="card-product__price">
+                <b class="times-font">218,000</b>
+              </p>
             </li>
 
             <li class="card-product">
@@ -408,6 +435,7 @@
               <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
           </ul>
+          <!-- </div> -->
           <div class="main-products__scrollbar-wrap">
             <div class="main-products__scrollbar">
               <div class="main-products__scrollbar-thumb"></div>
@@ -419,9 +447,10 @@
 
         <!-- S : 하단 텍스트 -->
         <section class="main-bottom-text-banner">
-          <h2>
-            Experience authentic French mood in Korea. We suggest styles that allow modern women to mix and match in their daily lives, transforming the
-            ordinary with exquisite details, colors, and patterns. Discover your unique charm beyond the mundane.
+          <h2 class="line-text-animation">
+            Experience authentic French mood in Korea. We suggest styles that allow modern women to mix and match in
+            their daily lives, transforming the ordinary with exquisite details, colors, and patterns. Discover your
+            unique charm beyond the mundane.
           </h2>
         </section>
         <!-- E : 하단 텍스트 -->
@@ -460,12 +489,21 @@
             <ul>
               <li><span>상호</span>{$company_name}</li>
               <li><span>대표자</span>{$president_name}</li>
-              <li><span>사업자등록번호</span>{$company_regno}<a href="#none" onclick="{$action_biz_info}">[사업자정보확인]</a></li>
+              <li>
+                <span>사업자등록번호</span>{$company_regno}<a href="#none" onclick="{$action_biz_info}"
+                  >[사업자정보확인]</a
+                >
+              </li>
               <li><span>통신판매업</span>{$network_regno}</li>
               <li><span>주소</span>{$mall_zipcode} {$mall_addr1} {$mall_addr2}</li>
               <li><span>개인정보보호책임자</span>{$cpo_name} ({$cpo_email})</li>
             </ul>
-            <p class="safe">고객님은 안전거래를 위해 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스를 이용하실 수 있습니다.<a href="#none">[확인]</a></p>
+            <p class="safe">
+              고객님은 안전거래를 위해 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스를 이용하실 수 있습니다.<a
+                href="#none"
+                >[확인]</a
+              >
+            </p>
           </div>
         </div>
 
@@ -536,7 +574,11 @@
       <div id="progressPaybarView">
         <div class="box">
           <p class="graph">
-            <span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
+            <span
+              ><img
+                src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif"
+                alt="현재 결제가 진행중입니다."
+            /></span>
             <span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt="" /></span>
           </p>
           <p class="txt">
@@ -551,132 +593,360 @@
     <span itemscope="" itemtype="https://schema.org/Organization">
       <link itemprop="url" href="https://www.lenina.kr" />
     </span>
-
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <!-- The following plugins are only available for Club GSAP members.-->
+    <script src="./js/DrawSVGPlugin.min.js"></script>
+    <script src="./js/ScrollSmoother.min.js"></script>
+    <script src="./js/MotionPathHelper.min.js"></script>
+    <script src="./js/ScrambleTextPlugin.min.js"></script>
+    <script src="./js/SplitText.min.js"></script>
     <script>
-     
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(DrawSVGPlugin, ScrollSmoother, MotionPathHelper, ScrambleTextPlugin, SplitText);
+      });
+      // 스크롤 스무스
+      const lenis = new Lenis();
 
-      // GSAP 가로스크롤
-      const container = document.querySelector(".main-products");
-      const wrapper = container.querySelector(".main-products__item-list");
-      console.log(wrapper.clientWidth - container.clientWidth);
-      console.log(wrapper.clientWidth, container.clientWidth, wrapper.clientWidth - container.clientWidth);
-      // console.clear();
-      const toDark = () => {
-        gsap.to(container, {
+      lenis.on("scroll", (e) => {
+        // console.log(e);
+      });
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
+
+      // 비쥬얼배너 고정
+      function visualFixed() {
+        const panel = document.querySelector(".main-visual");
+
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+        });
+      }
+      visualFixed();
+      const headerHeight = "70px";
+      // gsap 카테고리
+      function categoryInteraction() {
+        let panels = gsap.utils.toArray(".main-category__item");
+        // let dddd = gsap.utils.toArray(".main-category__list");
+        let tops = panels.map((panel) => ScrollTrigger.create({ trigger: panel, start: "top top" }));
+
+        panels.forEach((panel, i) => {
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+            pin: true,
+            pinSpacing: false,
+          });
+        });
+
+        // ScrollTrigger.create({
+        //   snap: {
+        //     snapTo: (progress, self) => {
+        //       let panelStarts = tops.map((st) => st.start),
+        //         snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+        //       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
+        //     },
+        //     duration: 0.1,
+        //   },
+        // });
+      }
+      categoryInteraction();
+
+      function ScaleAnimation(el) {
+        console.log(el);
+
+        el.classList.add("active");
+      }
+      // 이미지 배너 이미지
+
+      function imgBannerInteraction() {
+        const ani2 = gsap.timeline();
+        ani2
+          .from(".main-gallery__img[data-img='01']", {
+            x: -100,
+            autoAlpha: 0,
+            // onStart: () => ScaleAnimation(document.querySelector(".main-gallery__img[data-img='01']")),
+          })
+          .from(".main-gallery__img[data-img='02']", {
+            x: 100,
+            autoAlpha: 0,
+            // onStart: () => ScaleAnimation(document.querySelector(".main-gallery__img[data-img='02']")),
+          })
+          .from(".main-gallery__img[data-img='03']", {
+            x: -100,
+            autoAlpha: 0,
+            // onStart: () => ScaleAnimation(document.querySelector(".main-gallery__img[data-img='03']")),
+          })
+          .from(".main-gallery__img[data-img='04']", {
+            x: 200,
+            autoAlpha: 0,
+            // onStart: () => ScaleAnimation(document.querySelector(".main-gallery__img[data-img='04']")),
+          })
+          .from(".main-gallery__img[data-img='05']", {
+            y: 100,
+            autoAlpha: 0,
+            // onStart: () => ScaleAnimation(document.querySelector(".main-gallery__img[data-img='05']")),
+          });
+
+        ScrollTrigger.create({
+          animation: ani2,
+          trigger: ".main-gallery",
+          // start: "top top",
+          start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+          end: "+=2000",
+          pinnedContainer: ".main-gallery__img-list",
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          markers: false,
+        });
+      }
+
+      imgBannerInteraction();
+
+      // GSAP 가로스크롤 + 스크롤바
+      function setupHorizontalScroll() {
+        const container = document.querySelector(".main-products");
+        const wrapper = container.querySelector(".main-products__item-list");
+        const scrollbar = document.querySelector(".main-products__scrollbar");
+        const scrollbarThumb = document.querySelector(".main-products__scrollbar-thumb");
+
+        // 스크롤을 관리할 Tween을 생성합니다.
+        const scrollTween = gsap.to(wrapper, {
+          x: () => -(wrapper.clientWidth - container.clientWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: () => `+=${wrapper.clientWidth}`,
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            // markers: true,
+            duration: 3,
+            onUpdate: (self) => {
+              const progress = self.progress;
+              const scrollWidth = wrapper.scrollWidth - wrapper.clientWidth;
+              const thumbWidth = scrollbarThumb.offsetWidth;
+              const maxThumbPosition = scrollbar.clientWidth - thumbWidth;
+              const thumbPosition = progress * maxThumbPosition;
+              gsap.set(scrollbarThumb, { x: thumbPosition });
+
+              // 스크롤바의 길이를 조정합니다.
+              let scrollbarWidth = container.clientWidth * (container.clientWidth / wrapper.clientWidth);
+              scrollbarWidth = Math.min(container.clientWidth, scrollbarWidth); // 최대 컨테이너 너비로 제한합니다.
+              gsap.set(scrollbar, { width: scrollbarWidth });
+            },
+          },
+        });
+
+        // 컨테이너에 대한 스크롤 트리거를 설정합니다.
+        ScrollTrigger.create({
+          trigger: container,
+          start: "top top",
+          end: "bottom 20%",
+          // onEnter: () => toDark(),
+          // onLeave: () => toLight(),
+          // onEnterBack: () => toDark(),
+          // onLeaveBack: () => toLight(),
+        });
+
+        // 스크롤 바를 드래그할 때 내용물을 스크롤하도록 설정합니다.
+        Draggable.create(scrollbarThumb, {
+          type: "x",
+          bounds: ".main-products__scrollbar",
+          inertia: true,
+          onDrag: function () {
+            const progress = this.x / (this.maxX - this.minX);
+            const scrollX = gsap.utils.mapRange(
+              0,
+              1,
+              0,
+              wrapper.clientWidth,
+              progress * (wrapper.clientWidth - container.clientWidth)
+            );
+            TweenMax.to(scrollTween, {
+              progress: progress,
+              scrollTo: { x: scrollX },
+            });
+          },
+        });
+
+        // Draggable.create(".main-products__item-list-wrap", {
+        //   // type: "scrollLeft",
+        //   // throwProps: true,
+        //   //dragResistance:  -0.5,
+        //   // type: "x",
+        //   // bounds: ".main-products__scrollbar",
+        //   // inertia: true,
+        //   // onDrag: function () {
+        //   //   const progress = this.x / (this.maxX - this.minX);
+        //   //   const scrollX = gsap.utils.mapRange(0, 1, 0, wrapper.clientWidth, progress * (wrapper.clientWidth - container.clientWidth));
+        //   //   TweenMax.to(scrollTween, {
+        //   //     progress: progress,
+        //   //     scrollTo: { x: scrollX },
+        //   //   });
+        //   // },
+        // });
+      }
+
+      // 스크롤 위치에 따라 배경색을 변경하는 함수들입니다.
+      function toDark() {
+        gsap.to(".main-products", {
           backgroundColor: "#edd8d2",
           duration: 1,
           ease: "expo",
         });
-      };
-      const toLight = () => {
-        gsap.to(container, {
+      }
+
+      function toLight() {
+        gsap.to(".main-products", {
           backgroundColor: "#ebe2e0",
           duration: 1,
           ease: "expo",
         });
-      };
+      }
 
-      gsap.set(container, { backgroundColor: "#ebe2e0" });
+      // 함수를 호출하여 가로 스크롤을 설정합니다.
+      setupHorizontalScroll();
 
-      ScrollTrigger.create({
-        trigger: container,
-        start: "top top", // 뷰포트 상단에서 지점에서 시작
-        end: "bottom 20%", // 뷰포트 하단에서 20% 지점에서 끝
-        onEnter: () => {
-          toDark();
-        },
-        onLeave: () => {
-          toLight();
-        },
-        onEnterBack: () => {
-          toDark();
-        },
-        onLeaveBack: () => {
-          toLight();
-        },
-      });
+      // 텍스트 애니메이션
+      const quotes = document.querySelectorAll(".text-animation");
+      const animTarget = document.querySelectorAll(".line-text-animation");
 
-      let scrollTween = gsap.to(wrapper, {
-        x: () => -(wrapper.clientWidth - container.clientWidth),
-        ease: "none",
-        scrollTrigger: {
-          // trigger: container,
-          // start: "top top",
-          // end: () => `${wrapper.clientWidth - container.clientWidth}`,
-          trigger: container,
-          start: "top top", // 뷰포트 상단에서 지점에서 시작
-          end: "bottom 20%", // 뷰포트 하단에서 20% 지점에서 끝
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          markers: true,
-        },
-      });
+      function setupSplits() {
+        quotes.forEach((quote) => {
+          // Reset if needed
+          if (quote.anim) {
+            quote.anim.progress(1).kill();
+            quote.split.revert();
+          }
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: "top top",
-          end: () => `${wrapper.clientWidth - container.clientWidth}`,
-          scrub: 1,
-        },
-      });
+          quote.split = new SplitText(quote, {
+            type: "lines,words,chars",
+            linesClass: "split-line",
+          });
 
+          // Set up the anim
+          quote.anim = gsap.from(quote.split.chars, {
+            scrollTrigger: {
+              trigger: quote,
+              toggleActions: "restart pause resume reverse",
+              start: "top 80%",
+            },
+            duration: 0.6,
+            ease: "circ.out",
+            y: "100%",
+            stagger: 0.02,
+          });
+        });
+      }
 
-//       // 텍스트 이벤트
-//       const quotes = document.querySelectorAll(".animate-text");
+      function setupSplits2() {
+        // SplitText 플러그인을 사용하여 텍스트 분할
+        const split = new SplitText(animTarget, { type: "lines" });
 
-// function setupSplits() {
-//   quotes.forEach(quote => {
-//     // Reset if needed
-//     if(quote.anim) {
-//       quote.anim.progress(1).kill();
-//       quote.split.revert();
-//     }
+        // GSAP 타임라인 생성
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".main-bottom-text-banner", // 트리거 요소
+            start: "top 60%", // 트리거 요소 상단에 닿을 때 실행
+            // end: "bottom 20%", // 트리거 요소 하단에 닿을 때 실행
+            id: "마지막",
+            toggleActions: "play none none reverse", // 진입 시 재생, 벗어날 때 역방향 재생
+            markers: true, // 마커 표시 (디버깅용)
+          },
+        });
 
-//     quote.split = new SplitText(quote, { 
-//       type: "lines,words,chars",
-//       linesClass: "split-line"
-//     });
+        // 애니메이션 설정
+        tl.from(split.lines, {
+          opacity: 0,
+          y: "50%",
+          duration: 1,
+          ease: "power4.out",
+          stagger: {
+            each: 0.05, // 각 줄 사이의 시간 간격
+            from: "start", // 앞에서부터 순차적으로 실행
+          },
+        });
+      }
 
-//     // Set up the anim
-//     quote.anim = gsap.from(quote.split.chars, {
-//       scrollTrigger: {
-//         trigger: quote,
-//         toggleActions: "restart pause resume reverse",
-//         start: "top 50%",
-//       },
-//       duration: 0.6, 
-//       ease: "circ.out", 
-//       y: 80, 
-//       stagger: 0.02,
-//     });
-//   });
-// }
+      ScrollTrigger.addEventListener("refresh", setupSplits);
+      setupSplits();
+      ScrollTrigger.addEventListener("refresh", setupSplits2);
+      setupSplits2();
 
-// ScrollTrigger.addEventListener("refresh", setupSplits);
-// setupSplits();
+      // 밀리는 이미지
+      // const firstGroupImages = document.querySelectorAll(".card-product:nth-child(3n+1)");
 
+      // const test = document.getElementsByClassName("test")[0];
 
+      // gsap.to(test, {
+      //   y: -120,
+      //   backgroundColor: "#1e90ff",
+      //   ease: "none",
+      //   scrollTrigger: {
+      //     trigger: test,
+      //     containerAnimation: scrollTween,
+      //     start: "center center",
+      //     end: "left left",
+      //     scrub: true,
+      //   },
+      // });
 
-      // create the scrollSmoother before your scrollTriggers
-//       <body>
-//   <div id="smooth-wrapper">
-//     <div id="smooth-content">
-//       <!--- ALL YOUR CONTENT HERE --->
-//     </div>
-//   </div>
-//   <!-- position: fixed elements can go outside --->
-// </body>
-      // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-// ScrollSmoother.create({
-//   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-//   effects: true, // looks for data-speed and data-lag attributes on elements
-//   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-// });
+      // const $HORIZON_SECTION = gsap.utils.toArray("#horizontal .card-product");
+      // const list = document.querySelector(".main-products__item-list");
+      // console.log($HORIZON_SECTION[0].offsetWidth * $HORIZON_SECTION.length);
+      // let scrollTween = gsap.to($HORIZON_SECTION, {
+      //   // xPercent: -100 * ($HORIZON_SECTION.length - 1),
+      //   xPercent: -100 * ($HORIZON_SECTION.length - 1),
+      //   ease: "none",
+      //   scrollTrigger: {
+      //     trigger: horizontal,
+      //     start: "top top",
+      //     end: () => "+=" + $HORIZON_SECTION[0].offsetWidth * $HORIZON_SECTION.length,
+      //     pin: true,
+      //     anticipatePin: 1,
+      //     scrub: 0.5,
+      //     invalidateOnRefresh: true,
+      //   },
+      // });
 
+      // 이미지 축소하기
+      // const visualAnimation = gsap.timeline();
+      // visualAnimation.from(".main-visual figure", {
+      //   autoAlpha: 0,
+      //   scale: 5,
+      //   width: "100vw",
+      //   height: "100vh",
+      // });
 
+      // ScrollTrigger.create({
+      //   animation: visualAnimation,
+      //   trigger: ".main-visual",
+      //   start: "top top",
+      //   end: "+=3000",
+      //   scrub: true,
+      //   pin: true,
+      //   markers: false,
+      //   anticipatePin: 1,
+      // });
     </script>
   </body>
 </html>

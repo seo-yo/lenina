@@ -24,6 +24,12 @@ https://gsap.com/community/forums/topic/40401-slider-auto-scrolling-draggable-sc
 5. gsap codepen
    https://codepen.io/GreenSock/collections/?cursor=ZD0xJm89MCZwPTU=
 
+6. css-compact
+   shift+alt+f
+
+7. gsap 강의
+   https://www.creativecodingclub.com/courses/FreeGSAP3Express#sample
+
 텍스트 이벤트
 스크롤 부드럽게
 
@@ -70,7 +76,7 @@ https://velog.io/@kmmkyung/GSAP
 
 ```js
 function cateTest() {
-  let sections = document.querySelectorAll("lenina-item-category__item"),
+  let sections = document.querySelectorAll("main-category__item"),
     images = document.querySelectorAll(".bg"),
     headings = gsap.utils.toArray(".section-heading"),
     outerWrappers = gsap.utils.toArray(".outer"),

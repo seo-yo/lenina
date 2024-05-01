@@ -82,6 +82,13 @@
     />
     <!-- lenis 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
   </head>
   <body id="layout">
     <div id="wrap">
@@ -203,19 +210,23 @@
         <!-- S : 메인 비쥬얼 -->
         <section class="main-visual">
           <h2 class="blind">메인 비쥬얼</h2>
-          <!-- <iframe
+          <iframe
             id="vimeo-player"
             src="https://player.vimeo.com/video/921917600?h=0afbfa0f69&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;byline=0&amp;controls=0&amp;loop=1&amp;pip=0&amp;playsinlin=0&amp;portrait=0&amp;title=0&amp;background=1&amp;muted=1"
             frameborder="0"
             title="LENINA SUMMER TEASER WEB"
-          ></iframe> -->
+          ></iframe>
         </section>
         <!-- E : 메인 비쥬얼 -->
 
         <!-- S : 텍스트 배너 -->
         <section class="main-text-banner">
           <figure>
-            <img src="./img/emblem_01.svg" alt="장식" />
+            <img
+              src="./img/emblem_01.svg"
+              alt="장식"
+              onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+            />
           </figure>
           <h2 class="text-animation">
             24 SUMMER COLLECTION<br />
@@ -262,7 +273,11 @@
         <section class="main-gallery">
           <div class="main-gallery__text-wrap">
             <figure>
-              <img src="https://lenina.kr/web/upload/drawcode/logo.svg" alt="Lenina" />
+              <img
+                src="https://lenina.kr/web/upload/drawcode/logo.svg"
+                alt="Lenina"
+                onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+              />
             </figure>
             <h2 class="main-gallery__title text-animation">
               <span class="times-font">24</span>&nbsp;SUMMER COLLECTION
@@ -272,19 +287,39 @@
 
           <div class="main-gallery__img-list">
             <figure class="main-gallery__img" data-img="01">
-              <img src="./img/img_banner_img_01.jpg" alt="&nbsp;" />
+              <img
+                src="./img/img_banner_img_01.jpg"
+                alt="&nbsp;"
+                onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+              />
             </figure>
             <figure class="main-gallery__img" data-img="02">
-              <img src="./img/img_banner_img_02.jpg" alt="&nbsp;" />
+              <img
+                src="./img/img_banner_img_02.jpg"
+                alt="&nbsp;"
+                onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+              />
             </figure>
             <figure class="main-gallery__img" data-img="03">
-              <img src="./img/img_banner_img_03.jpg" alt="&nbsp;" />
+              <img
+                src="./img/img_banner_img_03.jpg"
+                alt="&nbsp;"
+                onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+              />
             </figure>
             <figure class="main-gallery__img" data-img="05">
-              <img src="./img/img_banner_img_05.jpg" alt="&nbsp;" />
+              <img
+                src="./img/img_banner_img_05.jpg"
+                alt="&nbsp;"
+                onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+              />
             </figure>
             <figure class="main-gallery__img" data-img="04">
-              <img src="./img/img_banner_img_04.jpg" alt="&nbsp;" />
+              <img
+                src="./img/img_banner_img_04.jpg"
+                alt="&nbsp;"
+                onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+              />
             </figure>
           </div>
         </section>
@@ -298,7 +333,11 @@
               <a href="" class="main-products__link">
                 <b>Discover Now</b>
                 <span>
-                  <img src="./img/icon_arrow.svg" alt="아이콘" />
+                  <img
+                    src="./img/icon_arrow.svg"
+                    alt="아이콘"
+                    onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                  />
                 </span>
               </a>
             </div>
@@ -308,7 +347,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_01.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_01.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -320,7 +363,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_02.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_02.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -332,7 +379,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_03.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_03.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -344,7 +395,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_04.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_04.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -356,7 +411,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_01.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_01.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -368,7 +427,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_02.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_02.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -380,7 +443,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_03.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_03.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">
@@ -392,7 +459,11 @@
                 <li class="swiper-slide">
                   <div class="card-product">
                     <figure class="card-product__img">
-                      <img src="./img/slide_item_04.jpg" alt="제품명" />
+                      <img
+                        src="./img/slide_item_04.jpg"
+                        alt="제품명"
+                        onerror="this.onerror=null; this.src='https://picsum.photos/200/300';"
+                      />
                     </figure>
                     <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
                     <p class="card-product__price">

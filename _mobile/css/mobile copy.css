@@ -2,17 +2,13 @@
 
 @font-face {
   font-family: "Times";
-  src: local("Times New Roman"),
-    url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf")
-      format("truetype");
+  src: local("Times New Roman"), url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf") format("truetype");
   font-weight: normal;
   unicode-range: U+0030-0039;
 }
 @font-face {
   font-family: "Times";
-  src: local("Times New Roman Bold"),
-    url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf")
-      format("truetype");
+  src: local("Times New Roman Bold"), url("https://lenina.kr/web/upload/drawcode/fonts/timesbd.ttf") format("truetype");
   font-weight: bold;
   unicode-range: U+0030-0039;
 }
@@ -109,10 +105,10 @@ img {
   width: 100%;
 }
 
-.lenina-visual {
+.main-visual {
   aspect-ratio: 4/7.1;
 }
-.lenina-visual #vimeo-player {
+.main-visual #vimeo-player {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,36 +119,36 @@ img {
   object-fit: cover;
 }
 
-.lenina-text-banner {
+.main-text-banner {
   padding: calc(100vw * (82 / 375)) 0 calc(100vw * (80 / 375));
 }
-.lenina-text-banner figure {
+.main-text-banner figure {
   width: calc(100vw * (40 / 375));
   height: calc(100vw * (40 / 375));
   margin: 0 auto 16px;
 }
-.lenina-text-banner h2 {
+.main-text-banner h2 {
   font-size: calc(100vw * (24 / 375));
   line-height: 1.4;
   font-weight: 400;
   text-align: center;
 }
 
-.lenina-item-category .sticky-element {
+.main-category .sticky-element {
 }
-.lenina-item-category__swiper {
+.main-category__swiper {
   position: relative;
   width: 100%;
   aspect-ratio: 375/664;
   overflow: hidden;
 }
-.lenina-item-category ul {
+.main-category ul {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
-.lenina-item-category .swiper-slide {
+.main-category .swiper-slide {
   position: relative;
   flex-shrink: 0;
   width: 100%;
@@ -161,7 +157,7 @@ img {
   background-color: #000;
 }
 
-.lenina-item-category .slide-inner {
+.main-category .slide-inner {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -172,7 +168,7 @@ img {
   background-repeat: no-repeat;
   z-index: 1; /* 활성 슬라이드가 가장 앞에 오도록 z-index 설정 */
 }
-.lenina-item-category .slide-inner figure {
+.main-category .slide-inner figure {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -184,16 +180,16 @@ img {
   transform: translateX(-50%);
   z-index: 1; /* 활성 슬라이드가 가장 앞에 오도록 z-index 설정 */
 }
-.lenina-item-category__swiper .swiper-slide-active .slide-inner {
+.main-category__swiper .swiper-slide-active .slide-inner {
   z-index: 2; /* 활성 슬라이드에 더 높은 z-index 설정 */
 }
 
-.lenina-item-category img {
+.main-category img {
   height: 100%;
   width: auto;
   min-width: 100%;
 }
-.lenina-item-category__desc {
+.main-category__desc {
   position: absolute;
   bottom: calc(100vw * (36 / 375));
   left: 50%;
@@ -203,7 +199,7 @@ img {
   transform: translateX(-50%);
   z-index: 1;
 }
-.lenina-item-category__title {
+.main-category__title {
   position: relative;
   text-align: center;
   font-size: calc(100vw * (32 / 375));
@@ -212,8 +208,8 @@ img {
   padding: 0 calc(100vw * (20 / 375));
   margin-bottom: calc(100vw * (40 / 375));
 }
-.lenina-item-category__title:after,
-.lenina-item-category__title:before {
+.main-category__title:after,
+.main-category__title:before {
   position: absolute;
   top: calc(50% + 7px);
   width: calc(100vw * (21 / 375));
@@ -221,16 +217,16 @@ img {
   content: "";
   background: url("../img/emblem_02.svg") no-repeat center / contain;
 }
-.lenina-item-category__title:before {
+.main-category__title:before {
   left: 0;
   transform: translate(-100%, -50%);
 }
-.lenina-item-category__title:after {
+.main-category__title:after {
   right: 0;
   transform: translate(100%, -50%);
 }
 
-.lenina-img-banner {
+.main-gallery {
   aspect-ratio: 375/665;
   background-color: #eabeb0;
 
@@ -238,11 +234,11 @@ img {
   /* background: url("../img/img_banner_bg.jpg") repeat center center / auto 100%; */
 }
 
-.lenina-img-banner__bg,
-.lenina-img-banner__bg img {
+.main-gallery__bg,
+.main-gallery__bg img {
   height: 100%;
 }
-.lenina-img-banner__text-wrap {
+.main-gallery__text-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -251,7 +247,7 @@ img {
   flex-direction: column;
   transform: translate(-50%, -50%);
 }
-.lenina-img-banner__text-wrap::before {
+.main-gallery__text-wrap::before {
   width: calc(100vw * (51 / 375));
   height: calc(100vw * (33 / 375));
   flex-shrink: 0;
@@ -259,13 +255,13 @@ img {
   background: url("../img/emblem_03.svg") no-repeat center / contain;
   margin-bottom: calc(100vw * (15 / 375));
 }
-.lenina-img-banner__text-wrap figure {
+.main-gallery__text-wrap figure {
   flex-shrink: 0;
   width: calc(100vw * (213 / 375));
   height: calc(100vw * (50 / 375));
   margin-bottom: calc(100vw * (15 / 375));
 }
-.lenina-img-banner__text-wrap h2 {
+.main-gallery__text-wrap h2 {
   font-size: calc(100vw * (14 / 375));
   font-weight: 400;
   line-height: 1;
@@ -273,7 +269,7 @@ img {
   color: rgba(128, 65, 52, 0.7);
   margin-bottom: calc(100vw * (31 / 375));
 }
-.lenina-img-banner__text-wrap h2:after {
+.main-gallery__text-wrap h2:after {
   display: block;
   width: calc(100vw * (0.5 / 375));
   height: calc(100vw * (20 / 375));
@@ -281,26 +277,26 @@ img {
   background-color: #a27d71;
   margin: calc(100vw * (15 / 375)) auto 0;
 }
-.lenina-img-banner__text-wrap span {
+.main-gallery__text-wrap span {
   font-size: calc(100vw * (12 / 375));
   font-weight: 400;
   line-height: 1;
   color: rgba(128, 65, 52, 0.7);
 }
 
-.lenina-img-banner__text-wrap a {
+.main-gallery__text-wrap a {
   flex-shrink: 0;
 }
 
-.lenina-img-banner__img-list {
+.main-gallery__img-list {
   pointer-events: none;
 }
 
-.lenina-img-banner__img {
+.main-gallery__img {
   position: absolute;
 }
 
-.lenina-img-banner__img[data-img="01"] {
+.main-gallery__img[data-img="01"] {
   top: calc(100vw * (50 / 375));
   left: 50%;
   /* top: calc(100vh * (50 / 665));
@@ -310,45 +306,45 @@ img {
   transform: translateX(-50%);
 }
 
-.lenina-img-banner__img[data-img="02"] {
+.main-gallery__img[data-img="02"] {
   top: calc(100vw * (89 / 375));
   right: -3%;
   width: calc(100vw * (123 / 375));
   height: calc(100vw * (153 / 375));
 }
-.lenina-img-banner__img[data-img="03"] {
+.main-gallery__img[data-img="03"] {
   bottom: calc(100vw * (65 / 375));
   left: calc(100vw * (-29 / 375));
   width: calc(100vw * (129 / 375));
   height: calc(100vw * (180 / 375));
 }
-.lenina-img-banner__img[data-img="04"] {
+.main-gallery__img[data-img="04"] {
   bottom: calc(100vw * (47 / 375));
   right: calc(100vw * (16 / 375));
   width: calc(100vw * (200 / 375));
   height: calc(100vw * (111 / 375));
 }
-.lenina-img-banner__img[data-img="05"] {
+.main-gallery__img[data-img="05"] {
   bottom: calc(100vw * (109 / 375));
   right: calc(100vw * (-23 / 375));
   width: calc(100vw * (92 / 375));
   height: calc(100vw * (88 / 375));
 }
-.lenina-new-arrivals {
+.main-products {
   height: 100svh;
   background: #edd8d2;
   padding: calc(100vw * (139 / 375)) 0;
   overflow: hidden;
 }
 
-.lenina-new-arrivals__inner {
+.main-products__inner {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
   transform: translateY(-50%);
 }
-.lenina-new-arrivals__top {
+.main-products__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -356,30 +352,30 @@ img {
   padding: 0 calc(100vw * (18 / 375));
   margin-bottom: calc(100vw * (20 / 375));
 }
-.lenina-new-arrivals__title {
+.main-products__title {
   color: #000;
   font-size: calc(100vw * (24 / 375));
   font-weight: 700;
   line-height: normal;
 }
-.lenina-new-arrivals__link {
+.main-products__link {
   display: flex;
   align-items: center;
   gap: calc(100vw * (12 / 375));
   font-size: calc(100vw * (14 / 375));
   font-weight: 700;
 }
-.lenina-new-arrivals__link b {
+.main-products__link b {
   color: #000;
   font-size: calc(100vw * (14 / 375));
   font-weight: 700;
 }
-.lenina-new-arrivals__link span {
+.main-products__link span {
   width: calc(100vw * (14 / 375));
   height: calc(100vw * (5.4 / 375));
 }
 
-.lenina-new-arrivals__item-list {
+.main-products__item-list {
   /* 얘 때문에 가로스크롤 어쩌지 ㅋ */
   position: absolute;
   display: flex;
@@ -387,21 +383,21 @@ img {
   gap: calc(100vw * (8 / 375));
   margin-bottom: calc(100vw * (34 / 375));
 }
-.new-arrivals-item {
+.card-product {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   width: calc(100% / 2 - 100vw * ((8+16) / 375));
   min-width: calc(100vw * (176 / 375));
 }
-.new-arrivals-item__img {
+.card-product__img {
   width: 100%;
   min-height: calc(100vw * (235 / 375));
   aspect-ratio: 176/235;
   flex-shrink: 0;
   margin-bottom: calc(100vw * (12 / 375));
 }
-.new-arrivals-item__name {
+.card-product__name {
   color: #000;
 
   font-size: calc(100vw * (14 / 375));
@@ -409,23 +405,23 @@ img {
   line-height: normal;
   margin-bottom: calc(100vw * (8 / 375));
 }
-.new-arrivals-item__price {
+.card-product__price {
   display: flex;
   align-items: center;
   gap: calc(100vw * (4 / 375));
 }
-.new-arrivals-item__price b {
+.card-product__price b {
   color: #000;
   font-size: calc(100vw * (14 / 375));
   font-weight: 700;
 }
-.new-arrivals-item__price s {
+.card-product__price s {
   color: rgba(0, 0, 0, 0.4);
   font-size: calc(100vw * (14 / 375));
   font-weight: 400;
 }
 
-.lenina-new-arrivals__scrollbar-wrap {
+.main-products__scrollbar-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -435,7 +431,7 @@ img {
   overflow: hidden;
 }
 
-.lenina-new-arrivals__scrollbar {
+.main-products__scrollbar {
   position: relative;
   width: calc(100vw * (335 / 375));
   height: 100%;
@@ -443,17 +439,17 @@ img {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.lenina-new-arrivals__scrollbar-thumb {
+.main-products__scrollbar-thumb {
   position: absolute;
   width: 100px;
   height: 100%;
   border-radius: calc(100vw * (40 / 375));
   background-color: #000;
 }
-.lenina-bottom-text {
+.main-bottom-text-banner {
   padding-top: calc(100vw * (60 / 375));
 }
-.lenina-bottom-text h2 {
+.main-bottom-text-banner h2 {
   width: calc(100vw * (334 / 375));
   color: #000;
   text-align: center;

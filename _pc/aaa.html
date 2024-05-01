@@ -41,24 +41,24 @@
       letter-spacing: 0.5em;
     }
 
-    .lenina-item-category {
+    .main-category {
       position: relative;
       min-height: 100vh;
       background-color: #867f7f;
     }
 
-    .lenina-item-category__wrap {
+    .main-category__wrap {
       position: relative;
       width: 100%;
     }
 
-    .lenina-item-category__list {
+    .main-category__list {
       width: 100%;
       position: relative;
       visibility: visible;
     }
 
-    .lenina-item-category__item {
+    .main-category__item {
       display: flex;
       flex-direction: column;
     }
@@ -91,7 +91,7 @@
         url("./img/category_04.jpg") no-repeat top center / cover;
     }
 
-    .lenina-item-category__desc {
+    .main-category__desc {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -101,7 +101,7 @@
       z-index: 1;
     }
 
-    .lenina-item-category__title {
+    .main-category__title {
       position: relative;
       text-align: center;
       font-size: 60px;
@@ -111,8 +111,8 @@
       padding: 0 20px;
       margin-bottom: 40px;
     }
-    .lenina-item-category__title:after,
-    .lenina-item-category__title:before {
+    .main-category__title:after,
+    .main-category__title:before {
       position: absolute;
       top: calc(50% + 7px);
       width: 32px;
@@ -120,11 +120,11 @@
       content: "";
       background: url("./img/emblem_02.svg") no-repeat center / contain;
     }
-    .lenina-item-category__title:before {
+    .main-category__title:before {
       left: 0;
       transform: translate(-100%, -50%);
     }
-    .lenina-item-category__title:after {
+    .main-category__title:after {
       right: 0;
       transform: translate(100%, -50%);
     }
@@ -186,50 +186,50 @@ Sections animate in and out on scroll. Scroll up or down and the sections will w
     </div>
   </section> -->
 
-  <section class="lenina-item-category">
-    <div class="lenina-item-category__wrap">
-      <article class="lenina-item-category__list category__top">
+  <section class="main-category">
+    <div class="main-category__wrap">
+      <article class="main-category__list category__top">
         <div class="outer">
           <div class="inner">
             <div class="bg one">
-              <div class="lenina-item-category__desc">
-                <p class="lenina-item-category__title text-animation">TOP</p>
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">TOP</p>
                 <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
               </div>
             </div>
           </div>
         </div>
       </article>
-      <article class="lenina-item-category__list category__dress">
+      <article class="main-category__list category__dress">
         <div class="outer">
           <div class="inner">
             <div class="bg">
-              <div class="lenina-item-category__desc">
-                <p class="lenina-item-category__title text-animation">DRESS</p>
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">DRESS</p>
                 <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
               </div>
             </div>
           </div>
         </div>
       </article>
-      <article class="lenina-item-category__list category__shirt">
+      <article class="main-category__list category__shirt">
         <div class="outer">
           <div class="inner">
             <div class="bg">
-              <div class="lenina-item-category__desc">
-                <p class="lenina-item-category__title text-animation">SHIRT</p>
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">SHIRT</p>
                 <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
               </div>
             </div>
           </div>
         </div>
       </article>
-      <article class="lenina-item-category__list category__denim">
+      <article class="main-category__list category__denim">
         <div class="outer">
           <div class="inner">
             <div class="bg">
-              <div class="lenina-item-category__desc">
-                <p class="lenina-item-category__title text-animation">DENIM</p>
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">DENIM</p>
                 <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
               </div>
             </div>
@@ -255,11 +255,11 @@ Sections animate in and out on scroll. Scroll up or down and the sections will w
   <script>
     // gsap.registerPlugin(Observer);
 
-    // let sections = document.querySelectorAll(".lenina-item-category__list"),
+    // let sections = document.querySelectorAll(".main-category__list"),
     //   images = document.querySelectorAll(".bg"),
     //   headings = gsap.utils.toArray(".section-heading"),
-    //   outerWrappers = gsap.utils.toArray(".lenina-item-category__list .outer"),
-    //   innerWrappers = gsap.utils.toArray(".lenina-item-category__list .inner"),
+    //   outerWrappers = gsap.utils.toArray(".main-category__list .outer"),
+    //   innerWrappers = gsap.utils.toArray(".main-category__list .inner"),
     //   splitHeadings = headings.map(
     //     (heading) => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })
     //   ),
@@ -335,11 +335,11 @@ Sections animate in and out on scroll. Scroll up or down and the sections will w
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    let sections = gsap.utils.toArray(".lenina-item-category__list"),
+    let sections = gsap.utils.toArray(".main-category__list"),
       backgrounds = gsap.utils.toArray(".bg"),
-      headings = gsap.utils.toArray(".lenina-item-category__title"),
-      outerWrappers = gsap.utils.toArray(".lenina-item-category__list .outer"),
-      innerWrappers = gsap.utils.toArray(".lenina-item-category__list .inner"),
+      headings = gsap.utils.toArray(".main-category__title"),
+      outerWrappers = gsap.utils.toArray(".main-category__list .outer"),
+      innerWrappers = gsap.utils.toArray(".main-category__list .inner"),
       splitHeadings = headings.map(
         (heading) => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })
       ),

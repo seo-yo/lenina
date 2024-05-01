@@ -35,7 +35,7 @@
     <title>르니나 리뉴얼</title>
     <!-- 임의로 가져온 코드 -->
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/가로스크롤.css" />
     <script src="./js/common.js" defer></script>
 
     <!-- 추가한 소스 코드 -->
@@ -265,19 +265,19 @@
     <div id="contents">
       <main id="main">
         <!-- S : 메인 비쥬얼 -->
-        <section class="lenina-visual">
+        <section class="main-visual">
           <h2 class="blind">메인 비쥬얼</h2>
           <iframe
             id="vimeo-player"
-            src="https://player.vimeo.com/video/940712688?h=c7fe692a7e&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;byline=0&amp;controls=0&amp;loop=1&amp;pip=0&amp;playsinlin=0&amp;portrait=0&amp;title=0&amp;background=1&amp;muted=1"
+            src="https://player.vimeo.com/video/921917600?h=0afbfa0f69&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;byline=0&amp;controls=0&amp;loop=1&amp;pip=0&amp;playsinlin=0&amp;portrait=0&amp;title=0&amp;background=1&amp;muted=1"
             frameborder="0"
-            title="LENINA SPRING TEASER WEB"
+            title="LENINA SUMMER TEASER WEB"
           ></iframe>
         </section>
         <!-- E : 메인 비쥬얼 -->
 
         <!-- S : 텍스트 배너 -->
-        <section class="lenina-text-banner">
+        <section class="main-text-banner">
           <figure>
             <img src="./img/emblem_01.svg" alt="장식" />
           </figure>
@@ -289,117 +289,65 @@
         <!-- E : 텍스트 배너 -->
 
         <!-- S : 상품 카테고리 -->
-        <section class="lenina-item-category">
+        <section class="main-category">
           <h2 class="blind">상품 카테고리 리스트</h2>
-          <!-- <div class="lenina-item-category__wrap">
-            <div class="lenina-item-category__list">
-              <div class="lenina-item-category__item category__top">
-                <div class="lenina-item-category__desc">
-                  <p class="lenina-item-category__title text-animation">TOP</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </div>
-              <div class="lenina-item-category__item category__dress">
-                <div class="lenina-item-category__desc">
-                  <p class="lenina-item-category__title text-animation">DRESS</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </div>
-              <div class="lenina-item-category__item category__shirt">
-                <div class="lenina-item-category__desc">
-                  <p class="lenina-item-category__title text-animation">SHIRT</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </div>
-              <div class="lenina-item-category__item category__denim">
-                <div class="lenina-item-category__desc">
-                  <p class="lenina-item-category__title text-animation">DENIM</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
+          <!-- <div class="main-category__wrap"> -->
+          <div class="main-category__list observer-section">
+            <div class="main-category__item category__top">
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">TOP</p>
+                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
               </div>
             </div>
-          </div> -->
-          <div class="lenina-item-category__swiper swiper">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <div class="lenina-item-category__desc">
-                  <h1>A</h1>
-                  <h2>Is for Apple</h2>
-                  <p class="lenina-item-category__title">TOP</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </li>
-              <li class="swiper-slide">
-                <div class="lenina-item-category__desc">
-                  <h1>A</h1>
-                  <h2>Is for Apple</h2>
-                  <p class="lenina-item-category__title">DRESS</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </li>
-              <li class="swiper-slide">
-                <div class="lenina-item-category__desc">
-                  <h1>A</h1>
-                  <h2>Is for Apple</h2>
-                  <p class="lenina-item-category__title">SHIRT</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </li>
-              <li class="swiper-slide">
-                <div class="lenina-item-category__desc">
-                  <h1>A</h1>
-                  <h2>Is for Apple</h2>
-                  <p class="lenina-item-category__title">DENIM</p>
-                  <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
-                </div>
-              </li>
-            </ul>
-            <div
-              id="currentSlide"
-              style="
-                font-size: 4vh;
-                font-weight: bold;
-                font-family: sans-serif;
-                width: 8em;
-                padding: 20px;
-                background: #ccc;
-                border-radius: 2.5em;
-                text-align: center;
-                margin: 20px auto auto auto;
-              "
-            >
-              1
+            <div class="main-category__item category__dress">
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">DRESS</p>
+                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+              </div>
+            </div>
+            <div class="main-category__item category__shirt">
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">SHIRT</p>
+                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+              </div>
+            </div>
+            <div class="main-category__item category__denim">
+              <div class="main-category__desc">
+                <p class="main-category__title text-animation">DENIM</p>
+                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+              </div>
+              <!-- </div> -->
             </div>
           </div>
         </section>
         <!-- E : 상품 카테고리 -->
 
         <!-- S : 이미지 배너 -->
-        <section class="lenina-img-banner">
-          <div class="lenina-img-banner__text-wrap">
+        <section class="main-gallery">
+          <div class="main-gallery__text-wrap">
             <figure>
               <img src="https://lenina.kr/web/upload/drawcode/logo.svg" alt="Lenina" />
             </figure>
-            <h2 class="lenina-img-banner__title text-animation">
+            <h2 class="main-gallery__title text-animation">
               <span class="times-font">24</span>&nbsp;SUMMER COLLECTION
             </h2>
             <a href="" class="lenina-button__ribbon"><span>Discover Now</span></a>
           </div>
 
-          <div class="lenina-img-banner__img-list">
-            <figure class="lenina-img-banner__img" data-img="01">
+          <div class="main-gallery__img-list">
+            <figure class="main-gallery__img" data-img="01">
               <img src="./img/img_banner_img_01.jpg" alt="&nbsp;" />
             </figure>
-            <figure class="lenina-img-banner__img" data-img="02">
+            <figure class="main-gallery__img" data-img="02">
               <img src="./img/img_banner_img_02.jpg" alt="&nbsp;" />
             </figure>
-            <figure class="lenina-img-banner__img" data-img="03">
+            <figure class="main-gallery__img" data-img="03">
               <img src="./img/img_banner_img_03.jpg" alt="&nbsp;" />
             </figure>
-            <figure class="lenina-img-banner__img" data-img="05">
+            <figure class="main-gallery__img" data-img="05">
               <img src="./img/img_banner_img_05.jpg" alt="&nbsp;" />
             </figure>
-            <figure class="lenina-img-banner__img" data-img="04">
+            <figure class="main-gallery__img" data-img="04">
               <img src="./img/img_banner_img_04.jpg" alt="&nbsp;" />
             </figure>
           </div>
@@ -408,99 +356,181 @@
 
         <!-- S : 상품 진열 리스트 -->
         <!-- <div id="horizontal"> -->
-        <section class="lenina-new-arrivals">
-          <!-- <div class="lenina-new-arrivals__inner"> -->
-          <div class="lenina-new-arrivals__top">
-            <h2 class="lenina-new-arrivals__title">New Arrivals</h2>
-            <a href="" class="lenina-new-arrivals__link">
+        <section class="main-products">
+          <div class="main-products__top">
+            <h2 class="main-products__title">New Arrivals</h2>
+            <a href="" class="main-products__link">
               <b>Discover Now</b>
               <span>
                 <img src="./img/icon_arrow.svg" alt="아이콘" />
               </span>
             </a>
           </div>
-          <!-- <div class="lenina-new-arrivals__item-list-wrap"> -->
-          <ul class="lenina-new-arrivals__item-list">
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+          <!-- <ul class="main-products__item-list">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_01.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">196,200</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">196,200</b></p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_02.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price">
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price">
                 <b class="times-font">218,000</b>
               </p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_03.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_04.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_01.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_02.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_03.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
 
-            <li class="new-arrivals-item">
-              <figure class="new-arrivals-item__img">
+            <li class="card-product">
+              <figure class="card-product__img">
                 <img src="./img/slide_item_04.jpg" alt="제품명" />
               </figure>
-              <p class="new-arrivals-item__name">LUX marine boat neck stripe knit_mint</p>
-              <p class="new-arrivals-item__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+              <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+              <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
             </li>
           </ul>
-          <!-- </div> -->
-          <div class="lenina-new-arrivals__scrollbar-wrap">
-            <div class="lenina-new-arrivals__scrollbar">
-              <div class="lenina-new-arrivals__scrollbar-thumb"></div>
+          <div class="main-products__scrollbar-wrap">
+            <div class="main-products__scrollbar">
+              <div class="main-products__scrollbar-thumb"></div>
             </div>
+          </div> -->
+          <!-- Swiper -->
+          <div class="swiper card-product__swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_01.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">196,200</b></p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_02.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price">
+                    <b class="times-font">218,000</b>
+                  </p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_03.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_04.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_01.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_02.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_03.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+                </div>
+              </li>
+
+              <li class="swiper-slide">
+                <div class="card-product">
+                  <figure class="card-product__img">
+                    <img src="./img/slide_item_04.jpg" alt="제품명" />
+                  </figure>
+                  <p class="card-product__name">LUX marine boat neck stripe knit_mint</p>
+                  <p class="card-product__price"><s class="times-font">218,000</s><b class="times-font">218,000</b></p>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-scrollbar card-product__swiper-scrollbar"></div>
           </div>
-          <!-- </div> -->
         </section>
         <!-- E : 상품 진열 리스트 -->
 
         <!-- S : 하단 텍스트 -->
-        <section class="lenina-bottom-text">
-          <!-- <h2 class="text-animation"> -->
-          <h2 class="text-animation2">
+        <section class="main-bottom-text-banner">
+          <h2 class="line-text-animation">
             Experience authentic French mood in Korea. We suggest styles that allow modern women to mix and match in
             their daily lives, transforming the ordinary with exquisite details, colors, and patterns. Discover your
             unique charm beyond the mundane.
@@ -654,399 +684,31 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
     <!-- The following plugins are only available for Club GSAP members.-->
-    <script src="./js/DrawSVGPlugin.min.js"></script>
-    <script src="./js/ScrollSmoother.min.js"></script>
-    <script src="./js/MotionPathHelper.min.js"></script>
-    <script src="./js/ScrambleTextPlugin.min.js"></script>
     <script src="./js/SplitText.min.js"></script>
-    <script>
+    <script src="./js/ScrollSmoother.min.js"></script>
+    <script defer>
       // use a script tag or an external JS file
-      document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(DrawSVGPlugin, ScrollSmoother, MotionPathHelper, ScrambleTextPlugin, SplitText);
-      });
+      // document.addEventListener("DOMContentLoaded", (event) => {
+      // });
+      // gsap.registerPlugin(ScrollSmoother, SplitText);
       // 스크롤 스무스
       const lenis = new Lenis();
-      lenis.on("scroll", (e) => {
-        // console.log(e);
-      });
+
       lenis.on("scroll", ScrollTrigger.update);
+
       gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
       });
+
       gsap.ticker.lagSmoothing(0);
 
-      // 비쥬얼배너 고정
-      function visualFixed() {
-        const panel = document.querySelector(".lenina-visual");
-
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top top",
-          pin: true,
-          pinSpacing: false,
-        });
-      }
-      visualFixed();
-
-      function test() {
-        // const categorySwiper = new Swiper(".lenina-item-category__swiper", {
-        //   slidesPerView: 1,
-        //   speed: 1000,
-        //   watchSlidesProgress: true,
-        //   // mousewheel: true,
-        //   grabCursor: true,
-        //   // effect: "creative",
-        //   // creativeEffect: {
-        //   //   prev: {
-        //   //     translate: [0, "-20%", -1],
-        //   //   },
-        //   //   next: {
-        //   //     translate: [0, "100%", 0],
-        //   //   },
-        //   // },
-        //   // on: {
-        //   //   init: function () {
-        //   //     gsap.to(this.slides[this.activeIndex], { scale: 1, opacity: 1 });
-        //   //     // this.slides[this.activeIndex].animation.play();
-        //   //     console.log(this.slides);
-        //   //   },
-        //   //   slideChange: function () {
-        //   //     // currentSlide.textContent = this.activeIndex + 1;
-        //   //     gsap.to(this.slides[this.activeIndex], { scale: 1, opacity: 1 });
-        //   //     gsap.to(this.slides[this.previousIndex], { opacity: 0.3, scale: 0.8 });
-        //   //     this.slides[this.previousIndex].animation.pause(0);
-        //   //     this.slides[this.activeIndex].animation.restart();
-        //   //     currentIndex = this.activeIndex;
-        //   //   },
-        //   //   slideChangeTransitionEnd: function () {
-        //   //     animating = false;
-        //   //   },
-        //   // },
-        // });
-        const swiper = new Swiper(".lenina-item-category__swiper", {});
-        const numPanels = swiper.slides.length;
-        console.log(numPanels);
-
-        // Gsap Code
-        let currentIndex = 0;
-        let animating;
-
-        swiper.on("slideChange", function () {
-          currentSlide.textContent = swiper.activeIndex + 1;
-          gsap.to(swiper.slides[swiper.activeIndex], { scale: 1, opacity: 1 });
-          gsap.to(swiper.slides[swiper.previousIndex], { opacity: 0.3, scale: 0.8 });
-          swiper.slides[swiper.previousIndex].animation.pause(0);
-          swiper.slides[swiper.activeIndex].animation.restart();
-          currentIndex = swiper.activeIndex;
-        });
-
-        swiper.on("slideChangeTransitionEnd", function () {
-          animating = false;
-        });
-
-        swiper.slides.forEach((slide, index) => {
-          let letter = slide.querySelector("h1");
-          let description = slide.querySelector("h2");
-          let chars = SplitText.create(description, { type: "chars" });
-          let tl = gsap.timeline({ paused: true, onComplete: function () {} });
-          tl.from(letter, { scale: 0, opacity: 0, ease: "back", duration: 1 }).from(
-            chars.chars,
-            { opacity: 0, yPercent: 50, stagger: 0.02 },
-            "-=0.5"
-          );
-
-          slide.animation = tl;
-        });
-
-        swiper.slides[0].animation.play();
-
-        /*
-
-
-ALL OF THE FOLLOWING CODE IS BORROWED FROM THIS PEN FROM GREENSOCK
-https://codepen.io/GreenSock/pen/MWGVJYL?editors=1000
-
-I MADE SLIGHT ALTERATIONS TO MAKE GOTOPANEL() TALK TO SWIPER
-
-*/
-
-        // create an observer and disable it to start
-        let intentObserver = ScrollTrigger.observe({
-          type: "wheel,touch",
-          onUp: () => !animating && gotoPanel(currentIndex + 1, true),
-          onDown: () => !animating && gotoPanel(currentIndex - 1, false),
-          wheelSpeed: -1, // to match mobile behavior, invert the wheel speed
-          tolerance: 30,
-          preventDefault: true,
-          onPress: (self) => {
-            // on touch devices like iOS, if we want to prevent scrolling, we must call preventDefault() on the touchstart (Observer doesn't do that because that would also prevent side-scrolling which is undesirable in most cases)
-            ScrollTrigger.isTouch && self.event.preventDefault();
-          },
-        });
-        intentObserver.disable();
-
-        let preventScroll = ScrollTrigger.observe({
-          preventDefault: true,
-          type: "wheel,scroll",
-          allowClicks: true,
-          onEnable: (self) => {
-            console.log("enable");
-            return (self.savedScroll = self.scrollY());
-          }, // save the scroll position
-          onChangeY: (self) => {
-            console.log("disable");
-            self.scrollY(self.savedScroll); // refuse to scroll
-          },
-        });
-        preventScroll.disable();
-
-        // handle the panel swipe animations
-        function gotoPanel(index, isScrollingDown) {
-          animating = true;
-          console.log("gotoPanel");
-          // return to normal scroll if we're at the end or back up to the start
-          if ((index === numPanels && isScrollingDown) || (index === -1 && !isScrollingDown)) {
-            console.log("return to normal scroll");
-            intentObserver.disable();
-            preventScroll.disable();
-
-            animating = false;
-            // now make it go 1px beyond in the correct direction so that it doesn't trigger onEnter/onEnterBack.
-            preventScroll.scrollY(preventScroll.scrollY() + (index === numPanels ? 1 : -1));
-            return;
-          }
-          console.log("call swiper slideTo()");
-          swiper.slideTo(index);
-
-          currentIndex = index;
-        }
-
-        // pin swipe section and initiate observer
-        ScrollTrigger.create({
-          trigger: ".lenina-item-category",
-          pin: true,
-          anticipatePin: true,
-          start: "top top",
-          end: "+=50%",
-          onEnter: (self) => {
-            if (preventScroll.isEnabled === false) {
-              self.scroll(self.start);
-              preventScroll.enable();
-              intentObserver.enable();
-
-              gotoPanel(currentIndex + 1, true);
-            }
-          },
-          onEnterBack: (self) => {
-            if (preventScroll.isEnabled === false) {
-              self.scroll(self.start);
-              preventScroll.enable();
-              intentObserver.enable();
-
-              gotoPanel(currentIndex - 1, false);
-            }
-          },
-        });
-
-        ScrollTrigger.config({
-          ignoreMobileResize: true,
-        });
-      }
-      test();
       const headerHeight = "70px";
-      // gsap 카테고리
-      function categoryInteraction() {
-        let panels = gsap.utils.toArray(".lenina-item-category__item");
-        // let dddd = gsap.utils.toArray(".lenina-item-category__list");
-        let tops = panels.map((panel) => ScrollTrigger.create({ trigger: panel, start: "top top" }));
-
-        panels.forEach((panel, i) => {
-          ScrollTrigger.create({
-            trigger: panel,
-            start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
-            pin: true,
-            pinSpacing: false,
-          });
-        });
-
-        // ScrollTrigger.create({
-        //   snap: {
-        //     snapTo: (progress, self) => {
-        //       let panelStarts = tops.map((st) => st.start),
-        //         snapScroll = gsap.utils.snap(panelStarts, self.scroll());
-        //       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
-        //     },
-        //     duration: 0.1,
-        //   },
-        // });
-      }
-      // categoryInteraction();
-
-      function ScaleAnimation(el) {
-        console.log(el);
-
-        el.classList.add("active");
-      }
-      // 이미지 배너 이미지
-
-      function imgBannerInteraction() {
-        const ani2 = gsap.timeline();
-        ani2
-          .from(".lenina-img-banner__img[data-img='01']", {
-            x: -100,
-            autoAlpha: 0,
-            // onStart: () => ScaleAnimation(document.querySelector(".lenina-img-banner__img[data-img='01']")),
-          })
-          .from(".lenina-img-banner__img[data-img='02']", {
-            x: 100,
-            autoAlpha: 0,
-            // onStart: () => ScaleAnimation(document.querySelector(".lenina-img-banner__img[data-img='02']")),
-          })
-          .from(".lenina-img-banner__img[data-img='03']", {
-            x: -100,
-            autoAlpha: 0,
-            // onStart: () => ScaleAnimation(document.querySelector(".lenina-img-banner__img[data-img='03']")),
-          })
-          .from(".lenina-img-banner__img[data-img='04']", {
-            x: 200,
-            autoAlpha: 0,
-            // onStart: () => ScaleAnimation(document.querySelector(".lenina-img-banner__img[data-img='04']")),
-          })
-          .from(".lenina-img-banner__img[data-img='05']", {
-            y: 100,
-            autoAlpha: 0,
-            // onStart: () => ScaleAnimation(document.querySelector(".lenina-img-banner__img[data-img='05']")),
-          });
-
-        ScrollTrigger.create({
-          animation: ani2,
-          trigger: ".lenina-img-banner",
-          // start: "top top",
-          start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
-          end: "+=2000",
-          pinnedContainer: ".lenina-img-banner__img-list",
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-          markers: false,
-        });
-      }
-
-      imgBannerInteraction();
-
-      // GSAP 가로스크롤 + 스크롤바
-      function setupHorizontalScroll() {
-        const container = document.querySelector(".lenina-new-arrivals");
-        const wrapper = container.querySelector(".lenina-new-arrivals__item-list");
-        const scrollbar = document.querySelector(".lenina-new-arrivals__scrollbar");
-        const scrollbarThumb = document.querySelector(".lenina-new-arrivals__scrollbar-thumb");
-
-        // 스크롤을 관리할 Tween을 생성합니다.
-        const scrollTween = gsap.to(wrapper, {
-          x: () => -(wrapper.clientWidth - container.clientWidth),
-          ease: "none",
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: () => `+=${wrapper.clientWidth}`,
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-            // markers: true,
-            duration: 3,
-            onUpdate: (self) => {
-              const progress = self.progress;
-              const scrollWidth = wrapper.scrollWidth - wrapper.clientWidth;
-              const thumbWidth = scrollbarThumb.offsetWidth;
-              const maxThumbPosition = scrollbar.clientWidth - thumbWidth;
-              const thumbPosition = progress * maxThumbPosition;
-              gsap.set(scrollbarThumb, { x: thumbPosition });
-
-              // 스크롤바의 길이를 조정합니다.
-              let scrollbarWidth = container.clientWidth * (container.clientWidth / wrapper.clientWidth);
-              scrollbarWidth = Math.min(container.clientWidth, scrollbarWidth); // 최대 컨테이너 너비로 제한합니다.
-              gsap.set(scrollbar, { width: scrollbarWidth });
-            },
-          },
-        });
-
-        // 컨테이너에 대한 스크롤 트리거를 설정합니다.
-        ScrollTrigger.create({
-          trigger: container,
-          start: "top top",
-          end: "bottom 20%",
-          // onEnter: () => toDark(),
-          // onLeave: () => toLight(),
-          // onEnterBack: () => toDark(),
-          // onLeaveBack: () => toLight(),
-        });
-
-        // 스크롤 바를 드래그할 때 내용물을 스크롤하도록 설정합니다.
-        Draggable.create(scrollbarThumb, {
-          type: "x",
-          bounds: ".lenina-new-arrivals__scrollbar",
-          inertia: true,
-          onDrag: function () {
-            const progress = this.x / (this.maxX - this.minX);
-            const scrollX = gsap.utils.mapRange(
-              0,
-              1,
-              0,
-              wrapper.clientWidth,
-              progress * (wrapper.clientWidth - container.clientWidth)
-            );
-            TweenMax.to(scrollTween, {
-              progress: progress,
-              scrollTo: { x: scrollX },
-            });
-          },
-        });
-
-        // Draggable.create(".lenina-new-arrivals__item-list-wrap", {
-        //   // type: "scrollLeft",
-        //   // throwProps: true,
-        //   //dragResistance:  -0.5,
-        //   // type: "x",
-        //   // bounds: ".lenina-new-arrivals__scrollbar",
-        //   // inertia: true,
-        //   // onDrag: function () {
-        //   //   const progress = this.x / (this.maxX - this.minX);
-        //   //   const scrollX = gsap.utils.mapRange(0, 1, 0, wrapper.clientWidth, progress * (wrapper.clientWidth - container.clientWidth));
-        //   //   TweenMax.to(scrollTween, {
-        //   //     progress: progress,
-        //   //     scrollTo: { x: scrollX },
-        //   //   });
-        //   // },
-        // });
-      }
-
-      // 스크롤 위치에 따라 배경색을 변경하는 함수들입니다.
-      function toDark() {
-        gsap.to(".lenina-new-arrivals", {
-          backgroundColor: "#edd8d2",
-          duration: 1,
-          ease: "expo",
-        });
-      }
-
-      function toLight() {
-        gsap.to(".lenina-new-arrivals", {
-          backgroundColor: "#ebe2e0",
-          duration: 1,
-          ease: "expo",
-        });
-      }
-
-      // 함수를 호출하여 가로 스크롤을 설정합니다.
-      setupHorizontalScroll();
 
       // 텍스트 애니메이션
-      const quotes = document.querySelectorAll(".text-animation");
-      const animTarget = document.querySelectorAll(".text-animation2");
-
-      function setupSplits() {
-        quotes.forEach((quote) => {
+      const textTarget = document.querySelectorAll(".text-animation");
+      const lineTextTarget = document.querySelectorAll(".line-text-animation");
+      function setupTextSplits() {
+        textTarget.forEach((quote) => {
           // Reset if needed
           if (quote.anim) {
             quote.anim.progress(1).kill();
@@ -1062,7 +724,7 @@ I MADE SLIGHT ALTERATIONS TO MAKE GOTOPANEL() TALK TO SWIPER
           quote.anim = gsap.from(quote.split.chars, {
             scrollTrigger: {
               trigger: quote,
-              toggleActions: "restart pause resume reverse",
+              toggleActions: "restart none resume reverse",
               start: "top 80%",
             },
             duration: 0.6,
@@ -1072,20 +734,18 @@ I MADE SLIGHT ALTERATIONS TO MAKE GOTOPANEL() TALK TO SWIPER
           });
         });
       }
-
-      function setupSplits2() {
+      function setupLineSplits() {
         // SplitText 플러그인을 사용하여 텍스트 분할
-        const split = new SplitText(animTarget, { type: "lines" });
+        const split = new SplitText(lineTextTarget, { type: "lines" });
 
         // GSAP 타임라인 생성
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: ".lenina-bottom-text", // 트리거 요소
+            trigger: ".main-bottom-text-banner", // 트리거 요소
             start: "top 60%", // 트리거 요소 상단에 닿을 때 실행
             // end: "bottom 20%", // 트리거 요소 하단에 닿을 때 실행
             id: "마지막",
             toggleActions: "play none none reverse", // 진입 시 재생, 벗어날 때 역방향 재생
-            markers: true, // 마커 표시 (디버깅용)
           },
         });
 
@@ -1102,66 +762,226 @@ I MADE SLIGHT ALTERATIONS TO MAKE GOTOPANEL() TALK TO SWIPER
         });
       }
 
-      ScrollTrigger.addEventListener("refresh", setupSplits);
-      setupSplits();
-      ScrollTrigger.addEventListener("refresh", setupSplits2);
-      setupSplits2();
+      // 메인비쥬얼 Pin 고정
+      function visualFixed() {
+        const visualSection = document.querySelector(".main-visual");
 
-      // 밀리는 이미지
-      // const firstGroupImages = document.querySelectorAll(".new-arrivals-item:nth-child(3n+1)");
+        ScrollTrigger.create({
+          trigger: visualSection,
+          start: "top top",
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          pinSpacing: false,
+        });
+      }
 
-      // const test = document.getElementsByClassName("test")[0];
+      // gsap 카테고리
+      function categoryAnimation() {
+        let categoryItem = gsap.utils.toArray(".main-category__item");
+        categoryItem.forEach((panel, i) => {
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+            pin: true,
+            pinSpacing: false,
+          });
+        });
+      }
 
-      // gsap.to(test, {
-      //   y: -120,
-      //   backgroundColor: "#1e90ff",
-      //   ease: "none",
-      //   scrollTrigger: {
-      //     trigger: test,
-      //     containerAnimation: scrollTween,
-      //     start: "center center",
-      //     end: "left left",
-      //     scrub: true,
-      //   },
-      // });
+      // 갤러리 애니메이션
+      function galleryAnimation() {
+        const ani2 = gsap.timeline();
+        ani2
+          .from(".main-gallery__img[data-img='01']", {
+            //   x: -100,
+            autoAlpha: 0,
+            duration: 2,
+          })
+          .from(".main-gallery__img[data-img='02']", {
+            // x: 100,
+            autoAlpha: 0,
+            duration: 2,
+          })
+          .from(".main-gallery__img[data-img='03']", {
+            // x: -100,
+            autoAlpha: 0,
+            duration: 2,
+          })
+          .from(".main-gallery__img[data-img='04']", {
+            // x: 200,
+            autoAlpha: 0,
+            duration: 2,
+          })
+          .from(".main-gallery__img[data-img='05']", {
+            // y: 100,
+            autoAlpha: 0,
+            duration: 2,
+          });
 
-      // const $HORIZON_SECTION = gsap.utils.toArray("#horizontal .new-arrivals-item");
-      // const list = document.querySelector(".lenina-new-arrivals__item-list");
-      // console.log($HORIZON_SECTION[0].offsetWidth * $HORIZON_SECTION.length);
-      // let scrollTween = gsap.to($HORIZON_SECTION, {
-      //   // xPercent: -100 * ($HORIZON_SECTION.length - 1),
-      //   xPercent: -100 * ($HORIZON_SECTION.length - 1),
-      //   ease: "none",
-      //   scrollTrigger: {
-      //     trigger: horizontal,
-      //     start: "top top",
-      //     end: () => "+=" + $HORIZON_SECTION[0].offsetWidth * $HORIZON_SECTION.length,
-      //     pin: true,
-      //     anticipatePin: 1,
-      //     scrub: 0.5,
-      //     invalidateOnRefresh: true,
-      //   },
-      // });
+        ScrollTrigger.create({
+          animation: ani2,
+          trigger: ".main-gallery",
+          // start: "top top",
+          start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+          end: "+=2000",
+          pinnedContainer: ".main-gallery__img-list",
+          scrub: true,
+          pin: true,
+          ease: "circ.out",
+          anticipatePin: 1,
+          markers: false,
+        });
+      }
 
-      // 이미지 축소하기
-      // const visualAnimation = gsap.timeline();
-      // visualAnimation.from(".lenina-visual figure", {
-      //   autoAlpha: 0,
-      //   scale: 5,
-      //   width: "100vw",
-      //   height: "100vh",
-      // });
+      // 프로덕트 섹션 슬라이더
+      let swiperWrapperWidth;
+      let newArrivalsSwiper = new Swiper(".card-product__swiper", {
+        slidesPerView: 4,
+        spaceBetween: 8,
+        updateOnWindowResize: true, // 윈도우 리사이즈시 breakpoint 적용
+        scrollbar: {
+          el: ".swiper-scrollbar.card-product__swiper-scrollbar",
+          draggable: true,
+          snapOnRelease: false, // 스크롤 막대를 놓을 때 슬라이더 위치를 슬라이드에 맞춤
+        },
+        a11y: {
+          prevSlideMessage: "이전 슬라이드",
+          nextSlideMessage: "다음 슬라이드",
+          slideLabelMessage: "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+        }, // 접근성 매개변수(접근성 관련 대체 텍스트 설정이 가능)
+        lazy: {
+          loadPrevNext: true, // 이전/다음 이미지 지연 로딩 활성화
+          loadPrevNextAmount: 2, // 미리 로드할 다음/이전 슬라이드의 양입니다. slidesPerView보다 작을 수 없습니다.
+        },
+        on: {
+          init: function () {
+            swiperWrapperWidth = this.slides.length * (this.slides[0].clientWidth + this.passedParams.spaceBetween);
+            console.log(this.slides.length, this.slides[0].clientWidth, this.passedParams.spaceBetween);
+          },
+        },
+      });
 
-      // ScrollTrigger.create({
-      //   animation: visualAnimation,
-      //   trigger: ".lenina-visual",
-      //   start: "top top",
-      //   end: "+=3000",
-      //   scrub: true,
-      //   pin: true,
-      //   markers: false,
-      //   anticipatePin: 1,
-      // });
+      // 프로덕트 섹션 [GSAP 가로스크롤 + 스크롤바]
+      function productAnimation() {
+        const container = document.querySelector(".main-products");
+        const wrapper = container.querySelector(".card-product__swiper .swiper-wrapper");
+        console.log(swiperWrapperWidth);
+        // 스크롤을 관리할 Tween을 생성합니다.
+        const scrollTween = gsap.to(wrapper, {
+          x: () => -(swiperWrapperWidth - container.clientWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: () => `+=${swiperWrapperWidth}`,
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+            duration: 3,
+          },
+        });
+
+        // 스크롤 바를 드래그할 때 내용물을 스크롤하도록 설정합니다.
+      }
+
+      function cateTest() {
+        const observerSections = gsap.utils.toArray(".observer-section");
+        console.log(observerSections);
+        let allowScroll = true;
+        const scrollTimeout = gsap.delayedCall(1, () => (allowScroll = true)).pause();
+        let currentSection = 0;
+        const sectionIndices = [0, 0];
+        const sectionsPanels = [];
+        const sectionsLimits = [];
+
+        const gotoPanel = (index, isScrollingDown) => {
+          const limit = sectionsLimits[currentSection];
+          if ((index === limit && isScrollingDown) || (index === -1 && !isScrollingDown)) {
+            intentObserver.disable(); // resume native scroll
+            return;
+          }
+          allowScroll = false;
+          scrollTimeout.restart(true);
+          const target = isScrollingDown
+            ? sectionsPanels[currentSection][sectionIndices[currentSection]]
+            : sectionsPanels[currentSection][index];
+          gsap.to(target, {
+            yPercent: isScrollingDown ? -100 : 0,
+            duration: 0.75,
+          });
+          sectionIndices[currentSection] = index;
+        };
+
+        const intentObserver = ScrollTrigger.observe({
+          type: "wheel,touch",
+          onUp: () => allowScroll && gotoPanel(sectionIndices[currentSection] - 1, false),
+          onDown: () => allowScroll && gotoPanel(sectionIndices[currentSection] + 1, true),
+          tolerance: 10,
+          preventDefault: true,
+          onEnable(self) {
+            allowScroll = false;
+            scrollTimeout.restart(true);
+            // when enabling, we should save the scroll position and freeze it. This fixes momentum-scroll on Macs, for example.
+            let savedScroll = self.scrollY();
+            self._restoreScroll = () => self.scrollY(savedScroll); // if the native scroll repositions, force it back to where it should be
+            document.addEventListener("scroll", self._restoreScroll, {
+              passive: false,
+            });
+          },
+          onDisable: (self) => document.removeEventListener("scroll", self._restoreScroll),
+        });
+        intentObserver.disable();
+
+        observerSections.forEach((section, i) => {
+          const panels = gsap.utils.toArray(".main-category__item", section);
+          sectionsPanels[i] = panels;
+          sectionsLimits[i] = panels.length;
+
+          gsap.set(panels, { zIndex: (j) => panels.length - j });
+
+          ScrollTrigger.create({
+            trigger: section,
+            // start: "top top",
+            // end: "+=100%",
+            // trigger: ".main-category__list", // 변경된 부분
+            start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
+            end: "+=2000",
+            pin: ".main-category__list", // 변경된 부분
+            onEnter: (self) => {
+              console.log(self);
+              if (intentObserver.isEnabled) {
+                return;
+              } // in case the native scroll jumped past the end and then we force it back to where it should be.
+              self.scroll(self.start + 1); // jump to just one pixel past the start of this section so we can hold there.
+              intentObserver.enable(); // STOP native scrolling
+              currentSection = i;
+            },
+            onEnterBack: (self) => {
+              if (intentObserver.isEnabled) {
+                return;
+              } // in case the native scroll jumped backward past the start and then we force it back to where it should be.
+              self.scroll(self.end - 1); // jump to one pixel before the end of this section so we can hold there.
+              intentObserver.enable(); // STOP native scrolling
+              currentSection = i;
+            },
+            // id: "sec-" + (1 + i),
+            // markers: {
+            //   indent: 200 * i,
+            //   startColor: "#eee",
+            //   endColor: "#eee",
+            // }
+          });
+        });
+      }
+      cateTest();
+      visualFixed();
+      ScrollTrigger.addEventListener("refresh", setupTextSplits);
+      ScrollTrigger.addEventListener("refresh", setupLineSplits);
+      // categoryAnimation(); // 카테고리 애니메이션
+      galleryAnimation(); // 갤러리 애니메이션
+      // productAnimation(); // 프로덕트 섹션 [GSAP 가로스크롤 + 스크롤바]
     </script>
   </body>
 </html>
