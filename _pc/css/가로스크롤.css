@@ -291,7 +291,7 @@ section {
   place-content: center;
   width: 100%;
   height: calc(100vh - 70px);
-  background: url("../img/img_banner_bg.jpg") no-repeat center / cover;
+  background: url("../img/gallery_bg.jpg") no-repeat center / cover;
   overflow: hidden;
 
   &::after {

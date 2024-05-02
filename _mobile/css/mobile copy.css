@@ -231,7 +231,7 @@ img {
   background-color: #eabeb0;
 
   /* height: 100svh; */
-  /* background: url("../img/img_banner_bg.jpg") repeat center center / auto 100%; */
+  /* background: url("../img/gallery_bg.jpg") repeat center center / auto 100%; */
 }
 
 .main-gallery__bg,
@@ -376,7 +376,6 @@ img {
 }
 
 .main-products__item-list {
-  /* 얘 때문에 가로스크롤 어쩌지 ㅋ */
   position: absolute;
   display: flex;
   padding: 0 calc(100vw * (16 / 375));

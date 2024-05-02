@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @font-face {
   font-family: "Times";
   src: local("Times New Roman"), url("https://lenina.kr/web/upload/drawcode/fonts/times.ttf") format("truetype");
@@ -48,7 +47,7 @@ img {
   display: block;
   width: 217px;
   height: 54px;
-  background: url("../img/button_frame__basic.svg") no-repeat center / contain;
+  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__basic.svg") no-repeat center / contain;
   padding: 7px;
 }
 
@@ -92,7 +91,7 @@ img {
   content: "";
   width: 100%;
   height: 50px;
-  background: url("../img/button_frame__ribbon.svg") no-repeat center / contain;
+  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__ribbon.svg") no-repeat center / contain;
   pointer-events: none;
 }
 
@@ -111,8 +110,7 @@ section {
 
 .main-visual {
   aspect-ratio: 4/7.1;
-  background: url("../img/main_banner.jpg") no-repeat center / cover;
-
+  display: flex;
   & #vimeo-player {
     position: absolute;
     top: 50%;
@@ -127,7 +125,6 @@ section {
 .main-text-banner {
   padding: 86px 0;
   background: #fff;
-
   & figure {
     width: 40px;
     height: 40px;
@@ -136,9 +133,7 @@ section {
   & h2 {
     font: 400 20px/ 1.4 var(--font-play);
     text-align: center;
-    color: #111;
-
-    /* 숫자폰트 case-sensitive forms 적용 */
+    color: #111; /* 숫자폰트 case-sensitive forms 적용 */
     font-variant-numeric: lining-nums; /* high-level property */
     -moz-font-feature-settings: "lnum"; /* low-level (old Firefox) */
     -webkit-font-feature-settings: "lnum"; /* low-level (old Webkit) */
@@ -148,7 +143,6 @@ section {
 
 .main-category {
   overflow: hidden;
-
   & .main-category__list {
   }
 
@@ -159,16 +153,16 @@ section {
   }
 
   & .category__top {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_01.jpg") no-repeat top center / cover;
   }
   & .category__dress {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_02.jpg") no-repeat top center / cover;
   }
   & .category__shirt {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_03.jpg") no-repeat top center / cover;
   }
   & .category__denim {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat top center / cover;
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_04.jpg") no-repeat top center / cover;
   }
 
   & .main-category__desc {
@@ -199,7 +193,7 @@ section {
     width: 21px;
     height: 18px;
     content: "";
-    background: url("../img/emblem_02.svg") no-repeat center / contain;
+    background: url("https://lenina.kr/web/upload/2024_renewal/mo/emblem_02.svg") no-repeat center / contain;
   }
   & .main-category__title:before {
     left: 0;
@@ -211,34 +205,12 @@ section {
   }
 
   /*
-    position: relative;
-  width: 100%;
-  aspect-ratio: 375/664;
-  overflow: hidden;
-  
-  & .swpier-wrapper {
-    transition-timing-function: linear;
-  }
-  & .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(1) {
-    background: #edd8d2 url("../img/category_01.jpg") no-repeat center / cover;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(2) {
-    background: #edd8d2 url("../img/category_02.jpg") no-repeat center / cover;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(3) {
-    background: #edd8d2 url("../img/category_03.jpg") no-repeat center / cover;
-  }
-  & .main-category__swiper .swiper-slide:nth-child(4) {
-    background: #edd8d2 url("../img/category_04.jpg") no-repeat center / cover;
-  } */
+ position: relative; width: 100%; aspect-ratio: 375/664; overflow: hidden; & .swpier-wrapper { transition-timing-function: linear; } 
+ & .swiper-slide { display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: bold; color: #fff; } 
+ & .main-category__swiper .swiper-slide:nth-child(1) { background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_01.jpg") no-repeat center / cover; } 
+ & .main-category__swiper .swiper-slide:nth-child(2) { background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_02.jpg") no-repeat center / cover; } 
+ & .main-category__swiper .swiper-slide:nth-child(3) { background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_03.jpg") no-repeat center / cover; } 
+ & .main-category__swiper .swiper-slide:nth-child(4) { background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_04.jpg") no-repeat center / cover; } */
 }
 
 .main-gallery {
@@ -246,10 +218,8 @@ section {
   place-content: center;
   width: 100%;
   height: calc(100vh - 52px);
-  background: url("../img/img_banner_bg.jpg") no-repeat center / cover;
-
+  background: url("https://lenina.kr/web/upload/2024_renewal/mo/gallery_bg.jpg") no-repeat center / cover;
   overflow: hidden;
-
   &::after {
     position: absolute;
     top: 0;
@@ -257,7 +227,7 @@ section {
     content: "";
     width: 100%;
     height: calc(100vh * (30 / 665));
-    background: url("../img/line_top.svg") repeat-x bottom left / cover;
+    background: url("https://lenina.kr/web/upload/2024_renewal/mo/line_top.svg") repeat-x bottom left / cover;
   }
   &::before {
     position: absolute;
@@ -266,7 +236,7 @@ section {
     content: "";
     width: 100%;
     height: calc(100vh * (30 / 665));
-    background: url("../img/line_bottom.svg") repeat-x top left / cover;
+    background: url("https://lenina.kr/web/upload/2024_renewal/mo/line_bottom.svg") repeat-x top left / cover;
   }
 
   & .main-gallery__text-wrap {
@@ -281,7 +251,7 @@ section {
     height: calc(100vh * (33 / 665));
     flex-shrink: 0;
     content: "";
-    background: url("../img/emblem_03.svg") no-repeat center / contain;
+    background: url("https://lenina.kr/web/upload/2024_renewal/mo/emblem_03.svg") no-repeat center / contain;
     margin-bottom: calc(100vh * (15 / 665));
   }
   & .main-gallery__text-wrap figure {
@@ -307,9 +277,7 @@ section {
     margin: calc(100vh * (15 / 665)) auto 0;
   }
   & .main-gallery__title span {
-    /* font-size: calc(100vh * (12 / 665));
-    font-weight: 400;
-    line-height: 1; */
+    /* font-size: calc(100vh * (12 / 665)); font-weight: 400; line-height: 1; */
     color: rgba(89, 106, 131, 0.7);
   }
 
@@ -377,7 +345,6 @@ section {
   padding: calc(100vh * (139 / 665)) 0;
   display: flex;
   align-items: center;
-
   & .main-products__inner {
     width: 100%;
   }
@@ -409,6 +376,8 @@ section {
   & .main-products__link span {
     width: calc(100vh * (14 / 665));
     height: calc(100vh * (5.4 / 665));
+    display: flex;
+    align-items: flex-end;
     margin-top: calc(100vh * (2 / 665));
   }
 
@@ -431,9 +400,7 @@ section {
     font-size: calc(100vh * (14 / 665));
     font-weight: 400;
     line-height: normal;
-    margin-bottom: calc(100vh * (8 / 665));
-
-    /* 두줄처리 */
+    margin-bottom: calc(100vh * (8 / 665)); /* 두줄처리 */
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -450,9 +417,7 @@ section {
     max-width: 50%;
     color: #000;
     font-size: calc(100vh * (14 / 665));
-    font-weight: 700;
-
-    /* 한줄처리 */
+    font-weight: 700; /* 한줄처리 */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -461,9 +426,7 @@ section {
     max-width: 50%;
     color: rgba(0, 0, 0, 0.4);
     font-size: calc(100vh * (14 / 665));
-    font-weight: 400;
-
-    /* 한줄처리 */
+    font-weight: 400; /* 한줄처리 */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -471,13 +434,13 @@ section {
 
   & .card-product__swiper-scrollbar {
     position: absolute;
-    top: unset;
-    left: 50%;
-    bottom: 0;
-    width: calc(100vw - calc(100vh * (32 / 665)));
+    top: unset !important;
+    left: 50% !important;
+    bottom: 0 !important;
+    width: calc(100vw - calc(100vh * (32 / 665))) !important;
     height: calc(100vh * (20 / 665));
     transform: translateX(-50%);
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   & .card-product__swiper-scrollbar:before {
@@ -503,8 +466,7 @@ section {
     height: calc(3 / 750 * 100vw);
     background-color: #111;
     border-radius: 0;
-    transform: translateY(-50%);
-    /* pointer-events: none; */
+    transform: translateY(-50%); /* pointer-events: none; */
     transition: background-color 0.3s ease; /* 전환 효과 */
   }
 
@@ -516,7 +478,6 @@ section {
 
 .main-bottom-text-banner {
   padding-top: 60px;
-
   & h2 {
     width: auto;
     color: #000;
@@ -526,5 +487,18 @@ section {
     line-height: normal;
     padding: 0 20px;
     letter-spacing: -0.1px;
+  }
+
+  .main-bottom__logo-wrap {
+    padding-top: 55px;
+  }
+  .main-bottom__logo {
+    width: 255px;
+    height: 59px;
+    margin: 0 auto 117px;
+  }
+  .main-bottom__logo img {
+    width: 100%;
+    height: 100%;
   }
 }
