@@ -1,23 +1,14 @@
 1. 디자인 파일
    https://www.figma.com/file/eInowFdipsYvATRAtxmi2P/LENINA?type=design&node-id=349-389&mode=design&t=nv1tNl9CK6EUXifk-0
 
-2. cafe24
-   https://eclogin.cafe24.com/Shop/
-   아이디 : lenina
-   비밀번호 : Inditex11!!
-
-   테스트 페이지
-   PC https://lenina.kr/index_renewal.html
-   MO https://m.lenina.kr/index_renewal.html
-
-3. gsap
+2. gsap
    https://gsap.com
    dev@yoil.co.kr / yoil3213!
 
    https://webstoryboy.github.io/gsap2023/gsap01.html
    https://webstoryboy.co.kr/1911
 
-4. 질문창
+3. 질문창
 
 https://gsap.com/community/forums/topic/40401-slider-auto-scrolling-draggable-scrollbar/#comment-201181
 
