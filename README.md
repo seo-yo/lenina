@@ -3,7 +3,6 @@
 
 2. gsap
    https://gsap.com
-   dev@yoil.co.kr / yoil3213!
 
    https://webstoryboy.github.io/gsap2023/gsap01.html
    https://webstoryboy.co.kr/1911
