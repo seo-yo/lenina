@@ -326,10 +326,12 @@ section {
   & .main-gallery__img {
     position: absolute;
     transform-origin: top center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   & .main-gallery__img img {
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
   }
 
   & .main-gallery__img[data-img="01"] {
@@ -340,15 +342,15 @@ section {
   }
   & .main-gallery__img[data-img="02"] {
     top: calc(100vh * (87 / 1080));
-    right: 0;
-    width: calc(100vh * (594 / 1080));
+    right: calc(100vh * (-27 / 1080));
+    width: calc(100vh * (621 / 1080));
     height: calc(100vh * (347 / 1080));
   }
   & .main-gallery__img[data-img="03"] {
     /* top: calc(100vh * (665 / 1080)); */
     bottom: calc(100vh * (81 / 1080));
-    left: 0;
-    width: calc(100vh * (579 / 1080));
+    left: calc(100vh * (-40 / 1080));
+    width: calc(100vh * (619 / 1080));
     height: calc(100vh * (344 / 1080));
   }
   & .main-gallery__img[data-img="04"] {

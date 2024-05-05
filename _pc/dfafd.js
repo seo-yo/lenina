@@ -1,12 +1,41 @@
-const smoother = ScrollSmoother.create({
-  smooth: 5,
-  effects: true,
-  normalizeScroll: true,
+// popup
+$(function () {
+  dePopup();
 });
+function dePopup() {
+  function setCookie(name, value, expiredays) {
+    var todayDate = new Date();
+    todayDate.setDate(todayDate.getDate() + expiredays);
+    document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+  }
+  cookiedata = document.cookie;
+  if (cookiedata.indexOf("de-popup=done") < 0) {
+    $(".de-popup, .de-popup-bg").css("display", "block");
+  } else {
+    $(".de-popup, .de-popup-bg").css("display", "none");
+  }
+  let popupSwiper = new Swiper(".popup-list", {
+    speed: 1000,
+    touchReleaseOnEdges: true,
+    preloadImages: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    scrollbar: {
+      el: ".de-popup-scrollbar",
+      draggable: true,
+    },
+  });
+  $(".de-popup .closetoday").click(function () {
+    setCookie("de-popup", "done", 1);
+    $(".de-popup, .de-popup-bg").css("display", "none");
+  });
+  $(".de-popup .close").click(function () {
+    $(".de-popup, .de-popup-bg").css("display", "none");
+  });
+}
 
-ScrollTrigger.normalizeScroll({
-  allowNestedScroll: true,
-});
 const headerHeight = "70px";
 
 // 텍스트 애니메이션
@@ -81,51 +110,56 @@ function visualFixed() {
   });
 }
 
-// gsap 카테고리
-
 // 갤러리 애니메이션
 function galleryAnimation() {
-  const ani2 = gsap.timeline();
+  const ani2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".main-gallery",
+      start: "top-=" + headerHeight + " top",
+      end: "+=2000",
+      pinnedContainer: ".main-gallery__img-list",
+      scrub: true,
+      pin: true,
+      ease: "circ.out",
+      anticipatePin: 1,
+      markers: false,
+    },
+  });
+
   ani2
     .from(".main-gallery__img[data-img='01']", {
       x: -100,
       autoAlpha: 0,
       duration: 4,
     })
+    .from(
+      ".main-gallery__img[data-img='04']",
+      {
+        x: 200,
+        autoAlpha: 0,
+        duration: 4,
+      },
+      "<"
+    )
     .from(".main-gallery__img[data-img='02']", {
       x: 100,
       autoAlpha: 0,
       duration: 4,
     })
-    .from(".main-gallery__img[data-img='03']", {
-      x: -100,
-      autoAlpha: 0,
-      duration: 4,
-    })
-    .from(".main-gallery__img[data-img='04']", {
-      x: 200,
-      autoAlpha: 0,
-      duration: 2,
-    })
+    .from(
+      ".main-gallery__img[data-img='03']",
+      {
+        x: 200,
+        autoAlpha: 0,
+        duration: 4,
+      },
+      "<"
+    )
     .from(".main-gallery__img[data-img='05']", {
       y: 100,
       autoAlpha: 0,
       duration: 4,
     });
-
-  ScrollTrigger.create({
-    animation: ani2,
-    trigger: ".main-gallery",
-    // start: "top top",
-    start: "top-=" + headerHeight + " top", // 헤더높이 뺀값을 시작 점으로 잡기
-    end: "+=2000",
-    pinnedContainer: ".main-gallery__img-list",
-    scrub: true,
-    pin: true,
-    ease: "circ.out",
-    anticipatePin: 1,
-    markers: false,
-  });
 }
 
 // 프로덕트 섹션 [GSAP 가로스크롤 + 스크롤바]
@@ -147,7 +181,7 @@ function productAnimation() {
       pin: true,
       anticipatePin: 1,
       invalidateOnRefresh: true,
-      duration: 3,
+      duration: 2,
       onUpdate: (self) => {
         const progress = self.progress;
         const scrollWidth = wrapper.scrollWidth - wrapper.clientWidth;
@@ -187,35 +221,77 @@ function productAnimation() {
 }
 
 function categorySlide() {
-  const mainCategorySwiper = document.querySelector(".main-category");
+  let currentSlideIndex = 0;
   const swiperInner = document.querySelector(".main-category__inner");
-
-  let cateSwiper = new Swiper(".main-category__swiper", {
-    mousewheel: {
-      releaseOnEdges: true,
-    },
-    resistance: false,
-    parallax: true,
-    touchStartPreventDefault: false,
-    speed: 600,
-  });
-}
-
-function categorySlide() {
-  let cateSwiper = new Swiper(".main-category__swiper", {
+  const cateSwiper = new Swiper(".main-category__swiper", {
     direction: "vertical",
     resistance: false,
+    touchReleaseOnEdges: true,
     parallax: true,
     touchStartPreventDefault: false,
     preventInteractionOnTransition: false,
     speed: 500,
     sensitivity: 1,
+    resistance: false,
+    mousewheel: {
+      enabled: true,
+    },
+    on: {
+      slideChange: function () {
+        currentSlideIndex = this.activeIndex;
+      },
+      slideChangeTransitionEnd: function () {
+        if (this.isEnd || this.isBeginning) {
+          swiperInner.classList.remove("fixed");
+          document.body.style.overflow = "auto";
+          DisableMouseWheel();
+
+          if (this.isEnd) {
+            window.scrollTo(0, cateSwiperSection.offsetTop + 1);
+          } else if (this.isBeginning) {
+            window.scrollTo(0, cateSwiperSection.offsetTop - 1);
+          }
+        }
+      },
+    },
   });
+
+  // 현재 스크롤 위치 추적
+  let CONTAINER_SCROLL_TOP = 0;
+  let currentScroll;
+  let deltaY; //-올라가는거 + 내려가는거
+
+  const cateSwiperSection = document.querySelector(".main-category");
+  window.addEventListener("scroll", (e) => {
+    currentScroll = document.documentElement.scrollTop; // 현재 스크롤바 위치
+    deltaY = currentScroll - CONTAINER_SCROLL_TOP;
+
+    if (cateSwiperSection.getBoundingClientRect().top <= 0) {
+      if (currentSlideIndex === 0 && deltaY > 0) {
+        swiperInner.classList.add("fixed");
+        document.body.style.overflow = "hidden";
+        ActiveMouseWheel();
+      }
+    }
+    if (cateSwiper.activeIndex !== 0 && deltaY < 0 && cateSwiperSection.getBoundingClientRect().top >= 0) {
+      swiperInner.classList.add("fixed");
+      document.body.style.overflow = "hidden";
+      ActiveMouseWheel();
+    }
+
+    CONTAINER_SCROLL_TOP = currentScroll;
+  });
+
+  const scrollHandler = () => {
+    CONTAINER_SCROLL_TOP = $CONTAINER.scrollTop;
+    console.log(CONTAINER_SCROLL_TOP);
+    scrollFixedTab(); // 탭 고정 여부 업데이트
+  };
 
   function ActiveMouseWheel() {
     cateSwiper.mousewheel.enable();
     cateSwiper.mousewheel.sensitivity = 0.5;
-    cateSwiper.mousewheel.releaseOnEdges = true;
+    // cateSwiper.mousewheel.releaseOnEdges = true;
   }
 
   function DisableMouseWheel() {
@@ -223,37 +299,9 @@ function categorySlide() {
     cateSwiper.mousewheel.sensitivity = 0;
     cateSwiper.mousewheel.releaseOnEdges = false;
   }
-
-  ScrollTrigger.create({
-    trigger: ".main-category",
-    start: "top top",
-    end: "+=200%",
-    // pinnedContainer: ".main-gallery__img-list",
-    scrub: 5,
-    pin: true,
-    ease: "circ.out",
-    anticipatePin: 1,
-    markers: false,
-    // pinSpacing: false,
-    onEnter: () => {
-      console.log("onEnter");
-      ActiveMouseWheel();
-    },
-
-    onLeave: () => {
-      console.log("onLeave");
-      DisableMouseWheel();
-    },
-    onEnterBack: () => {
-      console.log("onEnterBack");
-      ActiveMouseWheel();
-    },
-    onLeaveBack: () => {
-      console.log("onLeaveBack");
-      DisableMouseWheel();
-    },
-  });
 }
+
+console.log("테스트5");
 
 visualFixed();
 ScrollTrigger.addEventListener("refresh", setupTextSplits);
@@ -261,7 +309,3 @@ ScrollTrigger.addEventListener("refresh", setupLineSplits);
 categorySlide();
 galleryAnimation(); // 갤러리 애니메이션
 productAnimation(); // 프로덕트 섹션 [GSAP 가로스크롤 + 스크롤바]
-astly.cloudflare.com/ajax/libs/jquery-loading-overlay/2.1.7/loadingoverlay.min.css:1 
-        
-        
-       Failed to load resource: net::ERR_NAME_NOT_RESOLVED

@@ -42,7 +42,6 @@ section {
 .times-font {
   font: 400 60px/1.4 Times, serif;
 }
-
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -51,7 +50,7 @@ section {
   margin: -1px;
   overflow: hidden;
 }
-
+/*BUTTON*/
 .lenina-button__basic {
   display: block;
   width: 217px;
@@ -59,7 +58,6 @@ section {
   background: url("https://lenina.kr/web/upload/2024_renewal/pc/button_frame__basic.svg") no-repeat center / contain;
   padding: 7px;
 }
-
 .lenina-button__basic span {
   display: flex;
   align-items: center;
@@ -76,7 +74,6 @@ section {
   color: #5e4d4d;
   background-color: var(--color-white);
 }
-
 .lenina-button__ribbon {
   position: relative;
   display: block;
@@ -96,11 +93,9 @@ section {
   transition: all 0.5s;
   border-radius: 8px;
 }
-
 .lenina-button__ribbon:hover span {
   background-color: rgba(89, 106, 131, 0.3);
 }
-
 .lenina-button__ribbon::before {
   position: absolute;
   left: 0;
@@ -112,6 +107,7 @@ section {
   pointer-events: none;
 }
 
+/*MAIN VISUAL*/
 .main-visual {
   aspect-ratio: 16/9;
   display: flex;
@@ -125,6 +121,8 @@ section {
     object-fit: cover;
   }
 }
+
+/*MAIN TEXT BANNER*/
 .main-text-banner {
   padding: 180px 0 230px;
   background: #fff;
@@ -133,7 +131,6 @@ section {
     height: 80px;
     margin: 0 auto 32px;
   }
-
   & h2 {
     font: 200 40px/ 1.4 var(--font-play);
     text-align: center;
@@ -144,13 +141,15 @@ section {
     font-feature-settings: "lnum" on; /* low-level (all new browsers) */
   }
 }
+
+/*MAIN CATEGORY*/
 .main-category {
   height: 100vh;
   background-color: #fff;
-
   & .main-category__inner {
     position: relative;
-    -webkit-transform: translateZ(1);
+    height: 100vh;
+    overflow-y: hidden;
   }
   & .main-category__inner.fixed {
     position: fixed;
@@ -158,16 +157,14 @@ section {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 2; /* fixed 상태 */
   }
-
   & .main-category__swiper {
     height: 100vh;
   }
   & .swpier-wrapper {
     transition-timing-function: linear;
   }
-
   & .swiper-slide {
     height: 100%;
     overflow: hidden;
@@ -196,7 +193,6 @@ section {
   & .main-category__swiper .swiper-slide:nth-child(4) .slide-inner {
     background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/pc/category_04.jpg") no-repeat top center / cover;
   }
-
   & .main-category__desc {
     position: relative;
     height: 100%;
@@ -207,7 +203,6 @@ section {
     padding-bottom: 80px;
     z-index: 1;
   }
-
   & .main-category__title {
     position: relative;
     text-align: center;
@@ -218,7 +213,6 @@ section {
     padding: 0 20px;
     margin-bottom: 40px;
   }
-
   & .main-category__title:after,
   & .main-category__title:before {
     position: absolute;
@@ -228,7 +222,6 @@ section {
     content: "";
     background: url("https://lenina.kr/web/upload/2024_renewal/pc/emblem_02.svg") no-repeat center / contain;
   }
-
   & .main-category__title:before {
     left: 0;
     transform: translate(-100%, -50%);
@@ -239,6 +232,7 @@ section {
   }
 }
 
+/*MAIN GALLERY*/
 .main-gallery {
   display: grid;
   place-content: center;
@@ -264,7 +258,6 @@ section {
     height: 60px;
     background: url("https://lenina.kr/web/upload/2024_renewal/pc/line_bottom.svg") repeat-x top left / cover;
   }
-
   & .main-gallery__text-wrap {
     position: relative;
     display: flex;
@@ -308,7 +301,6 @@ section {
     line-height: 1;
     color: rgba(89, 106, 131, 0.7);
   }
-
   & .main-gallery__text-wrap a {
     flex-shrink: 0;
   }
@@ -323,18 +315,15 @@ section {
     pointer-events: none;
     z-index: 1;
   }
-
   & .main-gallery__img {
     position: absolute;
     transform-origin: top center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
   & .main-gallery__img img {
     width: 100%;
     height: 100%;
   }
-
   & .main-gallery__img[data-img="01"] {
     top: calc(100vh * (92 / 1080));
     left: calc(100vh * (104 / 1080));
@@ -370,6 +359,7 @@ section {
   }
 }
 
+/*MAIN PRODUCTS*/
 .main-products {
   height: 100vh;
   background: #f0e5e2;
@@ -406,7 +396,6 @@ section {
     height: calc(100vh * (5.4 / 1080));
     margin-top: calc(100vh * (2 / 1080));
   }
-
   & .main-products__item-list {
     position: absolute;
     top: calc(100vh * (277 / 1080));
@@ -461,7 +450,6 @@ section {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
   & .main-products__scrollbar-wrap {
     position: absolute;
     top: calc(100vh * (870 / 1080));
@@ -472,14 +460,12 @@ section {
     align-items: center;
     justify-content: space-between;
   }
-
   & .main-products__scrollbar {
     position: relative;
     width: clamp(0, calc(100vh * (1000 / 1080)), 80%);
     height: 100%;
     margin: 0 auto;
   }
-
   & .main-products__scrollbar:after {
     position: absolute;
     top: 50%;
@@ -490,7 +476,6 @@ section {
     background-color: rgba(0, 0, 0, 0.1);
     transform: translateY(-50%);
   }
-
   & .main-products__scrollbar-thumb {
     position: absolute;
     width: calc(100vh * (300 / 1080));
@@ -510,6 +495,7 @@ section {
   }
 }
 
+/*MAIN BOTTOM TEXT BANNER*/
 .main-bottom-text-banner {
   padding: 183px 10px 2px;
   background-color: #fff;
@@ -536,6 +522,51 @@ section {
     height: 100%;
   }
 }
+
 .split-line {
   overflow: hidden;
+}
+
+/* popup */
+.de-popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+  width: 380px;
+}
+.de-popup .inner {
+  position: relative;
+  z-index: 0;
+  border-radius: 0px 100px 0px 0px;
+  overflow: hidden;
+}
+.de-popup .inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.de-popup .buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.de-popup .buttons > p {
+  display: block;
+  padding: 16px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.de-popup .de-popup-scrollbar {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  z-index: 10;
+  width: 144px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+}
+.de-popup .de-popup-scrollbar .swiper-scrollbar-drag {
+  background: #fff;
 }

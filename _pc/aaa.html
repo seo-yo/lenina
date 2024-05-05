@@ -1,416 +1,1547 @@
-<head>
-  <script type="text/javascript" async="" src="https://cdn.channel.io/plugin/ch-plugin-web.js" charset="UTF-8"></script>
-
-  <!-- PG크로스브라우징필수내용 -->
-  <meta http-equiv="Cache-Control" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <!-- // PG크로스브라우징필수내용 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap"
-    rel="stylesheet"
-  />
-  <!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
-
-  <!-- End Meta Pixel Code -->
-
-  <!-- Google Shopping -->
-
-  <style type="text/css"></style>
-  <title>L E N I N A ; 르니나</title>
-
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-
-    /* $bg-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%); */
-
-    header {
-      position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      width: 100%;
-      z-index: 3;
-      height: 7em;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(0.66rem, 2vw, 1rem);
-      letter-spacing: 0.5em;
-    }
-
-    .main-category {
-      position: relative;
-      min-height: 100vh;
-      background-color: #867f7f;
-    }
-
-    .main-category__wrap {
-      position: relative;
-      width: 100%;
-    }
-
-    .main-category__list {
-      width: 100%;
-      position: relative;
-      visibility: visible;
-    }
-
-    .main-category__item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .bg {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .category__top .bg {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-        url("./img/category_01.jpg") no-repeat top center / cover;
-    }
-    .category__dress .bg {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-        url("./img/category_02.jpg") no-repeat top center / cover;
-    }
-    .category__shirt .bg {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-        url("./img/category_03.jpg") no-repeat top center / cover;
-    }
-    .category__denim .bg {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%),
-        url("./img/category_04.jpg") no-repeat top center / cover;
-    }
-
-    .main-category__desc {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding-bottom: 80px;
-      z-index: 1;
-    }
-
-    .main-category__title {
-      position: relative;
-      text-align: center;
-      font-size: 60px;
-      line-height: 1;
-      font-weight: 400;
-      color: var(--color-white);
-      padding: 0 20px;
-      margin-bottom: 40px;
-    }
-    .main-category__title:after,
-    .main-category__title:before {
-      position: absolute;
-      top: calc(50% + 7px);
-      width: 32px;
-      height: 28px;
-      content: "";
-      background: url("./img/emblem_02.svg") no-repeat center / contain;
-    }
-    .main-category__title:before {
-      left: 0;
-      transform: translate(-100%, -50%);
-    }
-    .main-category__title:after {
-      right: 0;
-      transform: translate(100%, -50%);
-    }
-  </style>
-</head>
-
-<body>
-  <!--
-Sections animate in and out on scroll. Scroll up or down and the sections will wrap around after hitting the start or end. Uses GSAP for the animations.
--->
-
-  <header>
-    <div>Animated Sections</div>
-    <div><a href="https://codepen.io/BrianCross/pen/PoWapLP">Original By Brian</a></div>
-  </header>
-  <!-- <section class="first">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg one">
-          <h2 class="section-heading">Scroll down</h2>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="main">
+      <!-- S : 메인 비쥬얼 -->
+      <div
+        class="pin-spacer"
+        style="
+          order: 0;
+          place-self: auto;
+          grid-area: auto / auto / auto / auto;
+          z-index: auto;
+          float: none;
+          flex-shrink: 1;
+          display: flex;
+          margin: 0px;
+          inset: 0px;
+          position: relative;
+          flex-basis: auto;
+          overflow: visible;
+          box-sizing: border-box;
+          width: 1497px;
+          height: 842px;
+          padding: 0px;
+        "
+      >
+        <section
+          class="main-visual"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            inset: 0px auto auto 0px;
+            margin: 0px;
+            max-width: 1497px;
+            width: 1497px;
+            max-height: 842.062px;
+            height: 842.062px;
+            padding: 0px;
+            transform: translate(0px, 0.001px);
+          "
+        >
+          <h2 class="blind">메인 비쥬얼</h2>
+          <iframe
+            id="vimeo-player"
+            src="https://player.vimeo.com/video/940712688?h=c7fe692a7e&amp;badge=0&amp;autoplay=1&amp;autopause=0&amp;byline=0&amp;controls=0&amp;loop=1&amp;pip=0&amp;playsinlin=0&amp;portrait=0&amp;title=0&amp;background=1&amp;muted=1"
+            frameborder="0"
+            title="LENINA SUMMER TEASER WEB"
+            data-ready="true"
+          ></iframe>
+        </section>
       </div>
-    </div>
-  </section>
-  <section class="second">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">Animated with GSAP</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="third">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">GreenSock</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="fourth">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">Animation platform</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="fifth">
-    <div class="outer">
-      <div class="inner">
-        <div class="bg">
-          <h2 class="section-heading">Keep scrolling</h2>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section class="main-category">
-    <div class="main-category__wrap">
-      <article class="main-category__list category__top">
-        <div class="outer">
-          <div class="inner">
-            <div class="bg one">
-              <div class="main-category__desc">
-                <p class="main-category__title text-animation">TOP</p>
-                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+      <!-- E : 메인 비쥬얼 --><!-- S : 텍스트 배너 -->
+      <section class="main-text-banner">
+        <figure><img src="https://lenina.kr/web/upload/2024_renewal/pc/emblem_01.svg" alt="장식" /> &nbsp;</figure>
+        <h2 class="text-animation" style="">
+          <div class="split-line" style="display: block; text-align: center; position: relative">
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                2
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                4
+              </div>
+            </div>
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                S
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                U
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                M
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                M
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                E
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                R
+              </div>
+            </div>
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                C
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                O
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                L
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                L
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                E
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                C
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                T
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                I
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                O
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                N
               </div>
             </div>
           </div>
-        </div>
-      </article>
-      <article class="main-category__list category__dress">
-        <div class="outer">
-          <div class="inner">
-            <div class="bg">
-              <div class="main-category__desc">
-                <p class="main-category__title text-animation">DRESS</p>
-                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+          <div class="split-line" style="display: block; text-align: center; position: relative">
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                M
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                o
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                n
+              </div>
+            </div>
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                c
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                h
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                e
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                r
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                ,
+              </div>
+            </div>
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                M
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                y
+              </div>
+            </div>
+            <div style="position: relative; display: inline-block">
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                s
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                u
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                m
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                m
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                e
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 100%);
+                "
+              >
+                r
               </div>
             </div>
           </div>
+        </h2>
+      </section>
+      <!-- E : 텍스트 배너 --><!-- S : 상품 카테고리 -->
+      <section class="main-category">
+        <h2 class="blind">상품 카테고리 리스트</h2>
+
+        <div class="main-category__inner fixed">
+          <div
+            class="main-category__swiper swiper swiper-initialized swiper-vertical swiper-pointer-events swiper-watch-progress swiper-backface-hidden"
+          >
+            <ul class="swiper-wrapper" id="swiper-wrapper-9520773a1bcfb613" aria-live="polite">
+              <li
+                class="swiper-slide main-category__item category__top swiper-slide-visible swiper-slide-active"
+                role="group"
+                aria-label="1 / 4"
+                style="height: 827px"
+              >
+                <div class="slide-inner" data-swiper-parallax-y="80%" style="transform: translate3d(0px, 0%, 0px)">
+                  <div class="main-category__desc">
+                    <p class="main-category__title">TOP</p>
+                    <a href="https://lenina.kr/category/top/45/" class="lenina-button__basic"
+                      ><span>Discover Now</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li
+                class="swiper-slide main-category__item category__dress swiper-slide-next"
+                role="group"
+                aria-label="2 / 4"
+                style="height: 827px"
+              >
+                <div class="slide-inner" data-swiper-parallax-y="80%" style="transform: translate3d(0px, -80%, 0px)">
+                  <div class="main-category__desc">
+                    <p class="main-category__title">DRESS</p>
+                    <a href="https://lenina.kr/category/dress/66/" class="lenina-button__basic"
+                      ><span>Discover Now</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li
+                class="swiper-slide main-category__item category__shirt"
+                role="group"
+                aria-label="3 / 4"
+                style="height: 827px"
+              >
+                <div class="slide-inner" data-swiper-parallax-y="80%" style="transform: translate3d(0px, -80%, 0px)">
+                  <div class="main-category__desc">
+                    <p class="main-category__title">SHIRT</p>
+                    <a href="https://lenina.kr/category/shirt/43/" class="lenina-button__basic"
+                      ><span>Discover Now</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li
+                class="swiper-slide main-category__item category__denim"
+                role="group"
+                aria-label="4 / 4"
+                style="height: 827px"
+              >
+                <div class="slide-inner" data-swiper-parallax-y="80%" style="transform: translate3d(0px, -80%, 0px)">
+                  <div class="main-category__desc">
+                    <p class="main-category__title">DENIM</p>
+                    <a href="https://lenina.kr/category/denim/44/" class="lenina-button__basic"
+                      ><span>Discover Now</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
         </div>
-      </article>
-      <article class="main-category__list category__shirt">
-        <div class="outer">
-          <div class="inner">
-            <div class="bg">
-              <div class="main-category__desc">
-                <p class="main-category__title text-animation">SHIRT</p>
-                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+      </section>
+      <!-- E : 상품 카테고리 --><!-- S : 이미지 배너 -->
+      <div
+        class="pin-spacer"
+        style="
+          order: 0;
+          place-self: auto;
+          grid-area: auto / auto / auto / auto;
+          z-index: auto;
+          float: none;
+          flex-shrink: 1;
+          display: grid;
+          margin: 0px;
+          inset: 0px;
+          position: relative;
+          flex-basis: auto;
+          overflow: visible;
+          box-sizing: border-box;
+          width: 1497px;
+          height: 2757px;
+          padding: 0px 0px 2000px;
+        "
+      >
+        <section
+          class="main-gallery"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            inset: 0px auto auto 0px;
+            margin: 0px;
+            max-width: 1497px;
+            width: 1497px;
+            max-height: 757px;
+            height: 757px;
+            padding: 0px;
+            transform: translate(0px, 0px);
+          "
+        >
+          <div class="main-gallery__text-wrap">
+            <figure><img src="https://lenina.kr/web/upload/drawcode/logo.svg" alt="Lenina" /> &nbsp;</figure>
+            <h2 class="main-gallery__title text-animation" style="">
+              <div class="split-line" style="display: block; text-align: center; position: relative">
+                <span class="times-font"
+                  ><div style="position: relative; display: inline-block">
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 100%);
+                      "
+                    >
+                      2
+                    </div>
+                    <div
+                      style="
+                        position: relative;
+                        display: inline-block;
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform: translate(0px, 100%);
+                      "
+                    >
+                      4
+                    </div>
+                  </div></span
+                >
+                <div style="position: relative; display: inline-block">
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    &nbsp;
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    S
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    U
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    M
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    M
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    E
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    R
+                  </div>
+                </div>
+                <div style="position: relative; display: inline-block">
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    C
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    O
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    L
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    L
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    E
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    C
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    T
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    I
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    O
+                  </div>
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 100%);
+                    "
+                  >
+                    N
+                  </div>
+                </div>
+              </div>
+            </h2>
+            <a href="https://lenina.kr/product/list.html?cate_no=206" class="lenina-button__ribbon"
+              ><span>Discover Now</span></a
+            >
+          </div>
+
+          <div class="main-gallery__img-list">
+            <figure
+              class="main-gallery__img"
+              data-img="01"
+              style="opacity: 0; visibility: hidden; transform: translate(-100px, 0px)"
+            >
+              <img src="https://lenina.kr/web/upload/2024_renewal/pc/gallery_01.jpg" alt="&nbsp;" /> &nbsp;
+            </figure>
+            <figure
+              class="main-gallery__img"
+              data-img="02"
+              style="opacity: 0; visibility: hidden; transform: translate(100px, 0px)"
+            >
+              <img src="https://lenina.kr/web/upload/2024_renewal/pc/gallery_02.jpg" alt="&nbsp;" /> &nbsp;
+            </figure>
+            <figure
+              class="main-gallery__img"
+              data-img="03"
+              style="opacity: 0; visibility: hidden; transform: translate(-100px, 0px)"
+            >
+              <img src="https://lenina.kr/web/upload/2024_renewal/pc/gallery_03.jpg" alt="&nbsp;" /> &nbsp;
+            </figure>
+            <figure
+              class="main-gallery__img"
+              data-img="05"
+              style="opacity: 0; visibility: hidden; transform: translate(0px, 100px)"
+            >
+              <img src="https://lenina.kr/web/upload/2024_renewal/pc/gallery_05.jpg" alt="&nbsp;" /> &nbsp;
+            </figure>
+            <figure
+              class="main-gallery__img"
+              data-img="04"
+              style="opacity: 0; visibility: hidden; transform: translate(200px, 0px)"
+            >
+              <img src="https://lenina.kr/web/upload/2024_renewal/pc/gallery_04.jpg" alt="&nbsp;" /> &nbsp;
+            </figure>
+          </div>
+        </section>
+      </div>
+      <!-- E : 이미지 배너 --><!-- S : 상품 진열 리스트 --><!-- <div id="horizontal"> -->
+      <div
+        class="pin-spacer"
+        style="
+          order: 0;
+          place-self: auto;
+          grid-area: auto / auto / auto / auto;
+          z-index: auto;
+          float: none;
+          flex-shrink: 1;
+          display: block;
+          margin: 0px;
+          inset: 0px;
+          position: relative;
+          flex-basis: auto;
+          overflow: visible;
+          box-sizing: border-box;
+          width: 1497px;
+          height: 4568px;
+          padding: 0px 0px 3741px;
+        "
+      >
+        <section
+          class="xans-element- xans-product xans-product-listmain-15 xans-product-listmain xans-product-15 main-products"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            inset: 0px auto auto 0px;
+            margin: 0px;
+            max-width: 1497px;
+            width: 1497px;
+            max-height: 827px;
+            height: 827px;
+            padding: 160.04px 0px 196.795px;
+            transform: translate(0px, 0px);
+          "
+        >
+          <div class="main-products__top">
+            <h2 class="main-products__title">New Arrivals</h2>
+            <a href="https://lenina.kr/product/list.html?cate_no=206" class="main-products__link">
+              <b>Discover Now</b>
+              <span>
+                <img src="https://lenina.kr/web/upload/2024_renewal/pc/icon_arrow.svg" alt="아이콘" />
+                &nbsp;</span
+              >
+            </a>
+          </div>
+          <!--
+            $count = 12
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+          <ul
+            class="main-products__item-list"
+            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px)"
+          >
+            <li id="anchorBoxId_2639" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-moira-throat-latch-trench-coativory/2639/category/1/display/16/"
+                name="anchorBoxName_2639"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/119eb2ad792360ee287e38c2bca29020.jpg"
+                  id="eListPrdImage2639_16"
+                  alt="[사나 착용] MOIRA throat latch trench coat_ivory"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-moira-throat-latch-trench-coativory/2639/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111"
+                  >[사나 착용] MOIRA throat latch trench coat_ivory</span
+                ></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">258,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2638" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-odile-frill-neck-embroidered-shirtwhite/2638/category/1/display/16/"
+                name="anchorBoxName_2638"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/002df239f3a61b4dd015a914f426acb0.jpg"
+                  id="eListPrdImage2638_16"
+                  alt="[사나 착용] ODILE frill neck embroidered shirt_white"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-odile-frill-neck-embroidered-shirtwhite/2638/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111"
+                  >[사나 착용] ODILE frill neck embroidered shirt_white</span
+                ></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">148,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2628" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-piper-wide-rollover-tuck-pantsblack/2628/category/1/display/16/"
+                name="anchorBoxName_2628"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/ec075f9bcb2ef3a242dbf8612cd6fe6e.jpg"
+                  id="eListPrdImage2628_16"
+                  alt="[사나 착용] PIPER wide rollover tuck pants_black"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-piper-wide-rollover-tuck-pantsblack/2628/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111"
+                  >[사나 착용] PIPER wide rollover tuck pants_black</span
+                ></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">153,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2641" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-birkin-classic-check-jacketpink-beige/2641/category/1/display/16/"
+                name="anchorBoxName_2641"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/6723d9c518d5da548f67a5ea9b5a04a6.jpg"
+                  id="eListPrdImage2641_16"
+                  alt="[사나 착용] BIRKIN classic check jacket_pink beige"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-birkin-classic-check-jacketpink-beige/2641/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111"
+                  >[사나 착용] BIRKIN classic check jacket_pink beige</span
+                ></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">218,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2622" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-priscilla-pintuck-laced-shirtwhite/2622/category/1/display/16/"
+                name="anchorBoxName_2622"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/bb0d1e8797e15aa805d6a6b77aa24619.jpg"
+                  id="eListPrdImage2622_16"
+                  alt="[사나 착용] PRISCILLA pintuck laced shirt_white"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-priscilla-pintuck-laced-shirtwhite/2622/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111">[사나 착용] PRISCILLA pintuck laced shirt_white</span></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">138,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2631" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-natalie-slit-midi-denim-skirtblue/2631/category/1/display/16/"
+                name="anchorBoxName_2631"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/f4de6e076568f55e695f20118d5f76c1.jpg"
+                  id="eListPrdImage2631_16"
+                  alt="[사나 착용] NATALIE slit midi denim skirt_blue"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-natalie-slit-midi-denim-skirtblue/2631/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111">[사나 착용] NATALIE slit midi denim skirt_blue</span></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">119,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2650" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-audrey-round-neck-denim-jacketblue/2650/category/1/display/16/"
+                name="anchorBoxName_2650"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/b7f61fd5aa566c94e4289e43ebbbe0df.jpg"
+                  id="eListPrdImage2650_16"
+                  alt="[사나 착용] AUDREY round neck denim jacket_blue"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-audrey-round-neck-denim-jacketblue/2650/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111">[사나 착용] AUDREY round neck denim jacket_blue</span></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">198,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2647" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-ramena-embroidered-shawl-collar-shirtwhite/2647/category/1/display/16/"
+                name="anchorBoxName_2647"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/b463e3f4afc2eb77d7f3d7700907e3fa.jpg"
+                  id="eListPrdImage2647_16"
+                  alt="[사나 착용] RAMENA embroidered shawl collar shirt_white"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-ramena-embroidered-shawl-collar-shirtwhite/2647/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111"
+                  >[사나 착용] RAMENA embroidered shawl collar shirt_white</span
+                ></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">178,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2649" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-audrey-denim-pleats-mid-skirtblue/2649/category/1/display/16/"
+                name="anchorBoxName_2649"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/f89c0ac8d005b44829b59a63d3bac5ce.jpg"
+                  id="eListPrdImage2649_16"
+                  alt="[사나 착용] AUDREY denim pleats mid skirt_blue"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-audrey-denim-pleats-mid-skirtblue/2649/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111">[사나 착용] AUDREY denim pleats mid skirt_blue</span></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">152,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2652" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-wilma-woolen-v-neck-tweed-jacketivory/2652/category/1/display/16/"
+                name="anchorBoxName_2652"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/b36d63d3d74230e15419f75faed04d20.jpg"
+                  id="eListPrdImage2652_16"
+                  alt="[사나 착용] WILMA woolen v neck tweed jacket_ivory"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-wilma-woolen-v-neck-tweed-jacketivory/2652/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111"
+                  >[사나 착용] WILMA woolen v neck tweed jacket_ivory</span
+                ></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">228,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2645" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-eliana-pintuck-ribbon-shirtwhite/2645/category/1/display/16/"
+                name="anchorBoxName_2645"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/bc4a842b69b596edab63f3ada4d00bb4.jpg"
+                  id="eListPrdImage2645_16"
+                  alt="[사나 착용] ELIANA pintuck ribbon shirt_white"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-eliana-pintuck-ribbon-shirtwhite/2645/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111">[사나 착용] ELIANA pintuck ribbon shirt_white</span></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">153,000원</b>
+              </p>
+            </li>
+            <li id="anchorBoxId_2651" class="card-product xans-record-">
+              <a
+                class="card-product__img"
+                href="/product/사나-착용-wilma-woolen-tweed-mid-skirtivory/2651/category/1/display/16/"
+                name="anchorBoxName_2651"
+              >
+                <img
+                  src="//cafe24.poxo.com/ec01/lenina/EjglQcnyYl9oLKpqUS6wZin6q/1LcmnKVxVcY7+i5P9B5P7bhUPpN7/ryRrYmX0pei+jdUcZWxWKH3BCAFEC/Q==/_/web/product/big/202403/3688fc3c209a6bc05354c919be7033a3.jpg"
+                  id="eListPrdImage2651_16"
+                  alt="[사나 착용] WILMA woolen tweed mid skirt_ivory"
+                />
+                &nbsp;</a
+              >
+              <a
+                class="card-product__name"
+                href="/product/사나-착용-wilma-woolen-tweed-mid-skirtivory/2651/category/1/display/16/"
+                ><span style="font-size: 18px; color: #111111">[사나 착용] WILMA woolen tweed mid skirt_ivory</span></a
+              >
+              <p class="card-product__price">
+                <s class="times-font displaynone"></s>
+                <b data-title="" class="times-font">132,000원</b>
+              </p>
+            </li>
+          </ul>
+          <div class="main-products__scrollbar-wrap">
+            <div class="main-products__scrollbar" style="width: 599px">
+              <div
+                class="main-products__scrollbar-thumb"
+                style="
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  touch-action: pan-y;
+                  cursor: grab;
+                  user-select: none;
+                  transform: translate3d(0px, 0px, 0px);
+                "
+              ></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- E : 상품 진열 리스트 --><!-- S : 하단 텍스트 -->
+      <section class="main-bottom-text-banner">
+        <h2 class="line-text-animation" style="">
+          <div
+            style="
+              display: block;
+              text-align: center;
+              position: relative;
+              translate: none;
+              rotate: none;
+              scale: none;
+              transform: translate(0px, 50%);
+              opacity: 0;
+            "
+          >
+            <div
+              style="
+                display: block;
+                text-align: center;
+                position: relative;
+                translate: none;
+                rotate: none;
+                scale: none;
+                transform: translate(0px, 50%);
+                opacity: 0;
+              "
+            >
+              <div
+                style="
+                  display: block;
+                  text-align: center;
+                  position: relative;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 50%);
+                  opacity: 0;
+                "
+              >
+                <div
+                  style="
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 50%);
+                    opacity: 0;
+                  "
+                >
+                  <div
+                    style="
+                      display: block;
+                      text-align: center;
+                      position: relative;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 50%);
+                      opacity: 0;
+                    "
+                  >
+                    Experience authentic French mood in Korea. We suggest styles that allow modern
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </article>
-      <article class="main-category__list category__denim">
-        <div class="outer">
-          <div class="inner">
-            <div class="bg">
-              <div class="main-category__desc">
-                <p class="main-category__title text-animation">DENIM</p>
-                <a href="" class="lenina-button__basic"><span>Discover Now</span></a>
+          <div
+            style="
+              display: block;
+              text-align: center;
+              position: relative;
+              translate: none;
+              rotate: none;
+              scale: none;
+              transform: translate(0px, 50%);
+              opacity: 0;
+            "
+          >
+            <div
+              style="
+                display: block;
+                text-align: center;
+                position: relative;
+                translate: none;
+                rotate: none;
+                scale: none;
+                transform: translate(0px, 50%);
+                opacity: 0;
+              "
+            >
+              <div
+                style="
+                  display: block;
+                  text-align: center;
+                  position: relative;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 50%);
+                  opacity: 0;
+                "
+              >
+                <div
+                  style="
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 50%);
+                    opacity: 0;
+                  "
+                >
+                  <div
+                    style="
+                      display: block;
+                      text-align: center;
+                      position: relative;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 50%);
+                      opacity: 0;
+                    "
+                  >
+                    women to mix and match in their daily lives, transforming the ordinary with
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div
+            style="
+              display: block;
+              text-align: center;
+              position: relative;
+              translate: none;
+              rotate: none;
+              scale: none;
+              transform: translate(0px, 50%);
+              opacity: 0;
+            "
+          >
+            <div
+              style="
+                display: block;
+                text-align: center;
+                position: relative;
+                translate: none;
+                rotate: none;
+                scale: none;
+                transform: translate(0px, 50%);
+                opacity: 0;
+              "
+            >
+              <div
+                style="
+                  display: block;
+                  text-align: center;
+                  position: relative;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 50%);
+                  opacity: 0;
+                "
+              >
+                <div
+                  style="
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 50%);
+                    opacity: 0;
+                  "
+                >
+                  <div
+                    style="
+                      display: block;
+                      text-align: center;
+                      position: relative;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 50%);
+                      opacity: 0;
+                    "
+                  >
+                    exquisite details, colors, and patterns. Discover your unique charm beyond the
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              display: block;
+              text-align: center;
+              position: relative;
+              translate: none;
+              rotate: none;
+              scale: none;
+              transform: translate(0px, 50%);
+              opacity: 0;
+            "
+          >
+            <div
+              style="
+                display: block;
+                text-align: center;
+                position: relative;
+                translate: none;
+                rotate: none;
+                scale: none;
+                transform: translate(0px, 50%);
+                opacity: 0;
+              "
+            >
+              <div
+                style="
+                  display: block;
+                  text-align: center;
+                  position: relative;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 50%);
+                  opacity: 0;
+                "
+              >
+                <div
+                  style="
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 50%);
+                    opacity: 0;
+                  "
+                >
+                  <div
+                    style="
+                      display: block;
+                      text-align: center;
+                      position: relative;
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 50%);
+                      opacity: 0;
+                    "
+                  >
+                    mundane.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </h2>
+
+        <div class="main-bottom__logo-wrap">
+          <figure class="main-bottom__logo">
+            <img src="https://lenina.kr/web/upload/drawcode/logo.svg" alt="lenina" /> &nbsp;
+          </figure>
         </div>
-      </article>
-    </div>
-  </section>
+      </section>
+      <!-- E : 하단 텍스트 -->
+    </main>
 
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-  <!-- The following plugins are only available for Club GSAP members.-->
-  <script src="./js/DrawSVGPlugin.min.js"></script>
-  <script src="./js/ScrollSmoother.min.js"></script>
-  <script src="./js/MotionPathHelper.min.js"></script>
-  <script src="./js/ScrambleTextPlugin.min.js"></script>
-  <script src="./js/SplitText.min.js"></script>
-  <script>
-    // gsap.registerPlugin(Observer);
-
-    // let sections = document.querySelectorAll(".main-category__list"),
-    //   images = document.querySelectorAll(".bg"),
-    //   headings = gsap.utils.toArray(".section-heading"),
-    //   outerWrappers = gsap.utils.toArray(".main-category__list .outer"),
-    //   innerWrappers = gsap.utils.toArray(".main-category__list .inner"),
-    //   splitHeadings = headings.map(
-    //     (heading) => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })
-    //   ),
-    //   currentIndex = -1,
-    //   wrap = gsap.utils.wrap(0, sections.length),
-    //   animating;
-
-    // gsap.set(outerWrappers, { yPercent: 100 });
-    // gsap.set(innerWrappers, { yPercent: -100 });
-
-    // function gotoSection(index, direction) {
-    //   index = wrap(index); // make sure it's valid
-    //   animating = true;
-    //   let fromTop = direction === -1,
-    //     dFactor = fromTop ? -1 : 1,
-    //     tl = gsap.timeline({
-    //       defaults: { duration: 1.25, ease: "power1.inOut" },
-    //       onComplete: () => (animating = false),
-    //     });
-    //   if (currentIndex >= 0) {
-    //     // The first time this function runs, current is -1
-    //     gsap.set(sections[currentIndex], { zIndex: 0 });
-    //     tl.to(images[currentIndex], { yPercent: -15 * dFactor }).set(sections[currentIndex], { autoAlpha: 0 });
-    //   }
-    //   gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-    //   tl.fromTo(
-    //     [outerWrappers[index], innerWrappers[index]],
-    //     {
-    //       yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
-    //     },
-    //     {
-    //       yPercent: 0,
-    //     },
-    //     0
-    //   )
-    //     .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-    //     .fromTo(
-    //       splitHeadings[index].chars,
-    //       {
-    //         autoAlpha: 0,
-    //         yPercent: 150 * dFactor,
-    //       },
-    //       {
-    //         autoAlpha: 1,
-    //         yPercent: 0,
-    //         duration: 1,
-    //         ease: "power2",
-    //         stagger: {
-    //           each: 0.02,
-    //           from: "random",
-    //         },
-    //       },
-    //       0.2
-    //     );
-
-    //   currentIndex = index;
-    // }
-
-    // Observer.create({
-    //   type: "wheel,touch,pointer",
-    //   wheelSpeed: -1,
-    //   onDown: () => !animating && gotoSection(currentIndex - 1, -1),
-    //   onUp: () => !animating && gotoSection(currentIndex + 1, 1),
-    //   tolerance: 10,
-    //   preventDefault: true,
-    // });
-
-    // gotoSection(0, 1);
-
-    // original: https://codepen.io/BrianCross/pen/PoWapLP
-    // horizontal version: https://codepen.io/GreenSock/pen/xxWdeMK
-  </script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    let sections = gsap.utils.toArray(".main-category__list"),
-      backgrounds = gsap.utils.toArray(".bg"),
-      headings = gsap.utils.toArray(".main-category__title"),
-      outerWrappers = gsap.utils.toArray(".main-category__list .outer"),
-      innerWrappers = gsap.utils.toArray(".main-category__list .inner"),
-      splitHeadings = headings.map(
-        (heading) => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })
-      ),
-      currentIndex = 0,
-      animating;
-
-    gsap.set(outerWrappers, { yPercent: 100 });
-    gsap.set(innerWrappers, { yPercent: -100 });
-
-    function gotoSection(index, direction) {
-      animating = true;
-      let fromTop = direction === -1,
-        dFactor = fromTop ? -1 : 1,
-        tl = gsap.timeline({
-          defaults: { duration: 1.25, ease: "power1.inOut" },
-          onComplete: () => (animating = false),
-        });
-
-      if (currentIndex >= 0) {
-        gsap.set(sections[currentIndex], { zIndex: 0 });
-        tl.to(backgrounds[currentIndex], { yPercent: -30 * dFactor }).set(sections[currentIndex], { autoAlpha: 0 });
-      }
-
-      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-      tl.fromTo(
-        [outerWrappers[index], innerWrappers[index]],
-        {
-          yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
-        },
-        {
-          yPercent: 0,
-        },
-        0
-      )
-        .fromTo(backgrounds[index], { yPercent: 30 * dFactor }, { yPercent: 0 }, 0) // Adjust background animation
-        .fromTo(
-          splitHeadings[index].chars,
-          {
-            autoAlpha: 0,
-            yPercent: 150 * dFactor,
-          },
-          {
-            autoAlpha: 1,
-            yPercent: 0,
-            duration: 1,
-            ease: "power2",
-            stagger: {
-              each: 0.02,
-              from: "random",
-            },
-          },
-          0.2
-        );
-
-      currentIndex = index;
-    }
-
-    const headerHeight = document.querySelector("header").offsetHeight;
-
-    sections.forEach((section, index) => {
-      ScrollTrigger.create({
-        trigger: section,
-        start: `top-=${headerHeight} top`,
-        end: `+=${window.innerHeight * 0.8}`,
-        pin: true,
-        pinSpacing: false,
-        onEnter: () => gotoSection(index, 1),
-        onEnterBack: () => gotoSection(index, -1),
-      });
-    });
-
-    gotoSection(0, 1);
-  </script>
-</body>
+    <ul>
+      <li id="anchorBoxId_{$product_no}" class="card-product">
+        <a class="card-product__img" href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+          <img src="{$image_big}" id="{$image_medium_id}" alt="{$seo_alt_tag}" />
+        </a>
+        <a class="card-product__name" href="{$link_product_detail}" class="{$product_name_display|display}"
+          >{$product_name}</a
+        >
+        <p class="card-product__price">
+          <s class="times-font {$prd_price_sale|display}">{$prd_price_sale}</s>
+          <b data-title="{$item_title|striptag}" class="times-font {$disp_product_price|display}"
+            >{$disp_product_price}</b
+          >
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

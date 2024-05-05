@@ -199,6 +199,7 @@ function categorySlide2() {
   }
 }
 
+// 카테고리
 function categorySlide() {
   const swiperInner = document.querySelector(".main-category__inner");
   const cateSwiperSection = document.querySelector(".main-category");
@@ -236,9 +237,9 @@ function categorySlide() {
         if (this.isEnd || this.isBeginning) {
           swiperActive = false;
           if (cateSwiper.isBeginning) {
-            unsetFixed1("scrollUp");
+            unsetFixed("scrollUp");
           } else if (cateSwiper.isEnd) {
-            unsetFixed1("scrollDown");
+            unsetFixed("scrollDown");
           }
         }
       },
@@ -295,9 +296,8 @@ function categorySlide() {
       // 마우스 휠 이벤트로 첫번째, 마지막에서 탈출시, 스크롤 고정 해제 [ + 위로, - 아래로]
       swiperInner.addEventListener("wheel", (e) => {
         // 첫번째 슬라이드에서 위로 스크롤 시, 고정 해제
-        if (isFixed === true && swiperActive === false && cateSwiper.activeIndex === 0 && e.deltaY < 0) {
-          e.stopPropagation();
-          unsetFixed1("scrollUp");
+        if (cateSwiper.activeIndex === 0 && e.deltaY < 0) {
+          unsetFixed("scrollUp");
         }
         // 마지막 슬라이드에서 아래로 스크롤 시, 고정 해제
         if (
@@ -306,8 +306,7 @@ function categorySlide() {
           cateSwiper.activeIndex === cateSwiper.slides.length - 1 &&
           e.deltaY > 0
         ) {
-          e.stopPropagation();
-          unsetFixed1("scrollDown");
+          unsetFixed("scrollDown");
         }
       });
 
@@ -323,8 +322,7 @@ function categorySlide() {
 
         // 첫번째 슬라이드에서 위로 스크롤 시, 고정 해제
         if (isFixed === true && swiperActive === false && cateSwiper.activeIndex === 0 && touchDeltaY < 0) {
-          e.stopPropagation();
-          unsetFixed1("scrollUp");
+          unsetFixed("scrollUp");
         }
         // 마지막 슬라이드에서 아래로 스크롤 시, 고정 해제
         if (
@@ -333,8 +331,7 @@ function categorySlide() {
           cateSwiper.activeIndex === cateSwiper.slides.length - 1 &&
           touchDeltaY > 0
         ) {
-          e.stopPropagation();
-          unsetFixed1("scrollDown");
+          unsetFixed("scrollDown");
         }
       });
     }
@@ -349,49 +346,31 @@ function categorySlide() {
     cateSwiper.mousewheel.sensitivity = 0.5;
     cateSwiper.mousewheel.releaseOnEdges = true;
     swiperInner.classList.add("fixed");
-    document.body.classList.add("hidden");
-
+    document.body.classList.add("fixedBody");
+    R;
     // 상단 배너 숨김
     if (document.querySelector(".de-banner-top")) {
       document.querySelector(".de-banner-top").style.display = "none";
     }
   }
 
-  function unsetFixed() {
+  function unsetFixed(scroll) {
     isFixed = false;
     cateSwiper.allowTouchMove = false;
     cateSwiper.mousewheel.disable();
     cateSwiper.mousewheel.sensitivity = 0;
-    // cateSwiper.mousewheel.releaseOnEdges = false;
-    swiperInner.classList.remove("fixed");
-    document.body.classList.remove("hidden");
-    touchDeltaY = undefined;
-    // 상단 배너 노출
+    document.body.classList.remove("fixedBody");
     if (document.querySelector(".de-banner-top")) {
       document.querySelector(".de-banner-top").style.display = "block";
     }
-  }
-
-  function unsetFixed1(scroll) {
-    isFixed = false;
-    cateSwiper.allowTouchMove = false;
-    cateSwiper.mousewheel.disable();
-    cateSwiper.mousewheel.sensitivity = 0;
-    document.body.classList.remove("hidden");
-
     if (scroll === "scrollUp") {
       window.scrollTo(0, cateSectionTop - 1);
     } else if (scroll === "scrollDown") {
       window.scrollTo(0, cateSectionTop + 1);
     }
-
     setTimeout(() => {
       swiperInner.classList.remove("fixed");
       touchDeltaY = undefined;
-
-      if (document.querySelector(".de-banner-top")) {
-        document.querySelector(".de-banner-top").style.display = "block";
-      }
     }, 50);
   }
 }
@@ -471,7 +450,7 @@ let newArrivalsSwiper = new Swiper(".card-product__swiper", {
   },
 });
 
-console.log("test44");
+console.log("tes20");
 
 visualFixed();
 ScrollTrigger.addEventListener("refresh", setupTextSplits);

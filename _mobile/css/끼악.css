@@ -111,8 +111,8 @@ section {
 .main-visual {
   aspect-ratio: 4/7.1;
   display: flex;
-  overflow-x: hidden;
   & #vimeo-player {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -146,9 +146,10 @@ section {
   height: 100vh;
   height: 100svh;
   background-color: #fff;
+
   & .main-category__inner {
     position: relative;
-    -webkit-transform: translateZ(1);
+    /* overflow-y: hidden; */
   }
   & .main-category__inner.fixed {
     position: fixed;
@@ -157,14 +158,15 @@ section {
     width: 100%;
     height: 100vh;
     height: 100svh;
-    z-index: 2;
+    z-index: 2; /* fixed 상태 */
   }
   & .main-category__swiper {
     height: 100svh;
   }
   & .swpier-wrapper {
-    transition-timing-function: linear;
+    transition-timing-function: linear; /* overflow-y: hidden; */
   }
+
   & .swiper-slide {
     height: 100%;
     overflow: hidden;
@@ -193,6 +195,7 @@ section {
   & .main-category__swiper .swiper-slide:nth-child(4) .slide-inner {
     background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_04.jpg") no-repeat top center / cover;
   }
+
   & .main-category__desc {
     position: relative;
     height: 100%;
@@ -203,6 +206,7 @@ section {
     padding-bottom: 36px;
     z-index: 1;
   }
+
   & .main-category__title {
     position: relative;
     text-align: center;
@@ -365,6 +369,7 @@ section {
   padding: calc(100vh * (139 / 665)) 0;
   display: flex;
   align-items: center;
+
   & .main-products__inner {
     width: 100%;
   }
@@ -498,6 +503,7 @@ section {
 
 .main-bottom-text-banner {
   padding-top: 60px;
+
   & h2 {
     width: auto;
     color: #000;
@@ -531,4 +537,59 @@ section {
   -webkit-overflow-scrolling: none;
   overflow: hidden; /* 이외의 브라우저 */
   overscroll-behavior: none;
+
+  & * {
+    /* -webkit-transform: translateZ(0); */
+  }
 }
+html:has(body.hidden) {
+  position: fixed;
+  height: 100vh;
+}
+
+/* .main-category-duplicate {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  overflow-y: hidden;
+
+  & .main-category-duplicate__swiper {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  & .swiper-slide {
+    height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  & .slide-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+  & .swiper-slide:nth-child(1) .slide-inner {
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_01.jpg") no-repeat top center / cover;
+  }
+  & .swiper-slide:nth-child(2) .slide-inner {
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_02.jpg") no-repeat top center / cover;
+  }
+  & .swiper-slide:nth-child(3) .slide-inner {
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_03.jpg") no-repeat top center / cover;
+  }
+  & .swiper-slide:nth-child(4) .slide-inner {
+    background: #edd8d2 url("https://lenina.kr/web/upload/2024_renewal/mo/category_04.jpg") no-repeat top center / cover;
+  }
+}
+body.hidden .main-category-duplicate {
+  display: block;
+} */
