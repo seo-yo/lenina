@@ -47,7 +47,7 @@ img {
   display: block;
   width: 217px;
   height: 54px;
-  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__basic.svg") no-repeat center / contain;
+  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__basic.png") no-repeat center / contain;
   padding: 7px;
 }
 
@@ -91,7 +91,7 @@ img {
   content: "";
   width: 100%;
   height: 50px;
-  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__ribbon.svg") no-repeat center / contain;
+  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__ribbon.png") no-repeat center / contain;
   pointer-events: none;
 }
 

@@ -91,7 +91,7 @@ img {
   content: "";
   width: 100%;
   height: 50px;
-  background: url("https://lenina.kr/web/upload/2024_renewal/mo/button_frame__ribbon.svg") no-repeat center / contain;
+  background: url("../img/버튼.png") no-repeat center / contain;
   pointer-events: none;
 }
 
