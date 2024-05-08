@@ -1,0 +1,77 @@
+<div id="footer" module="Layout_footer">
+  <!--@css(/css/module/layout/footer.css)-->
+
+  <div class="footer_wrap">
+    <div class="left">
+      <div class="logo" style="width: 102px">
+        <a href="/"><!--@import(/layout/basic/logo.html)--></a>
+      </div>
+
+      <!-- 하단정보 : 관리자페이지와 연동되어 있습니다. 매뉴얼을 확인해주세요 -->
+      <div class="info">
+        <ul>
+          <li><span>상호</span>{$company_name}</li>
+          <li><span>대표자</span>{$president_name}</li>
+          <li>
+            <span>사업자등록번호</span>{$company_regno}<a href="#none" onclick="{$action_biz_info}">[사업자정보확인]</a>
+          </li>
+          <li><span>통신판매업</span>{$network_regno}</li>
+          <li><span>주소</span>{$mall_zipcode} {$mall_addr1} {$mall_addr2}</li>
+          <li><span>개인정보보호책임자</span>{$cpo_name} ({$cpo_email})</li>
+        </ul>
+        <p class="safe">
+          고객님은 안전거래를 위해 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스를 이용하실 수 있습니다.<a href="#none"
+            >[확인]</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- 고객센터 -->
+    <div class="cs">
+      <p class="title">Customer Center</p>
+      <p class="phone">1:1 상담톡 상담 권장</p>
+      <p class="runtime">
+        MON - FRI 10:00-16:00<br />
+        LUNCH 12:00-13:00<br />
+        SAT, SUN, HOLIDAY OFF
+      </p>
+    </div>
+
+    <!-- 계좌정보 -->
+    <div class="bank">
+      <p class="title">Bank Info</p>
+      <p class="account">국민 424001-01-396855 (주)레이커</p>
+    </div>
+
+    <div class="util">
+      <p class="title">About Us</p>
+      <ul class="utilMenu">
+        <li><a href="/member/agreement.html">Agreement</a></li>
+        <li><a href="/member/privacy.html">Privacy</a></li>
+        <li><a href="/shopinfo/guide.html">Guide</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <p class="copyright">
+      Copyright ©{$company_name} All rights reserved. Hosting by cafe24.
+      <a href="https://www.draw-code.com/" target="_blank">Designed by drawcode.</a>
+    </p>
+
+    <!-- sns링크 -->
+    <div class="social">
+      <ul>
+        <li class="insta"><a href="https://www.instagram.com/lenina_seoul/" target="_blank">인스타그램</a></li>
+        <!-- <li class="facebook"><a href="#none" target="_blank">페이스북</a></li> -->
+        <li class="youtube"><a href="https://www.youtube.com/@user-df5gu9gq1c" target="_blank">유튜브</a></li>
+        <!-- <li class="blog"><a href="#none" target="_blank">블로그</a></li> -->
+        <!-- <li class="twitter"><a href="#none" target="_blank">트위터</a></li> -->
+        <li class="kakao"><a href="https://pf.kakao.com/_nQciT" target="_blank">카카오 채널</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--@js(/js/custom.js)-->
+<!--@import(/layout/basic/cs-chat.html)-->

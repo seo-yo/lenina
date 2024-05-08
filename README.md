@@ -23,6 +23,13 @@ https://gsap.com/community/forums/topic/40401-slider-auto-scrolling-draggable-sc
 텍스트 이벤트
 스크롤 부드럽게
 
+르니나 카페24 관리자 계정 정보 전달 드립니다.
+https://eclogin.cafe24.com/Shop/
+아이디 : lenina
+비밀번호 : Inditex11!!
+PC https://lenina.kr/index_renewal.html
+MO https://m.lenina.kr/index_renewal.html
+
 무료 https://gsap.com/docs/v3/
 
 가로 세로 스크롤 효과
