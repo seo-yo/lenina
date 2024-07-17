@@ -1,0 +1,305 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+#membership {
+  font-family: "Pretendard", Pretendard, -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+
+  & .mo-only {
+    display: none;
+  }
+  & .blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
+
+  & .membership__container {
+    width: clamp(340px, 80%, 1200px);
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
+  /* TITLE */
+  & hgroup {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  & h2 {
+    font: 700 30px/1.15 "Times New Roman", "Noto Sans KR", sans-serif;
+    margin-bottom: 20px;
+  }
+
+  & h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* 멤버쉽 소개 */
+  & .membership__info {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 80px;
+  }
+  & .membership__info-box {
+    flex-shrink: 0;
+    width: 50%;
+  }
+  & .membership__info-box h4 {
+    font: 700 20px/1.4 "Times New Roman", "Noto Sans KR", sans-serif;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  & .membership__info-box p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+  & .membership__info-box ul:not(.mo-only) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  & .membership__info-box li:not(.mo-only) {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  & .membership__info-box li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+  /* 멤버쉽 혜택 표  */
+  & .membership-table {
+  }
+  & .membership-table__col:not(.mo-only) {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  & .membership-table__col:not(:first-child) {
+    min-height: 146px;
+  }
+  & .membership-table__col:first-child,
+  & .membership-table__col:last-child {
+    border-color: #000;
+  }
+
+  & .membership-table__row:not(.mo-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    /* height: 40px; */
+    padding: 10px 10px 10px 0;
+  }
+
+  & .membership-table__row:first-child {
+    width: 230px;
+    flex-shrink: 0;
+    align-items: flex-start;
+  }
+  & .membership-table__th {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  & .membership-table__gray:not(.mo-only) {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
+  }
+  & .membership-table__td {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    word-break: keep-all;
+  }
+  & .membership-table__rank {
+    font: 700 20px/1.4 "Times New Roman", "Noto Sans KR", sans-serif;
+  }
+  .line-height {
+    line-height: 2;
+  }
+}
+/* 모바일 */
+@media screen and (max-width: 1014px) {
+  #membership {
+    padding-top: 48px;
+
+    & .pc-only {
+      display: none !important;
+    }
+    & .mo-only {
+      display: block;
+    }
+    & .membership__container {
+      width: 100%;
+      padding: 0 16px;
+    }
+    /* TITLE */
+    & hgroup {
+      text-align: center;
+      padding-bottom: 40px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    & h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    & h3 {
+      font-size: 14px;
+    }
+
+    /* 멤버쉽 소개 */
+    & .membership__info {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    & .membership__info-box {
+      width: 100%;
+    }
+    & .membership__info-box h4 {
+      font-size: 16px;
+      padding-bottom: 0;
+      margin-bottom: 4px;
+      border-bottom: none;
+    }
+    & .membership__info-box:nth-child(2) h4 {
+      margin-bottom: 12px;
+    }
+    & .membership__info-box p {
+      font-size: 11px;
+    }
+
+    & .membership__info-box li:not(.mo-only) {
+      font-size: 12px;
+    }
+    & .membership__info-box li::before {
+      margin-left: 5px;
+    }
+    /* 멤버쉽 혜택 표  */
+    & .membership-table {
+      display: block;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    & .membership-table__col:not(:first-child) {
+      display: grid;
+      grid-template-columns: 123px 1fr; /* Adjust as needed */
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        "rank rank"
+        "condition discount"
+        "condition shipping"
+        "condition birth"
+        "condition coupon"
+        "condition benefit";
+      padding: 24px 0 !important;
+      min-height: auto;
+      align-items: flex-start;
+      gap: 2px;
+    }
+    & .membership-table__col:first-child,
+    & .membership-table__col:last-child {
+      border: none;
+    }
+    & .membership-table__row:not(.pc-only) {
+      align-items: flex-start;
+      height: auto;
+      padding: 0;
+      gap: 0;
+    }
+    & .membership-table__row:has(.membership-table__gray) {
+      flex-direction: column;
+    }
+
+    & .membership-table__row:nth-child(1) {
+      grid-area: rank;
+      margin-bottom: 12px;
+    }
+    & .membership-table__row:nth-child(2) {
+      grid-area: condition;
+    }
+    & .membership-table__row:nth-child(3) {
+      grid-area: discount;
+    }
+    & .membership-table__row:nth-child(4) {
+      grid-area: shipping;
+    }
+    & .membership-table__row:nth-child(5) {
+      grid-area: birth;
+    }
+    & .membership-table__row:nth-child(6) {
+      grid-area: coupon;
+    }
+    & .membership-table__row:nth-child(7) {
+      grid-area: benefit;
+    }
+    & .membership-table__th {
+      /* color: #5c5c5c;
+      opacity: 0.4;
+      font-size: 11px;
+      font-weight: 500;
+      margin-bottom: 9px; */
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.4);
+      margin-bottom: 8px;
+    }
+
+    & .membership-table__td:not(.pc-only) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 400;
+      word-break: keep-all;
+      line-height: 1.4;
+    }
+    & .membership-table__td b {
+      font-weight: 400;
+    }
+
+    & .membership-table__td.membership-table__rank {
+      font: 700 14px/1.4 "Times New Roman", "Noto Sans KR", sans-serif;
+    }
+  }
+
+  & .main-bottom__logo-wrap {
+    padding: 120px 0 60px;
+  }
+
+  & .main-bottom__logo-wrap figure {
+    width: 255px;
+    height: 59px;
+    margin: 0 auto;
+  }
+  & .main-bottom__logo-wrap img {
+    width: 100%;
+  }
+}
