@@ -196,9 +196,12 @@
 
     & .membership__info-box li:not(.mo-only) {
       font-size: 12px;
+      align-items: flex-start;
+      word-break: keep-all;
     }
     & .membership__info-box li::before {
       margin-left: 5px;
+      margin-top: 6px;
     }
     /* 멤버쉽 혜택 표  */
     & .membership-table {
