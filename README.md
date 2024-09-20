@@ -7,18 +7,23 @@
    https://webstoryboy.github.io/gsap2023/gsap01.html
    https://webstoryboy.co.kr/1911
 
+   https://gsap.com
+   dev@yoil.co.kr / yoil3213!
+
 3. 질문창
+   https://gsap.com/community/forums/topic/40401-slider-auto-scrolling-draggable-scrollbar/#comment-201181
 
-https://gsap.com/community/forums/topic/40401-slider-auto-scrolling-draggable-scrollbar/#comment-201181
-
-5. gsap codepen
+4. gsap codepen
    https://codepen.io/GreenSock/collections/?cursor=ZD0xJm89MCZwPTU=
 
-6. css-compact
+5. css-compact
    shift+alt+f
 
-7. gsap 강의
+6. gsap 강의
    https://www.creativecodingclub.com/courses/FreeGSAP3Express#sample
+
+7. 상품 진열하기
+   상품 > 상품진열 > 메인진열 > 메인분류관리 > 모듈코드 복사하기
 
 텍스트 이벤트
 스크롤 부드럽게
