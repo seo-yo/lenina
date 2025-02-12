@@ -1,0 +1,268 @@
+<!--@layout(/layout/basic/list.html)-->
+<div>
+  <div module="Board_ListPackage_8">
+    <!-- css(/css/module/board/listPackage_4grid_gallary.css)-->
+
+    <style>
+      /* 게시판 전체 공통 */
+      .xans-board-title .title {
+        min-height: 30px;
+        margin: 10px 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .xans-board-title .title h2 {
+        display: inline-block;
+        padding: 0 0 0 12px;
+        color: #2e2e2e;
+        font-size: 16px;
+        background: url("//img.echosting.cafe24.com/skin/base/layout/ico_heading.gif")
+          0 50% no-repeat;
+      }
+      .xans-board-title .title p {
+        display: inline-block;
+        margin: 0 0 0 6px;
+        padding: 0 0 0 10px;
+        color: #939393;
+        vertical-align: bottom;
+        background: url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif")
+          no-repeat 0 0;
+      }
+      .xans-board-title p.imgArea {
+        margin: 0 0 20px;
+      }
+      .xans-board-title p.imgArea img {
+        max-width: 100%;
+      }
+
+      .xans-board-listpackage-8 .boardSort {
+        float: left;
+        margin: 0 0 10px;
+      }
+
+      /* 갤러리형 탭메뉴 */
+      ul.xans-board-listheader-8 {
+        text-align: right;
+        margin: 0 0 10px;
+      }
+      ul.xans-board-listheader-8 li {
+        display: inline;
+      }
+
+      /* list */
+      .board-lookbook {
+        margin: 0 0 20px;
+      }
+      .board-lookbook .list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        /* width: calc(100% + 40px); */
+        /* margin-left: -20px; */
+      }
+      .board-lookbook .list li {
+        width: 25%;
+        margin-bottom: 50px;
+        padding: 0 5px 50px 5px;
+      }
+      .board-lookbook .list li .thumb {
+        overflow: hidden;
+      }
+      .board-lookbook .list li .thumb img {
+        width: 100%;
+        transition: all 0.4s;
+      }
+      .board-lookbook .list li .thumb:hover img {
+        transform: scale(1.02);
+      }
+      .board-lookbook .list li .subject {
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 500;
+        word-break: break-all;
+      }
+
+      /* 게시글 없음, 검색결과없음 */
+      .xans-board-listpackage-8 .boardListEmpty {
+        padding: 100px 0;
+        text-align: center;
+        border-top: 2px solid #111;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
+
+    <script></script>
+    <div module="board_title_3">
+      <div class="path">
+        <span>현재 위치</span>
+        <ol>
+          <li><a href="/">홈</a></li>
+          <li><a href="/board/index.html">게시판</a></li>
+          <li title="현재 위치"><strong>{$board_name}</strong></li>
+        </ol>
+      </div>
+
+      <div class="titleArea">
+        <h2>{$board_title|striptag} {$board_adult_icon}</h2>
+        <p>{$board_info}</p>
+      </div>
+      <p class="imgArea">{$board_top_image}</p>
+    </div>
+
+    <div class="boardSort">
+      <span module="board_category_3">{$form.board_category}</span>
+    </div>
+
+    <div module="board_notice_3">
+      <!--
+              $login_page_url = /member/login.html
+              $deny_access_url = /index.html
+          -->
+      <ul class="list">
+        <li>
+          <div class="thumb">
+            <a href="/board/lookbook/read.html{$param_read}"
+              ><img
+                src="{$img_src}"
+                onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
+                alt=""
+                width="806"
+            /></a>
+          </div>
+          <div class="subject">
+            {$checkbox}<a href="/board/lookbook/read.html{$param_read}">
+              {$notice_icon} {$subject}!!!</a
+            >
+          </div>
+        </li>
+        <li>
+          <div class="thumb">
+            <a href="/board/lookbook/read.html{$param_read}"
+              ><img
+                src="{$img_src}"
+                onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
+                alt=""
+            /></a>
+          </div>
+          <div class="subject">
+            {$checkbox}<a href="/board/lookbook/read.html{$param_read}">
+              {$notice_icon} {$subject}!!!!</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div module="board_list_3">
+      <!--
+              $count = 12
+              $login_page_url = /member/login.html
+              $deny_access_url = /index.html
+          -->
+      <ul class="list">
+        <li>
+          <div class="thumb">
+            <a href="/board/lookbook/read.html{$param_read}"
+              ><img
+                src="{$img_src}"
+                onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
+                alt=""
+            /></a>
+          </div>
+          <div class="subject">
+            {$checkbox}<a href="/board/lookbook/read.html{$param_read}"
+              >{$subject}!!</a
+            >
+          </div>
+        </li>
+        <li>
+          <div class="thumb">
+            <a href="/board/lookbook/read.html{$param_read}"
+              ><img
+                src="{$img_src}"
+                onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
+                alt=""
+            /></a>
+          </div>
+          <div class="subject">
+            {$checkbox}<a href="/board/lookbook/read.html{$param_read}"
+              >{$subject}!</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="boardListEmpty {$empty_display|display}" module="board_empty_3">
+      <p>{$empty_message}</p>
+    </div>
+
+    <div
+      module="board_ButtonList_3"
+      class="{$write_display|display} ec-base-button typeBG"
+    >
+      <span class="gRight">
+        <a
+          href="/board/gallery/write.html{$param_write}"
+          class="btnSubmitFix sizeS {$write_display|display}"
+          >글쓰기</a
+        >
+      </span>
+    </div>
+  </div>
+  <!--
+  <div module="board_paging_8" class="ec-base-paginate">
+      <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+      <ol>
+          <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+          <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+      </ol>
+      <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+  </div>
+  
+  <div module="board_search_3">
+  @css(/css/module/board/search.css)
+      <fieldset class="boardSearch">
+          <legend>게시물 검색</legend>
+          <p>{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnEmFix" onclick="{$action_search}">찾기</a></p>
+      </fieldset>
+  </div>
+  -->
+  <!-- 관리자 전용 메뉴 -->
+  <div module="board_catemove_3">
+    <!--@css(/css/module/board/catemove.css)-->
+    <p>
+      {$board_catemove_selectbox}
+      <a href="#none" class="btnNormal" onclick="{$action_category_move}"
+        ><img
+          src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif"
+          alt=""
+        />
+        {$category_move}</a
+      >
+    </p>
+  </div>
+
+  <div module="board_function_3">
+    <!--@css(/css/module/board/function.css)-->
+    <p>
+      {$board_function_selectbox}
+      <a href="#none" class="btnNormal" onclick="{$action_article_move}"
+        ><img
+          src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif"
+          alt=""
+        />
+        {$article_move}</a
+      >
+      <a href="#none" class="btnNormal" onclick="{$action_article_copy}"
+        ><img
+          src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif"
+          alt=""
+        />
+        {$article_copy}</a
+      >
+      {$board_function_help}
+    </p>
+  </div>
+</div>
+<!-- // 관리자 전용 메뉴 -->

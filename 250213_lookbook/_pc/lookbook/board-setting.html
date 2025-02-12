@@ -1,0 +1,24 @@
+<style>
+  .lookbook-container {
+    padding: 0 5px;
+  }
+  .lookbook-container img {
+    width: 100%;
+  }
+  .lookbook-container figure {
+    margin: 0;
+  }
+  .lookbook-container .mo-only {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .lookbook-container .pc-only {
+      display: none !important;
+    }
+    .lookbook-container .mo-only {
+      display: block;
+    }
+  }
+</style>
+
+<div class="lookbook-container"><figure class="pc-only"><img src="pcLink" alt="" /></figure><figure class="mo-only"><img src="mobileLink" alt="" /></figure></div>
