@@ -1,110 +1,210 @@
-<h3 class="guide-subtitle">메인 페이지 프로젝트 일정</h3>
-<table class="guide-table">
-  <colgroup>
-    <col width="15%" />
-    <col width="15%" />
-    <col width="35%" />
-    <col width="35%" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>시작일</th>
-      <th>종료일</th>
-      <th>작업내용</th>
-      <th>비고</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="center">-</td>
-      <td class="center">2024-05-07</td>
-      <td>퍼블 마감</td>
-      <td>메인페이지 인터렉션 적응형 작업</td>
-    </tr>
-    <tr>
-      <td class="center">2024-05-22</td>
-      <td class="center">2024-05-22</td>
-      <td>추가 작업</td>
-      <td>메인 비쥬얼 슬라이드 변경 및 중간배너 추가</td>
-    </tr>
-    <tr>
-      <td class="center">2024-06-25</td>
-      <td class="center">2024-06-25</td>
-      <td>여름 메인페이지</td>
-      <td>여름버전으로 텍스트 변경 및 이미지 변경</td>
-    </tr>
-    <tr>
-      <td class="center">2024-07-17</td>
-      <td class="center">2024-07-19</td>
-      <td>페이지 추가 작업</td>
-      <td>멤버쉽 페이지</td>
-    </tr>
-    <tr>
-      <td class="center">2024-08-22</td>
-      <td class="center">2024-08-23</td>
-      <td>[추석] 메인페이지 가을 버전으로 리뉴얼</td>
-      <td>메인 영상 변경, 카테고리 및 이미지, 링크 전체적 변경</td>
-    </tr>
-    <tr>
-      <td class="center">2024-09-05</td>
-      <td class="center">2024-09-05</td>
-      <td>[추석]메인페이지 추석 이벤트 배너 추가</td>
-      <td>배너 추가 및 링크 연결, new Arrival을 Weekly Best 로 텍스트 변경</td>
-    </tr>
-    <tr>
-      <td class="center">2024-09-20</td>
-      <td class="center">2024-09-20</td>
-      <td>[추석 - 수정]메인페이지 이미지 및 링크변경</td>
-      <td>메인페이지 슬라이드 배너 추가 및 이벤트배너 이미지와 링크, 텍스트 변경</td>
-    </tr>
-    <tr>
-      <td class="center">2024-10-17</td>
-      <td class="center">2024-10-17</td>
-      <td>[겨울] 메인 겨울 리뉴얼</td>
-      <td>메인페이지 이미지 및 텍스트, 링크 변경</td>
-    </tr>
-    <tr>
-      <td class="center">2024-10-31</td>
-      <td class="center">2024-11-05</td>
-      <td>[겨울] 메인 겨울 리뉴얼 2</td>
-      <td>메인페이지 슬라이드 배너 추가 및 이벤트배너 이미지와 링크</td>
-    </tr>
-    <tr>
-      <td class="center">2024-12-06</td>
-      <td class="center">2024-12-09</td>
-      <td>[겨울] 홀리데이 메인 슬라이드 변경</td>
-      <td>메인페이지 슬라이드 배너 추가 및 이벤트배너 이미지와 링크</td>
-    </tr>
-    <tr>
-      <td class="center">2025-01-13</td>
-      <td class="center">2025-01-13</td>
-      <td>메인 탑버튼 수정</td>
-      <td>메인페이지 gsap 이슈로인한 수정</td>
-    </tr>
-  </tbody>
-</table>
-<h3 class="guide-subtitle">멤버쉽 프로젝트 일정</h3>
-<table class="guide-table">
-  <colgroup>
-    <col width="15%" />
-    <col width="15%" />
-    <col width="35%" />
-    <col width="35%" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>시작일</th>
-      <th>종료일</th>
-      <th>작업내용</th>
-      <th>비고</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="center">2024-07-22</td>
-      <td class="center">2024-07-22</td>
-      <td>페이지 내용 수정</td>
-      <td>멤버쉽 페이지 텍스트 추가</td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 공통 스타일 */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* 제목 스타일 */
+    .guide-subtitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #4a90e2; /* 블루 포인트 컬러 */
+      border-left: 4px solid #4a90e2;
+      padding-left: 10px;
+    }
+
+    /* 테이블 스타일 */
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .guide-table th,
+    .guide-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    .guide-table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #555;
+      text-align: center;
+    }
+
+    .guide-table td.center {
+      text-align: center;
+    }
+
+    .guide-table tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    .guide-table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* 반응형 스타일 */
+    @media (max-width: 768px) {
+      .guide-table {
+        font-size: 0.9rem;
+      }
+
+      .guide-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  <body>
+    <h3 class="guide-subtitle">메인 페이지 프로젝트 일정</h3>
+    <table class="guide-table">
+      <colgroup>
+        <col width="15%" />
+        <col width="15%" />
+        <col width="35%" />
+        <col width="35%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>시작일</th>
+          <th>종료일</th>
+          <th>작업내용</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center">-</td>
+          <td class="center">2024-05-07</td>
+          <td>퍼블 마감</td>
+          <td>메인페이지 인터렉션 적응형 작업</td>
+        </tr>
+        <tr>
+          <td class="center">2024-05-22</td>
+          <td class="center">2024-05-22</td>
+          <td>추가 작업</td>
+          <td>메인 비쥬얼 슬라이드 변경 및 중간배너 추가</td>
+        </tr>
+        <tr>
+          <td class="center">2024-06-25</td>
+          <td class="center">2024-06-25</td>
+          <td>여름 메인페이지</td>
+          <td>여름버전으로 텍스트 변경 및 이미지 변경</td>
+        </tr>
+        <tr>
+          <td class="center">2024-07-17</td>
+          <td class="center">2024-07-19</td>
+          <td>페이지 추가 작업</td>
+          <td>멤버쉽 페이지</td>
+        </tr>
+        <tr>
+          <td class="center">2024-08-22</td>
+          <td class="center">2024-08-23</td>
+          <td>[추석] 메인페이지 가을 버전으로 리뉴얼</td>
+          <td>메인 영상 변경, 카테고리 및 이미지, 링크 전체적 변경</td>
+        </tr>
+        <tr>
+          <td class="center">2024-09-05</td>
+          <td class="center">2024-09-05</td>
+          <td>[추석]메인페이지 추석 이벤트 배너 추가</td>
+          <td>
+            배너 추가 및 링크 연결, new Arrival을 Weekly Best 로 텍스트 변경
+          </td>
+        </tr>
+        <tr>
+          <td class="center">2024-09-20</td>
+          <td class="center">2024-09-20</td>
+          <td>[추석 - 수정]메인페이지 이미지 및 링크변경</td>
+          <td>
+            메인페이지 슬라이드 배너 추가 및 이벤트배너 이미지와 링크, 텍스트
+            변경
+          </td>
+        </tr>
+        <tr>
+          <td class="center">2024-10-17</td>
+          <td class="center">2024-10-17</td>
+          <td>[겨울] 메인 겨울 리뉴얼</td>
+          <td>메인페이지 이미지 및 텍스트, 링크 변경</td>
+        </tr>
+        <tr>
+          <td class="center">2024-10-31</td>
+          <td class="center">2024-11-05</td>
+          <td>[겨울] 메인 겨울 리뉴얼 2</td>
+          <td>메인페이지 슬라이드 배너 추가 및 이벤트배너 이미지와 링크</td>
+        </tr>
+        <tr>
+          <td class="center">2024-12-06</td>
+          <td class="center">2024-12-09</td>
+          <td>[겨울] 홀리데이 메인 슬라이드 변경</td>
+          <td>메인페이지 슬라이드 배너 추가 및 이벤트배너 이미지와 링크</td>
+        </tr>
+        <tr>
+          <td class="center">2025-01-13</td>
+          <td class="center">2025-01-13</td>
+          <td>메인 탑버튼 수정</td>
+          <td>메인페이지 gsap 이슈로인한 수정</td>
+        </tr>
+        <tr>
+          <td class="center">2025-02-11</td>
+          <td class="center">2025-02-14</td>
+          <td>사나 계약 종료로 이전 스킨 재설정</td>
+          <td>
+            이전 스킨 재설정<br />
+            메뉴 리스트 수정<br />
+            슬라이드 이미지 변경, 슬라이드 이미지 및 로고 제외 삭제
+          </td>
+        </tr>
+        <tr>
+          <td class="center">2025-02-12</td>
+          <td class="center">2025-02-18</td>
+          <td>lookbook 페이지, 서브 페이지 생성</td>
+          <td>
+            lookbook 페이지 ;: 갤러리 리스트 커스텀하여 4열 그리드 작업<br />
+            lookbook 서브페이지 :: 게시판 형식 사용하여 게시판 내 하드코딩
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="guide-subtitle">멤버쉽 프로젝트 일정</h3>
+    <table class="guide-table">
+      <colgroup>
+        <col width="15%" />
+        <col width="15%" />
+        <col width="35%" />
+        <col width="35%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>시작일</th>
+          <th>종료일</th>
+          <th>작업내용</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center">2024-07-22</td>
+          <td class="center">2024-07-22</td>
+          <td>페이지 내용 수정</td>
+          <td>멤버쉽 페이지 텍스트 추가</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
