@@ -1,0 +1,93 @@
+/* 게시판 전체 공통 */
+.xans-board-title .title {
+  min-height: 30px;
+  margin: 10px 0 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.xans-board-title .title h2 {
+  display: inline-block;
+  padding: 0 0 0 12px;
+  color: #2e2e2e;
+  font-size: 16px;
+  background: url("//img.echosting.cafe24.com/skin/base/layout/ico_heading.gif")
+    0 50% no-repeat;
+}
+.xans-board-title .title p {
+  display: inline-block;
+  margin: 0 0 0 6px;
+  padding: 0 0 0 10px;
+  color: #939393;
+  vertical-align: bottom;
+  background: url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif")
+    no-repeat 0 0;
+}
+.xans-board-title p.imgArea {
+  margin: 0 0 20px;
+}
+.xans-board-title p.imgArea img {
+  max-width: 100%;
+}
+
+.xans-board-listpackage-8 .boardSort {
+  float: left;
+  margin: 0 0 10px;
+}
+
+/* 갤러리형 탭메뉴 */
+ul.xans-board-listheader-8 {
+  text-align: right;
+  margin: 0 0 10px;
+}
+ul.xans-board-listheader-8 li {
+  display: inline;
+}
+
+/* list */
+.xans-board-listpackage-8 {
+  margin: 0 0 20px;
+}
+.xans-board-listpackage-8 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.xans-board-listpackage-8 .list li {
+  width: 25%;
+  margin-bottom: 50px;
+  padding: 0 5px 50px 5px;
+}
+.xans-board-listpackage-8 .list li .thumb {
+  overflow: hidden;
+}
+.xans-board-listpackage-8 .list li .thumb img {
+  width: 100%;
+  transition: all 0.4s;
+}
+.xans-board-listpackage-8 .list li .thumb:hover img {
+  transform: scale(1.02);
+}
+.xans-board-listpackage-8 .list li .subject {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+/* 게시글 없음, 검색결과없음 */
+.xans-board-listpackage-8 .boardListEmpty {
+  padding: 100px 0;
+  text-align: center;
+  border-top: 2px solid #111;
+  border-bottom: 1px solid #eee;
+}
+
+.lookbook-board .lookbook-container figure:not(.thumb-img) {
+  display: none;
+}
+
+.lookbook-board .thumb > a > *:not(.lookbook-container) {
+  display: none;
+}

@@ -2,15 +2,16 @@
 <div class="lookbook-board">
   <div module="board_ReadPackage_3">
     <!--@css(/css/module/board/readPackage.css)-->
-    <div module="board_title_3">
-      <div class="path">
-        <span>현재 위치</span>
-        <ol>
-          <li><a href="/">홈</a></li>
-          <li><a href="/board/index.html">게시판</a></li>
-          <li title="현재 위치"><strong>{$board_name}</strong></li>
-        </ol>
-      </div>
+    <div id="titleArea" module="board_title_8">
+      <h2>{$board_name}</h2>
+      <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"
+          ><img
+            src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif"
+            width="33"
+            alt="뒤로가기"
+        /></a>
+      </span>
     </div>
 
     <div module="board_read_3">
@@ -18,9 +19,6 @@
             $login_page_url = /member/login.html
             $deny_access_url = /board/free/list.html
         -->
-      <div class="titleArea">
-        <h2>{$subject}</h2>
-      </div>
 
       <div class="ec-base-table typeWrite">
         <div class="detail">{$content}</div>

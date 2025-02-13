@@ -1,0 +1,92 @@
+/* /layout/basic/css/layout.css */
+
+@charset "utf-8";
+
+/* Layout */
+.-narr { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; }
+.-wide { position: relative; width: 100%; max-width: 1920px; margin: 0 auto; padding: 0 var(--layout-padding); }
+
+/* lookbook Layout :: 추가한 내역*/
+/* lookbook Layout */
+.-narr:has(.lookbook-board) { max-width: none;}
+.-wide:has(.lookbook-board) { max-width: none; padding: 0;}
+
+/**
+ * Swiper 8.0.7
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2022 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: March 4, 2022
+**/
+.swiper { margin-left: auto; margin-right: auto; position: relative; overflow: hidden; list-style: none; padding: 0; /* Fix of Webkit flickering */ z-index: 1; }
+.swiper-vertical > .swiper-wrapper { flex-direction: column; }
+.swiper-wrapper { position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box; }
+.swiper-android .swiper-slide,
+.swiper-wrapper { transform: translate3d(0px, 0, 0); }
+.swiper-pointer-events { touch-action: pan-y; }
+.swiper-pointer-events.swiper-vertical { touch-action: pan-x; }
+.swiper-slide { flex-shrink: 0; width: 100%; height: 100%; position: relative; transition-property: transform; }
+.swiper-slide-invisible-blank { visibility: hidden; }
+.swiper-fade.swiper-free-mode .swiper-slide { transition-timing-function: ease-out; }
+.swiper-fade .swiper-slide { pointer-events: none; transition-property: opacity; }
+.swiper-fade .swiper-slide .swiper-slide { pointer-events: none; }
+.swiper-fade .swiper-slide-active,
+.swiper-fade .swiper-slide-active .swiper-slide-active { pointer-events: auto; }
+
+.swiper-scrollbar-horizontal { position: relative; -ms-touch-action: none; margin: 0 auto; width: 100%; height: 2px; background: #DFDFDF; }
+.swiper-scrollbar-horizontal .swiper-scrollbar-drag { position: relative; left: 0; top: 0; width: 100%; height: 100%; background: #111; }
+.swiper-scrollbar-horizontal .swiper-scrollbar-cursor-drag { cursor: move; }
+.swiper-scrollbar-horizontal .swiper-scrollbar-lock { display: none; }
+
+/* Main */
+#boardArea { overflow:hidden; margin:50px 0 0; border-top:1px solid #d8d8d8; }
+#bannerArea { margin:22px 0 0; }
+#bannerArea h2 { margin:0 0 16px; font-weight:normal; font-size:20px; color:#2e2e2e; text-align:center; }
+
+/* 탐색경로바 */
+.path { display: none; overflow:hidden; height:30px; line-height:30px; *zoom:1; }
+.path span { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:100%; }
+.path ol { float:right; }
+.path li { float:left; padding:0 0 0 12px; margin:0 0 0 8px; color:#757575; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_path.gif") no-repeat 0 10px; }
+.path li:first-child { background:none; }
+.path li a { color:#757575; }
+.path li strong,
+.path li strong a { color:#2e2e2e; }
+
+/* 타이틀 */
+.titleArea { margin: 22px 0 32px; text-align: center; }
+.titleArea h2 { font-size: 28px; font-weight: 500; }
+.titleArea p { display:inline-block; position:relative; color:#939393; *display:inline; display: none; }
+.titleArea ul { padding:16px 0 5px; color:#939393; line-height:18px; }
+.titleArea ul li { position:relative; padding:0 0 0 9px; }
+.titleArea ul li:before { display:block; position: absolute; top:50%; left:0; content:""; width:2px; height:2px; margin:-2px 0 0 0; background:#939393; }
+
+/* 게시판 메인 */
+.boardMain { overflow:hidden; *zoom:1; }
+.boardMain td img { vertical-align:middle; margin:1px; }
+.boardMain .board { position:relative; margin:0 0 65px; }
+.boardMain .leftArea { float:left; width:50%; }
+.boardMain .leftArea .board { margin:0 23px 65px 0; }
+.boardMain .rightArea { float:right; width:50%; }
+.boardMain .rightArea .board { margin:0 0 65px 23px; }
+.boardMain .board h3 { margin:0 0 13px; height:28px; font-size:16px; color:#2e2e2e; border-bottom:2px solid #626672; }
+.boardMain .board .btnLink { position:absolute; top:3px; right:0; }
+.boardMain .board .ec-base-table.typeList td { color:#a4a4a4; }
+.boardMain .board .ec-base-table.typeList td.title a,
+.boardMain .board .ec-base-table.typeList td.title a:hover { color:#4f4f4f; }
+.boardMain .board .galleryList { overflow:hidden; }
+.boardMain .board .galleryList ul { overflow:hidden; margin:0 -10px; }
+.boardMain .board .galleryList li { float:left; position:relative; width:20%; padding:0 0 12px 0; word-break:break-all; }
+.boardMain .board .galleryList li span { display:block; margin:0 10px; font-size:11px; color:#a4a4a4; }
+.boardMain .board .galleryList li .imgLink,
+.boardMain .board .galleryList li .imgLink:hover { display:block; margin:0 10px 5px; font-size:12px; }
+.boardMain .board .galleryList li .imgLink img { width:100%; max-height:110px; border:1px solid #ededed; }
+
+/* 퀵뷰 모달 */
+#modalBackpanel { display:none; position:absolute; top:0; left:0; z-index:10000; width:100%; height:100%; background:#000; }
+#modalContainer { display:none; position:absolute; top:100px; left:100px; z-index:10001; width:975px; height:720px; border:1px solid #333; background:#fff; }
+#modalContainer #modalContent { width:100%; height:100%; }

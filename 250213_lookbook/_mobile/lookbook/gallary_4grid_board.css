@@ -1,0 +1,88 @@
+.xans-board-listpackage { background: transparent; overflow: hidden; }
+
+/* 정렬 */
+.xans-board-listpackage .boardSort span { display:block; width:48%; padding:0 1%; font-size:13px; }
+.xans-board-listpackage .boardSort span select { margin:7px 0; width:100%; }
+
+/* 공지글 */
+.xans-board-notice { margin:-1px 0 0; border-top:1px solid #ececec; }
+.xans-board-notice li { padding:14px; color:#757575; border-bottom:1px solid #ececec; }
+.xans-board-notice li:after { content:""; display:block; clear:both; }
+.xans-board-notice .thumbnail { display:inline-block; float:left; width:88px; }
+.xans-board-notice .thumbnail img { width:100%; border:1px solid #ededed; }
+.xans-board-notice .summary { margin:7px 0 0; padding:0 0 0 100px; }
+.xans-board-notice .summary > span { display:block; padding:0 0 7px; }
+.xans-board-notice .subject { display:block; margin:0 0 21px; word-wrap:break-word; line-height:1.5em; color:#1b1b1b; }
+.xans-board-notice .comment { color:#508bed; }
+.xans-board-notice .subject img { width:auto; vertical-align:-1px; }
+
+/* 고정글 */
+.xans-board-fixed { margin:-1px 0 0; border-top:1px solid #ececec; }
+.xans-board-fixed li { padding:14px; color:#757575; border-bottom:1px solid #ececec; }
+.xans-board-fixed li:after { content:""; display:block; clear:both; }
+.xans-board-fixed .thumbnail { display:inline-block; float:left; width:88px; }
+.xans-board-fixed .thumbnail img { width:100%; border:1px solid #ededed; }
+.xans-board-fixed .summary { margin:7px 0 0; padding:0 0 0 100px; }
+.xans-board-fixed .summary > span { display:block; padding:0 0 7px; }
+.xans-board-fixed .subject { display:block; margin:0 0 21px; word-wrap:break-word; line-height:1.5em; color:#1b1b1b; }
+.xans-board-fixed .comment { color:#508bed; }
+.xans-board-fixed .subject img { width:auto; vertical-align:-1px; }
+
+/* 게시글 : 이미지타입 보기 */
+/* .xans-board-list-3 { margin:-1px 0 0; background:#fff; }
+.xans-board-list-3 .thumbType { position:relative; left:-2px; padding:0 0 29px; color:#757575; } */
+.lookbook-board .thumbType img { max-width:100%; }
+.lookbook-board .thumbType { display:table; table-layout:fixed; width:100%; box-sizing:border-box; }
+.lookbook-board .thumbType li { display: block; margin: 0 0 25px; vertical-align:top; }
+.lookbook-board .thumbnail { margin:0 0 14px; }
+.lookbook-board .thumbnail img { width:100%; min-width:88px; }
+.lookbook-board .summary { line-height: 1.2em; }
+.lookbook-board .summary .subject { display:block; margin:0 0 10px; font-size: 16px; font-weight: 500; color: var(--color-black); word-break: break-all; }
+.lookbook-board .summary .comment { color:#508bed; }
+.lookbook-board .summary .name { margin:0 0 7px; }
+
+.lookbook-board .thumbType { display: flex; flex-wrap: wrap; }
+.lookbook-board .thumbType.grid2 { width: calc(100% + 10px); }
+.lookbook-board .thumbType.grid2 li { width: calc(50% - 10px); margin-right: 10px; }
+.lookbook-board .thumbType.grid3 li { width:33.333%; }
+.lookbook-board .thumbType.grid4 li { width:25%; }
+.lookbook-board .thumbType.grid5 li { width:20%; }
+
+/* 게시글 없음 */
+.xans-board-empty { padding:28px 0; text-align:center; font-size:12px; background: transparent; }
+
+.xans-board-paging-8.ec-base-paginate.typeList { background: transparent; }
+
+.lookbook-board .lookbook-container figure:not(.thumb-img) {
+  display: none;
+}
+.lookbook-board .thumb > a > *:not(.lookbook-container) {
+  display: none;
+}
+
+.lookbook-container {
+   padding: 0;
+}
+.lookbook-board .board {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.lookbook-board .board > li {
+  display: block;
+  width: 100%;
+}
+.lookbook-board .thumb { margin: 0 0 14px}
+.lookbook-board .thumb img { width:100%;}
+.lookbook-board  .subject {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-black);
+  word-break: break-all;
+}
+.lookbook-board  .subject a {
+    font-size: 16px;
+}
