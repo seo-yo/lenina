@@ -15,6 +15,7 @@ https://lenina.kr/board/lookbook/list.html
 링크
 https://lenina.kr/board/lookbook/list.html
 https://lenina.kr/board/lookbook/test.html
+https://lenina.kr/board/lookbook/custom.html
 
 작업 특이사항
 

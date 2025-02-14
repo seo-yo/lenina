@@ -32,27 +32,13 @@
 .read-top .info > div > strong { margin: 0 4px 0 0; color: var(--color-black); font-weight: normal; }
 .xans-board-read-4 .read-top { border-top: 1px solid #d7d5d5; }
 
-  .lookbook-container{
-    padding: 0
-   }
-  .lookbook-container img {
-    width: 100%;
-  }
-  .lookbook-container figure {
-    margin: 0;
-    padding: 0;
-  }
-  .lookbook-container .thumb-img {
-    display: none !important;
-  }
-  .lookbook-container .mo-only {
-    display: none;
-  }
-  @media (max-width: 768px) {
-    .lookbook-container .pc-only {
-      display: none !important;
-    }
-    .lookbook-container .mo-only {
-      display: block;
-    }
-  }
+#lookbook-container { padding: 0}
+#lookbook-container img { width: 100%; } 
+#lookbook-container figure { margin: 0; padding: 0;} 
+#lookbook-container .thumb-img { display: none !important; } 
+#lookbook-container .mo-only { display: none; } 
+#lookbook-container br { display: none; }
+@media (max-width: 768px){
+#lookbook-container .pc-only { display: none !important; } 
+#lookbook-container .mo-only { display: block; } 
+}

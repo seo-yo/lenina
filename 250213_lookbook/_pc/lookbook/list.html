@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/list.html)-->
-<div class="lookbook-board">
+<div id="lookbook-board">
   <div module="Board_ListPackage_8">
     <!--@css(/css/module/board/gallary_4grid_board.css)-->
 
@@ -202,86 +202,28 @@
   </div>
 </div>
 <!-- // 관리자 전용 메뉴 -->
-<!-- <script>
-  // 빈 리스트 선택
-  const listElem = document.querySelector(".lookbook-board-list")
-
-  // 20개의 아이템 추가 함수
-  let nextItem = 1
-
-  const loadMore = function () {
-    for (let i = 0; i < 4; i++) {
-      let item = document.createElement("li")
-      item.innerText = "List Item #" + nextItem++
-      listElm.appendChild(item)
-    }
-  }
-
-  // ul 리스트 바닥까지 스크롤 했는지 확인
-  listElm.addEventListener("scroll", function () {
-    if (listElm.scrollTop + listElm.clientHeight >= listElm.scrollHeight) {
-      loadMore()
-    }
-  })
-
-  // 아이템 20개씩 더 가져오는 loadMore함수 실행
-  loadMore()
-</script> -->
-<!-- <script>
+<script>
   const lookbookList = document.querySelectorAll(
-    ".lookbook-board .xans-record-"
+    "#lookbook-board .xans-record-"
   )
 
-  console.log(lookbookList)
-
-  // if (lookbookList.length !== 0) {
-  // 각 scrollArea에 대한 observer
-  // const handleScrollAreaVisibility = (entries) => {
-  //   entries.forEach((entry) => {
-  //     // if (!entry.isIntersecting) {
-  //     //   lookbookList.forEach((item) => item.classList.remove("active-show"))
-  //     // }
-  //   })
-  // }
-
-  // const scrollAreaObserver = new IntersectionObserver(
-  //   handleScrollAreaVisibility,
-  //   {
-  //     threshold: 0,
-  //   }
-  // )
-
-  // lookbookList.forEach((list) =>{
-  //   scrollAreaObserver.observe(scrollArea)
-  // })
-
-  console.log("object")
   // 각 item에 대한 observer
   const handleItemInView = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         console.log(entry, "entray")
         entry.target.classList.add("active-show")
-        entry.target.style.display = "block"
       }
     })
   }
 
   const itemObserver = new IntersectionObserver(handleItemInView, {
-    threshold: 0.5,
+    threshold: 0.2,
   })
 
   lookbookList.forEach((list) => {
     itemObserver.observe(list)
-    console.log(list, "observe")
-    // const delay = item.dataset.aniDelay
-    // if (delay !== undefined) {
-    //   item.style.transitionDelay = `${delay}s`
-    // }
-    // const duration = item.dataset.aniDuration
-    // if (duration !== undefined) {
-    //   item.style.transitionDuration = `${duration}s`
-    // }
   })
-  // }
-</script> -->
+</script>
+
+

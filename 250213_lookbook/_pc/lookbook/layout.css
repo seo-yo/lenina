@@ -7,9 +7,8 @@
 .-wide { position: relative; width: 100%; max-width: 1920px; margin: 0 auto; padding: 0 var(--layout-padding); }
 
 /* lookbook Layout :: 추가한 내역*/
-/* lookbook Layout */
-.-narr:has(.lookbook-board) { max-width: none;}
-.-wide:has(.lookbook-board) { max-width: none; padding: 0;}
+.-narr:has(#lookbook-container) { max-width: none;}
+.-wide:has(#lookbook-container) { max-width: none; padding: 0;}
 
 /**
  * Swiper 8.0.7
