@@ -1,0 +1,44 @@
+/* 게시판 전체 공통 */
+.xans-board-title .title { min-height:30px; margin:10px 0 20px; border-bottom:1px solid #e8e8e8; }
+.xans-board-title .title h2 { display:inline-block; padding:0 0 0 12px; color:#2e2e2e; font-size:16px; *display:inline; *zoom:1; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_heading.gif") 0 50% no-repeat; }
+.xans-board-title .title p { display:inline-block; margin:0 0 0 6px; padding:0 0 0 10px; color:#939393; vertical-align:bottom; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 0 0; *display:inline; *zoom:1; }
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* read */
+.xans-board-read .ec-base-table .etcArea li { display:inline-block; margin:0 0 9px; padding:8px 20px 10px; vertical-align:top; line-height:22px; color:#666; }
+.xans-board-read .ec-base-table .etcArea li a { text-decoration:none; }
+.xans-board-read .ec-base-table .detail { padding: 22px 0; word-break:break-all; line-height:normal; }
+.xans-board-read .ec-base-table .detail ol,
+.xans-board-read .ec-base-table .detail ul { margin:15px 0; padding:0 0 0 40px; }
+.xans-board-read .ec-base-table .detail ol li { list-style:decimal; }
+.xans-board-read .ec-base-table .detail ul li { list-style:disc; }
+.xans-board-read .ec-base-table tr.attach a { padding:0 0 0 12px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 0; color:#8f8f8f; }
+.xans-board-read .ec-base-table tr.attach a:hover { text-decoration:underline; }
+
+.xans-board-read .ec-base-button { margin:10px 0 40px; }
+
+/* read - 상품 */
+.xans-board-product .information .icon_img { margin:0 1px 4px 0; }
+.xans-board-product .information > img { margin: 0 2px 4px 0; }
+.xans-board-product .information h3 { margin: 0 0 2px; font-size:14px; font-weight: normal; color: var(--color-black); }
+.xans-board-product .information .price { color: #939393; }
+.xans-board-product .information .button { margin: 20px 0 0; }
+
+/* read-top */
+.read-top { padding: 30px 10px; border-top: 2px solid var(--color-black); }
+.read-top .subject { margin-bottom: 12px; font-size: 20px; }
+.read-top .info { display: flex; flex-wrap: wrap; color: #939393; font-size: 12px; }
+.read-top .info > div { margin: 0 8px 0 0; }
+.read-top .info > div > strong { margin: 0 4px 0 0; color: var(--color-black); font-weight: normal; }
+.xans-board-read-4 .read-top { border-top: 1px solid #d7d5d5; }
+
+#lookbook-container { padding: 0}
+#lookbook-container img { width: 100%; } 
+#lookbook-container figure { margin: 0; padding: 0;} 
+#lookbook-container .thumb-img { display: none !important; } 
+#lookbook-container .mo-only { display: none; } 
+#lookbook-container br { display: none; }
+@media (max-width: 768px){
+#lookbook-container .pc-only { display: none !important; } 
+#lookbook-container .mo-only { display: block; } 
+}

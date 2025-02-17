@@ -1,0 +1,52 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="lookbook-board-read">
+  <div module="board_ReadPackage_3">
+    <!--@css(/css/module/board/readPackage.css)-->
+      
+    <div module="board_read_3">
+      <!--
+            $login_page_url = /member/login.html
+            $deny_access_url = /board/free/list.html
+        -->
+      <h2 class="title">{$subject}</h2>
+      <div class="ec-base-table typeWrite">
+        <div class="detail">{$content}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--@css(/css/module/board/movement.css)-->
+<!-- <div module="board_movement_3">
+    <ul>
+        <li class="prev {$prev_display|display}"><strong>이전글</strong><a href="{$link_board_detail_prev}">{$prev_subject}</a></li>
+        <li class="next {$next_display|display}"><strong>다음글</strong><a href="{$link_board_detail_next}">{$next_subject}</a></li>
+    </ul>
+  </div> -->
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_function_3">
+  <!--@css(/css/module/board/function.css)-->
+  <!--
+        $success_return_url = /board/free/list.html
+     -->
+  <p>
+    {$board_function_selectbox}
+    <a href="#none" class="btnNormal" onclick="{$action_article_move}"
+      ><img
+        src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif"
+        alt=""
+      />
+      {$article_move}</a
+    >
+    <a href="#none" class="btnNormal" onclick="{$action_article_copy}"
+      ><img
+        src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif"
+        alt=""
+      />
+      {$article_copy}</a
+    >
+    {$board_function_help}
+  </p>
+</div>
+<!-- // 관리자 전용 메뉴 -->
+<!--@define(cmc_log)-->

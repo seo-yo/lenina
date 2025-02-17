@@ -1,23 +1,23 @@
 <!--@layout(/layout/basic/list.html)-->
 <div id="lookbook-board">
-  <div module="Board_ListPackage_12">
+  <div module="Board_ListPackage_8">
     <!--@css(/css/module/board/gallary_4grid_board.css)-->
 
     <div module="board_title_12">
-      <div class="path">
+       <!--<div class="path">
         <span>현재 위치</span>
         <ol>
-          <li><a href="/">홈</a></li>
-          <li><a href="/board/index.html">게시판</a></li>
+         <li><a href="/">홈</a></li>
+          <li><a href="/board/index.html">게시판</a></li> 
           <li title="현재 위치"><strong>{$board_name}</strong></li>
         </ol>
-      </div>
+      </div>-->
 
-      <div class="titleArea">
+      <div class="titleArea" id="titleArea">
         <h2>{$board_title|striptag} {$board_adult_icon}</h2>
-        <p>{$board_info}</p>
+        <!--<p>{$board_info}</p>-->
       </div>
-      <p class="imgArea">{$board_top_image}</p>
+      <!--<p class="imgArea">{$board_top_image}</p>-->
     </div>
 
     <div class="boardSort">
@@ -43,7 +43,8 @@
                   src="{$img_src}"
                   onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
                   alt="" /></a
-            ></a>
+              ></a
+            >
           </div>
           <div class="subject">
             {$checkbox}<a href="/board/lookbook/read.html{$param_read}">
@@ -59,7 +60,8 @@
                   src="{$img_src}"
                   onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
                   alt="" /></a
-            ></a>
+              ></a
+            >
           </div>
           <div class="subject">
             {$checkbox}<a href="/board/lookbook/read.html{$param_read}">
@@ -83,7 +85,8 @@
                   src="{$img_src}"
                   onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
                   alt="" /></a
-            ></a>
+              ></a
+            >
           </div>
           <div class="subject">
             {$checkbox}<a href="/board/lookbook/read.html{$param_read}">
@@ -99,7 +102,8 @@
                   src="{$img_src}"
                   onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
                   alt="" /></a
-            ></a>
+              ></a
+            >
           </div>
           <div class="subject">
             {$checkbox}<a href="/board/lookbook/read.html{$param_read}">
@@ -119,12 +123,10 @@
       <ul class="list board">
         <li>
           <div class="thumb">
-            <a href="/board/lookbook/read.html{$param_read}"
-              ><img
-                src="{$img_src}"
-                onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
-                alt=""
-            /></a>
+            <a href="/board/lookbook/read.html{$param_read}"><img
+                  src="{$img_src}"
+                  onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
+                  alt="" /></a>
           </div>
           <div class="subject">
             {$checkbox}<a href="/board/lookbook/read.html{$param_read}"
@@ -134,12 +136,10 @@
         </li>
         <li>
           <div class="thumb">
-            <a href="/board/lookbook/read.html{$param_read}"
-              ><img
-                src="{$img_src}"
-                onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
-                alt=""
-            /></a>
+            <a href="/board/lookbook/read.html{$param_read}"><img
+                  src="{$img_src}"
+                  onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'"
+                  alt="" /></a>
           </div>
           <div class="subject">
             {$checkbox}<a href="/board/lookbook/read.html{$param_read}"
@@ -149,10 +149,7 @@
         </li>
       </ul>
     </div>
-    <div
-      class="boardListEmpty {$empty_display|display}"
-      module="board_empty_12"
-    >
+    <div class="boardListEmpty {$empty_display|display}" module="board_empty_12">
       <p>{$empty_message}</p>
     </div>
 
@@ -228,6 +225,7 @@
     "#lookbook-board .xans-record-"
   )
 
+  console.log("object")
   // 각 item에 대한 observer
   const handleItemInView = (entries) => {
     entries.forEach((entry) => {
@@ -244,5 +242,7 @@
 
   lookbookList.forEach((list) => {
     itemObserver.observe(list)
+    console.log(list, "observe")
   })
 </script>
+
