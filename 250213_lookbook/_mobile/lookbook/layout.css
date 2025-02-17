@@ -4,7 +4,7 @@
 #contents { position:relative; padding: 0 var(--layout-padding); min-height: calc(100vh - 430px); background-color: transparent; }
 .-narr { padding: 0 var(--layout-padding); }
 /* :: lookbook 추가 */
-#contents:has(.lookbook-board) {padding: 0;}
+#contents:has(#lookbook-board) {padding: 0;}
 
 .btnTop { display:none; position:fixed; top:0; left:50%; z-index:100; margin:0 0 0 -36px; border:1px solid #d6d6d7; border-top:0; border-radius:0 0 3px 3px; opacity:0.9; background:#616161 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_btntop.png") no-repeat 90% 7px; background-size:12px 12px; }
 .btnTop a { display:inline-block; height:29px; padding:0 26px 0 10px; line-height:29px; color:#fff; }
