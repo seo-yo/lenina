@@ -1,0 +1,80 @@
+@charset "euc-kr";
+
+/*검색 스위치  /* 부분 앞뒤 부분 주석 삭제 하면 화면 검색 부분 삭제 됨 */
+
+/*
+.de-search {
+
+    display:none !important;
+
+}
+*/
+
+ #sana ul:nth-of-type(2) {
+            display: none !important;
+        }
+
+.d-none{display:none;}
+#cate64 > a {
+	pointer-events:none;
+}
+
+.secretSaleText{
+	display:none;
+    margin: 15px 0;
+}
+
+@font-face{
+    font-family:'Times New Roman';
+    src: local('Times New Roman'),
+         url('/web/upload/drawcode/fonts/times.ttf') format('truetype');
+    font-weight: normal;
+	/* unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;*/
+}
+@font-face{
+    font-family:'Times New Roman';
+    src: local('Times New Roman Bold'),
+         url('/web/upload/drawcode/fonts/timesbd.ttf') format('truetype');
+    font-weight: bold;
+	/* unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;*/
+}
+
+:root {
+    --font-main: 'Times New Roman', 'Noto Sans KR', sans-serif;
+    --font-product:  'Times New Roman', serif;
+    --layout-padding: 16px;
+    --color-main: #111;
+    --color-black: #111;
+    --color-gray: #AAA;
+    --color-darkgray: #999;
+    --color-gray-line: #DFDFDF;
+    --color-gray-bg: #F4F4F6;
+}
+
+/* reset */
+* { box-sizing: border-box; }
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, button, p, blockquote, th, td { margin:0; padding:0;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+html { width:100%; height:100%; }
+body, code { min-width:320px; font-size:13px; font-family: var(--font-main); color: var(--color-black); background:#fff; -webkit-text-size-adjust:none; }
+code { background:none; display:block; }
+ul li { list-style:none; }
+ol { list-style-position:inside; }
+img, fieldset{ border:none; }
+img { vertical-align:middle; }
+hr.layout { display:none; }
+em, address { font-style:normal; }
+ins { text-decoration:none; }
+a { text-decoration:none; color: inherit; }
+a:active { text-decoration:none; }
+table { width:100%; table-layout:fixed; border:0 none; border-spacing:0; border-collapse:collapse; }
+table td, table th { background-color: transparent; }
+table caption { display:none; }
+th, td { border:0; line-height:18px; }
+legend { height:0; width:0; display:block; text-indent:-9999em; }
+label { cursor:pointer; }
+button { overflow: visible; border: 0; font-family: inherit; }
+button::-moz-focus-inner { padding:0; border:0; }
+
+/* html5 */
+object, del, sub, var { margin:0; padding:0; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }

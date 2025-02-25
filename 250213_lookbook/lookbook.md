@@ -1,13 +1,13 @@
-<!-- https://sdsupport.cafe24.com/module/board/gallery/list.html -->
+<!-- https://sdsupport.cafe24.com/module/board/gallery/index.html -->
 
 0. 작업물
-   https://lenina.kr/board/lookbook/list.html
-   https://m.lenina.kr/board/lookbook/list.html
+   https://lenina.kr/board/lookbook/index.html
+   https://m.lenina.kr/board/lookbook/index.html
 
 1. 파일 경로
 
    1. html
-      board/gallery/lookbook/list.html
+      board/gallery/lookbook/index.html
       [생성] board/gallery/lookbook/read.html
 
    2. css
@@ -44,11 +44,11 @@
 > > > 250217 결론적으로 불가능하다 답변받음
 
 1.  적용 페이지 링크
-    https://lenina.kr/board/lookbook/list.html
-    https://m.lenina.kr/board/lookbook/list.html
+    https://lenina.kr/board/lookbook/index.html
+    https://m.lenina.kr/board/lookbook/index.html
 
 2.  적용 방법 가이드 공유.
 
 - 게시판 > 게시판 관리 > LOOKBOOK 갤러리 > 글보기 --- 이후 이미지 참고
 
-> > 메뉴 상 노출 위치 확인 요망
+> > 메뉴 상 노출 위치 컬렉션 에디터 사이

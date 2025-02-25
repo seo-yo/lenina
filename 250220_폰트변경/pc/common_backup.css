@@ -1,15 +1,10 @@
+/* @format */
 @charset "utf-8";
 
 /* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
 
 #header .gnb {
     height: unset !important;
-}
-
-#header .gnb .cate-list > li > a,
-.de-fnav .fnav .cate-list > li > a{
-  -webkit-text-stroke: 1px;
-  text-stroke: 1px;
 }
 
 .de-brand img {
@@ -172,8 +167,8 @@
 
 
 :root {
-    --font-main: 'Arsenal', 'Pretendard', sans-serif;
-    --font-product:  'Arsenal', 'Pretendard', sans-serif;
+    --font-main: 'Times New Roman', 'Pretendard', sans-serif;
+    --font-product:  'Times New Roman',  'Pretendard', sans-serif;
     --layout-padding: 5.2%;
     --color-main: #111;
     --color-black: #111;
